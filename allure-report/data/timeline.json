@@ -1,0 +1,85 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "INL-1208.local",
+    "children" : [ {
+      "name" : "3298@INL-1208.local.pool-1-thread-1(18)",
+      "children" : [ {
+        "name" : "Register",
+        "uid" : "a325ee7ae3066277",
+        "parentUid" : "2f59a8eb90152b572eea3c6d351fcaad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1532596749929,
+          "stop" : 1532596755533,
+          "duration" : 5604
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "SearchProduct",
+        "uid" : "e8ecd436fe6382bb",
+        "parentUid" : "2f59a8eb90152b572eea3c6d351fcaad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1532596770211,
+          "stop" : 1532596772408,
+          "duration" : 2197
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2f59a8eb90152b572eea3c6d351fcaad"
+    }, {
+      "name" : "1872@INL-1208.local.TestNG(11)",
+      "children" : [ {
+        "name" : "Hellotest",
+        "uid" : "5b1ecc0a504232fd",
+        "parentUid" : "340aa215bbd10046eebd70f006ce8af5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1532589280631,
+          "stop" : 1532589287689,
+          "duration" : 7058
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "340aa215bbd10046eebd70f006ce8af5"
+    }, {
+      "name" : "17973@INL-1208.local.main(1)",
+      "children" : [ {
+        "name" : "Hello",
+        "uid" : "26546d766df29dfc",
+        "parentUid" : "ed0144fa16c3da32a09c0de0c4a0ebe2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1532519681402,
+          "stop" : 1532519752210,
+          "duration" : 70808
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ed0144fa16c3da32a09c0de0c4a0ebe2"
+    }, {
+      "name" : "2032@INL-1208.local.TestNG(17)",
+      "children" : [ {
+        "name" : "Hellotest",
+        "uid" : "c2df2fd58eca2cc0",
+        "parentUid" : "0040516af7923978a14d8db810a77539",
+        "status" : "passed",
+        "time" : {
+          "start" : 1532590393826,
+          "stop" : 1532590400754,
+          "duration" : 6928
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0040516af7923978a14d8db810a77539"
+    } ],
+    "uid" : "595d780d692f97c96ee54ba125ac8dbe"
+  } ]
+}

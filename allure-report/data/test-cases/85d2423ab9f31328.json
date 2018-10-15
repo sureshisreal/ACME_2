@@ -1,0 +1,85 @@
+{
+  "uid" : "85d2423ab9f31328",
+  "name" : "Register",
+  "fullName" : "Testcases.HomepageScripts.Register",
+  "historyId" : "593250eeac63f87ffa6c6a0ecabfc59a",
+  "time" : {
+    "start" : 1532590879043,
+    "stop" : 1532590881702,
+    "duration" : 2659
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "beforeMethod",
+    "time" : {
+      "start" : 1532590864706,
+      "stop" : 1532590878623,
+      "duration" : 13917
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "afterMethod",
+    "time" : {
+      "start" : 1532590881711,
+      "stop" : 1532590881794,
+      "duration" : 83
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "testClass",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "testMethod",
+    "value" : "Register"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Checkout"
+  }, {
+    "name" : "suite",
+    "value" : "pvh1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "host",
+    "value" : "INL-1208.local"
+  }, {
+    "name" : "thread",
+    "value" : "2129@INL-1208.local.TestNG(18)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85d2423ab9f31328.json",
+  "parameterValues" : [ ]
+}

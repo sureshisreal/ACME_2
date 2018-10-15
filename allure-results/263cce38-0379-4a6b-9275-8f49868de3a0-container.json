@@ -1,0 +1,1 @@
+{"uuid":"263cce38-0379-4a6b-9275-8f49868de3a0","name":"Testcases.Hello.beforeMethod","description":"","start":1532521634601,"stop":1532521649808,"children":["71557beb-bff9-4b36-ae71-d16818d6738b"],"befores":[{"name":"beforeMethod","status":"passed","stage":"finished","description":"","start":1532521634601,"stop":1532521649806}]}

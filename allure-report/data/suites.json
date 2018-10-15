@@ -1,0 +1,105 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Default suite",
+    "children" : [ {
+      "name" : "Default test",
+      "children" : [ {
+        "name" : "Testcases.Hello",
+        "children" : [ {
+          "name" : "Hello",
+          "uid" : "26546d766df29dfc",
+          "parentUid" : "1891a8f0c3e383c49b79a28c2688a9fc",
+          "status" : "broken",
+          "time" : {
+            "start" : 1532519681402,
+            "stop" : 1532519752210,
+            "duration" : 70808
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "1891a8f0c3e383c49b79a28c2688a9fc"
+      } ],
+      "uid" : "848117670d75f6868e681771989ad50e"
+    } ],
+    "uid" : "2c8837b97293ea01a164a5cd7048ad56"
+  }, {
+    "name" : "Checkout",
+    "children" : [ {
+      "name" : "pvh1",
+      "children" : [ {
+        "name" : "Testcases.Hello",
+        "children" : [ {
+          "name" : "Hellotest",
+          "uid" : "5b1ecc0a504232fd",
+          "parentUid" : "85bce24a333d085fd8571099b9fc84e9",
+          "status" : "passed",
+          "time" : {
+            "start" : 1532589280631,
+            "stop" : 1532589287689,
+            "duration" : 7058
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "85bce24a333d085fd8571099b9fc84e9"
+      }, {
+        "name" : "Testcases.HomepageScripts",
+        "children" : [ {
+          "name" : "Hellotest",
+          "uid" : "c2df2fd58eca2cc0",
+          "parentUid" : "2de1174ccc3888715156a7a6bc87c5bf",
+          "status" : "passed",
+          "time" : {
+            "start" : 1532590393826,
+            "stop" : 1532590400754,
+            "duration" : 6928
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2de1174ccc3888715156a7a6bc87c5bf"
+      } ],
+      "uid" : "799603117788aa662c424f61c1094f0c"
+    } ],
+    "uid" : "717c13d1cf04dd5d4cee3118f3127eb0"
+  }, {
+    "name" : "ACME",
+    "children" : [ {
+      "name" : "HomepageScripts",
+      "children" : [ {
+        "name" : "Testcases.HomepageScripts",
+        "children" : [ {
+          "name" : "Register",
+          "uid" : "a325ee7ae3066277",
+          "parentUid" : "c1314612a43cefc5fc726fed089ab921",
+          "status" : "passed",
+          "time" : {
+            "start" : 1532596749929,
+            "stop" : 1532596755533,
+            "duration" : 5604
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "SearchProduct",
+          "uid" : "e8ecd436fe6382bb",
+          "parentUid" : "c1314612a43cefc5fc726fed089ab921",
+          "status" : "passed",
+          "time" : {
+            "start" : 1532596770211,
+            "stop" : 1532596772408,
+            "duration" : 2197
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c1314612a43cefc5fc726fed089ab921"
+      } ],
+      "uid" : "4d6f2aae6a58a9c3654328ff64903b39"
+    } ],
+    "uid" : "8b4ccb8a32dd4fee66dcda28c93584da"
+  } ]
+}

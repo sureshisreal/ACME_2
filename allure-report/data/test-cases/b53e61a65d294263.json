@@ -1,0 +1,85 @@
+{
+  "uid" : "b53e61a65d294263",
+  "name" : "SearchProduct",
+  "fullName" : "Testcases.HomepageScripts.SearchProduct",
+  "historyId" : "236f12ee580d0c4236f846bb18274643",
+  "time" : {
+    "start" : 1532591867110,
+    "stop" : 1532591869824,
+    "duration" : 2714
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "beforeMethod",
+    "time" : {
+      "start" : 1532591852703,
+      "stop" : 1532591867107,
+      "duration" : 14404
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "afterMethod",
+    "time" : {
+      "start" : 1532591869825,
+      "stop" : 1532591869902,
+      "duration" : 77
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "testClass",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "testMethod",
+    "value" : "SearchProduct"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Checkout"
+  }, {
+    "name" : "suite",
+    "value" : "pvh1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "host",
+    "value" : "INL-1208.local"
+  }, {
+    "name" : "thread",
+    "value" : "2412@INL-1208.local.TestNG(18)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b53e61a65d294263.json",
+  "parameterValues" : [ ]
+}

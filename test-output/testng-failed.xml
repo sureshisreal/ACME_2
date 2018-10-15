@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [ACME]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
+  <test name="HomepageScripts(failed)" parallel="tests">
+    <classes>
+      <class name="Testcases.HomepageScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="Guest_SearchCheckout"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.HomepageScripts -->
+    </classes>
+  </test> <!-- HomepageScripts(failed) -->
+</suite> <!-- Failed suite [ACME] -->

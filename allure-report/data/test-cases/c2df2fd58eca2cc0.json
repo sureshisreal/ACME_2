@@ -1,0 +1,87 @@
+{
+  "uid" : "c2df2fd58eca2cc0",
+  "name" : "Hellotest",
+  "fullName" : "Testcases.HomepageScripts.Hellotest",
+  "historyId" : "a9e8baf18cbcd8d2d8c60b3183b87359",
+  "time" : {
+    "start" : 1532590393826,
+    "stop" : 1532590400754,
+    "duration" : 6928
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "beforeMethod",
+    "time" : {
+      "start" : 1532590389998,
+      "stop" : 1532590393538,
+      "duration" : 3540
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "afterMethod",
+    "time" : {
+      "start" : 1532590400764,
+      "stop" : 1532590400844,
+      "duration" : 80
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "testClass",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "testMethod",
+    "value" : "Hellotest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Checkout"
+  }, {
+    "name" : "suite",
+    "value" : "pvh1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testcases.HomepageScripts"
+  }, {
+    "name" : "host",
+    "value" : "INL-1208.local"
+  }, {
+    "name" : "thread",
+    "value" : "2032@INL-1208.local.TestNG(17)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c2df2fd58eca2cc0.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,65 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Hello",
+    "uid" : "26546d766df29dfc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1532519681402,
+      "stop" : 1532519752210,
+      "duration" : 70808
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Hellotest",
+    "uid" : "5b1ecc0a504232fd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1532589280631,
+      "stop" : 1532589287689,
+      "duration" : 7058
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  }, {
+    "name" : "Hellotest",
+    "uid" : "c2df2fd58eca2cc0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1532590393826,
+      "stop" : 1532590400754,
+      "duration" : 6928
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Register",
+    "uid" : "a325ee7ae3066277",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1532596749929,
+      "stop" : 1532596755533,
+      "duration" : 5604
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "SearchProduct",
+    "uid" : "e8ecd436fe6382bb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1532596770211,
+      "stop" : 1532596772408,
+      "duration" : 2197
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  } ]
+}

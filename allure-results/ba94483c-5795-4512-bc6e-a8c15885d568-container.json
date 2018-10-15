@@ -1,0 +1,1 @@
+{"uuid":"ba94483c-5795-4512-bc6e-a8c15885d568","name":"Testcases.Hello.afterMethod","description":"","start":1532519497834,"stop":1532519497917,"children":["fa57474b-7764-40e6-85e9-704def3a30e0"],"afters":[{"name":"afterMethod","status":"passed","stage":"finished","description":"","start":1532519497834,"stop":1532519497917}]}

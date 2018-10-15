@@ -1,0 +1,6 @@
+"Status","Name","Duration in ms","Description"
+"passed","Testcases.HomepageScripts.Register","5604",""
+"passed","Testcases.Hello.Hellotest","7058",""
+"broken","Testcases.Hello.Hello","70808",""
+"passed","Testcases.HomepageScripts.Hellotest","6928",""
+"passed","Testcases.HomepageScripts.SearchProduct","2197",""

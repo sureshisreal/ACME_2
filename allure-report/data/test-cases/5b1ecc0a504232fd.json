@@ -1,0 +1,157 @@
+{
+  "uid" : "5b1ecc0a504232fd",
+  "name" : "Hellotest",
+  "fullName" : "Testcases.Hello.Hellotest",
+  "historyId" : "6100a5c1cec31224288a32911c513f31",
+  "time" : {
+    "start" : 1532589280631,
+    "stop" : 1532589287689,
+    "duration" : 7058
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ {
+    "name" : "beforeMethod",
+    "time" : {
+      "start" : 1532589275350,
+      "stop" : 1532589280488,
+      "duration" : 5138
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "afterMethod",
+    "time" : {
+      "start" : 1532589287697,
+      "stop" : 1532589287787,
+      "duration" : 90
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "Testcases.Hello"
+  }, {
+    "name" : "testClass",
+    "value" : "Testcases.Hello"
+  }, {
+    "name" : "testMethod",
+    "value" : "Hellotest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Checkout"
+  }, {
+    "name" : "suite",
+    "value" : "pvh1"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testcases.Hello"
+  }, {
+    "name" : "host",
+    "value" : "INL-1208.local"
+  }, {
+    "name" : "thread",
+    "value" : "1872@INL-1208.local.TestNG(11)"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "fb8a2b6aa092bea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1532523440604,
+        "stop" : 1532523449992,
+        "duration" : 9388
+      }
+    }, {
+      "uid" : "d68f8124c5429d01",
+      "status" : "passed",
+      "time" : {
+        "start" : 1532523241744,
+        "stop" : 1532523276324,
+        "duration" : 34580
+      }
+    }, {
+      "uid" : "5af6953cd1cf2f6e",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1532521041088,
+        "stop" : 1532521065356,
+        "duration" : 24268
+      }
+    }, {
+      "uid" : "ffba5ffc75c18d3a",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1532520865145,
+        "stop" : 1532520915249,
+        "duration" : 50104
+      }
+    }, {
+      "uid" : "a7e59cd04ead25ca",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1532520825583,
+        "stop" : 1532520825607,
+        "duration" : 24
+      }
+    }, {
+      "uid" : "8189f1a3e9a1f21d",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1532520640740,
+        "stop" : 1532520640756,
+        "duration" : 16
+      }
+    }, {
+      "uid" : "f22449fe309f382c",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1532520562894,
+        "stop" : 1532520562929,
+        "duration" : 35
+      }
+    }, {
+      "uid" : "e9e38e9819eb16d4",
+      "status" : "broken",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1532520540761,
+        "stop" : 1532520540781,
+        "duration" : 20
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5b1ecc0a504232fd.json",
+  "parameterValues" : [ ]
+}
