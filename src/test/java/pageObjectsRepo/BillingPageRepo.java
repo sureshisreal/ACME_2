@@ -19,13 +19,11 @@ public class BillingPageRepo {
 	
 	@FindBy( xpath = ".//*[@id='WC_CheckoutButton_2'][contains(.,'Place Order')]")
 	public  WebElement PlaceOrder_Button;
-	
-<<<<<<< HEAD
+
 	public String s  = "Sirius";
-=======
+
 	public int a = 99;
 	
 	
->>>>>>> 52fd5f0201611ed371a418fba59d9b525a597c78
 	
 }
