@@ -10,6 +10,5 @@
 			<class name="Testcases.HomepageScripts" />
 		</classes>
 		
-		
 	</test>
 </suite> <!-- Suite -->

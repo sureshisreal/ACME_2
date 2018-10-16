@@ -1,12 +1,14 @@
-package Testcases;
+package utilities;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import listeners.TestListener;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,44 +18,39 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-import com.aventstack.extentreports.Status;
-
-import pageObjectsRepo.ShoppingCartPageRepo;
 import utilities.ExtentManager;
+import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
 import Reusables.HomepageActions;
 import Reusables.ProductsDetailPageActions;
+import Reusables.RegisterationPageActions;
 import Reusables.ShippingPageActions;
 import Reusables.ShoppingCartPageActions;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class BaseTest extends ExtentManager {
 	public WebDriver driver;
 	protected ExtentTest extentTest;
-	String screenShot;
-	HomepageActions homepage;
-	CategorypageActions categorypage;
-	ProductsDetailPageActions productsDetailPage;
-	ShoppingCartPageActions shoppingCartPage;
-	ShippingPageActions shippingPage;
+	public FileInputStream fis = null;
+
+	protected HomepageActions homepage;
+	protected CategorypageActions categorypage;
+	protected ProductsDetailPageActions productsDetailPage;
+	protected ShoppingCartPageActions shoppingCartPage;
+	protected ShippingPageActions shippingPage;
+	protected BillingPageActions billingPage;
+	protected RegisterationPageActions registerationPage;
 
 	@BeforeMethod
 	@Parameters(value = { "browser" })
 	public void beforeMethod(String browser) throws MalformedURLException {
-		/*
-		 * System.setProperty("webdriver.chrome.driver",
-		 * "/Users/indhul/Documents/ChromeDriver/chromedriver"); driver = new
-		 * ChromeDriver();
-		 */
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("browserName", browser);
 		capabilities.setPlatform(Platform.WINDOWS);
@@ -72,22 +69,27 @@ public class BaseTest extends ExtentManager {
 				ShoppingCartPageActions.class);
 		shippingPage = PageFactory.initElements(driver,
 				ShippingPageActions.class);
+		billingPage = PageFactory
+				.initElements(driver, BillingPageActions.class);
+		registerationPage = PageFactory.initElements(driver,
+				RegisterationPageActions.class);
 	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) {
-		System.out.println("In After Method " +result.getThrowable());
+	public void afterMethod(ITestResult result) throws IOException {
+		System.out.println("In After Method " + result.getThrowable());
 		if (result.getStatus() == ITestResult.FAILURE) {
-			System.out.println("Script failed.... !!!!" +result.getStatus() );
-			 extentTest.log(Status.FAIL, result.getThrowable());
+			AddScreenshot();
+			System.out.println("Script failed.... !!!!" + result.getStatus());
+			extentTest.log(Status.FAIL, result.getThrowable());
+		} else {
+			extentTest.log(Status.PASS, "Script Completed");
 		}
-		System.out.println("Script completed");
 		driver.quit();
 	}
 
 	public static String captureScreen(WebDriver driver, String screenName)
 			throws IOException {
-
 		TakesScreenshot screen = (TakesScreenshot) driver;
 		File src = screen.getScreenshotAs(OutputType.FILE);
 		String dest = System.getProperty("user.dir") + "//Test-ScreenShots//"
@@ -95,6 +97,34 @@ public class BaseTest extends ExtentManager {
 		File target = new File(dest);
 		FileUtils.copyFile(src, target);
 		return dest;
+	}
+
+	public void logs(String message) {
+		extentTest.log(Status.PASS, message);
+	}
+
+	public String captureScreenShot() {
+		try {
+			DateFormat df = new SimpleDateFormat("dd_MM_yy_HH_mm_ss");
+			Date now = new Date();
+			String filePath = System.getProperty("user.dir")
+					+ "//Test-ScreenShots//" + df.format(now) + ".png";
+			TakesScreenshot screen = (TakesScreenshot) driver;
+			File screenShot = screen.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(screenShot, new File(filePath));
+			return filePath;
+		} catch (IOException e) {
+		}
+		return null;
+	}
+
+	protected void AddScreenshot() throws IOException {
+		extentTest.log(Status.PASS,
+				"" + extentTest.addScreenCaptureFromPath(captureScreenShot()));
+	}
+
+	protected void TestDescription(String Title, String Description) {
+		extentTest = extent.createTest(Title, Description);
 	}
 
 }

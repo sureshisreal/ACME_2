@@ -1,48 +1,79 @@
 package Testcases;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+import utilities.BaseTest;
 
 public class HomepageScripts extends BaseTest {
-	String screenShot;
+	
 
-	@Test
-	public void Guest_SearchCheckout() throws IOException, InterruptedException {
-			extentTest = extent.createTest("SearchProduct" , "To verify guest user able to place order using search items");
-			extentTest.log(Status.PASS, "SearchProduct");
-			screenShot = captureScreen(driver, "suresh");
-			extentTest.pass("Screen Shot : " + extentTest.addScreenCaptureFromPath(screenShot));
+	@Test	
+	public void Guest_SearchCheckout() throws IOException, InterruptedException {		
+		TestDescription("Guest_SearchCheckout" , "To verify guest user able to place order using search items");
+			logs("Url entered");
+			AddScreenshot();
+			logs("Page title verified");
 			homepage.searchTerm();
-			extentTest.log(Status.PASS, "Search term entered");
-			String screenShot1 = captureScreen(driver, "suresh1");
-			extentTest.pass("Screen Shot : " + extentTest.addScreenCaptureFromPath(screenShot1));
+			logs("Search term entered");
+			AddScreenshot();
 			categorypage.selectProduct();
-			extentTest.log(Status.PASS, "Product Selected in the CLP");
+			logs("First Product Selected in the CLP");
 			productsDetailPage.quantity("5");
-			extentTest.log(Status.PASS, "Qty increased in PDP");
+			AddScreenshot();
+			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
-			extentTest.log(Status.PASS, "Product added to the cart");
+			logs("Product added to the cart");
 			productsDetailPage.minishopcart_total();
+			logs("MiniCart Clicked");
 			shoppingCartPage.guestCheckout();
+			logs("Guest Checkout button clicked in the shoppingCart Page");
+			AddScreenshot();
 			shippingPage.GuestShippingAddress();
+			logs("Shipping address entered");
+			shippingPage.UseEnteredAddress();
+			billingPage.VisaPayment();
+			logs("Visa payment entered");
+			billingPage.PlaceOrder();
+			logs("Ordered Placed");
+			
 	}
 	
-	@Test
-	public void Reg_SearchCheckout() throws InterruptedException {
-		extentTest = extent.createTest("SearchProduct_second" , "To verify registered user able to place order using search items");
-		extentTest.log(Status.PASS, "SearchProduct");
-		System.out.println("********");
-		homepage.searchTerm();
-		extentTest.log(Status.PASS, "Search term entered");
-		categorypage.selectProduct();
-		extentTest.log(Status.PASS, "Search term entered");
-		productsDetailPage.quantity("5");
-		extentTest.log(Status.PASS, "Search term entered");
-		productsDetailPage.AddToCart();
-		extentTest.log(Status.PASS, "Search term entered"); 
+	@Test	
+	public void Registered_SearchCheckout() throws IOException, InterruptedException {		
+		TestDescription("Registered_SearchCheckout" , "To verify registered user able to place order using search items");
+			logs("Url entered");
+			AddScreenshot();
+			homepage.SignInLink();
+			registerationPage.HomepageLogin();
+			logs("User signed In using valid credentials");
+			homepage.searchTerm();
+			logs("Search term entered");
+			AddScreenshot();
+			categorypage.selectProduct();
+			logs("First Product Selected in the CLP");
+			productsDetailPage.quantity("5");
+			AddScreenshot();
+			logs("Qunatity increased in PDP");
+			productsDetailPage.AddToCart();
+			logs("Product added to the cart");
+			productsDetailPage.minishopcart_total();
+			logs("MiniCart Clicked");
+			shoppingCartPage.guestCheckout();
+			logs("Guest Checkout button clicked in the shoppingCart Page");
+			AddScreenshot();
+			shippingPage.GuestShippingAddress();
+			logs("Shipping address entered");
+			shippingPage.UseEnteredAddress();
+			billingPage.VisaPayment();
+			logs("Visa payment entered");
+			billingPage.PlaceOrder();
+			logs("Ordered Placed");
 	}
+
+
 }

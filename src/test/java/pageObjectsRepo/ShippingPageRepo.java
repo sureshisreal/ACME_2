@@ -38,6 +38,11 @@ public class ShippingPageRepo {
 	@FindBy( xpath = ".//*[@id='WC_CheckoutButton_2'][contains(.,'Place Order')]")
 	public  WebElement PlaceOrder_Button;
 	
+	@FindBy( xpath = ".//*[@name='addressOption'][@value='Original']")
+	public  WebElement UseEnteredAddress_RadioButton;
+	
+	@FindBy( xpath = "(.//*[@name='addressOption'])[1]")
+	public  WebElement UseSuggestedAddress_RadioButton;
 	
 	
 }

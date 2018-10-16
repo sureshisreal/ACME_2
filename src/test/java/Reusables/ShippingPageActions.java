@@ -1,6 +1,5 @@
 package Reusables;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import pageObjectsRepo.ShippingPageRepo;
@@ -19,9 +18,19 @@ public class ShippingPageActions extends ShippingPageRepo {
 		Shipping_state.sendKeys("New York");
 		Shipping_phone.sendKeys("1231231231");
 		Shipping_email1.sendKeys("test123@gmail.com");
-		Select se=new Select(Shipping_occupation);
-		se.selectByValue("Carpentry Work");
+		Select occupation =new Select(Shipping_occupation);
+		occupation.selectByValue("Carpentry Work");
 		PlaceOrder_Button.click();
+	}
+	
+	public void UseEnteredAddress(){
+		if(UseEnteredAddress_RadioButton !=null)
+			UseEnteredAddress_RadioButton.click();	
+	}
+	
+	public void UseSuggestedAddress(){
+		if(UseSuggestedAddress_RadioButton !=null)
+		UseSuggestedAddress_RadioButton.click();
 	}
 
 }
