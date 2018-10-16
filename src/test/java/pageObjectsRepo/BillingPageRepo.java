@@ -20,7 +20,8 @@ public class BillingPageRepo {
 	@FindBy( xpath = ".//*[@id='WC_CheckoutButton_2'][contains(.,'Place Order')]")
 	public  WebElement PlaceOrder_Button;
 	
-	public int a = 9;
+	public int a = 99;
+	
 	
 	
 }
