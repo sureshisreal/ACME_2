@@ -11,7 +11,6 @@
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="Registered_SearchCheckout"/>
           <include name="Guest_SearchCheckout"/>
         </methods>
       </class> <!-- Testcases.HomepageScripts -->

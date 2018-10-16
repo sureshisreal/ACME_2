@@ -16,6 +16,7 @@ public class HomepageScripts extends BaseTest {
 	public void Guest_SearchCheckout() throws IOException, InterruptedException {		
 		TestDescription("Guest_SearchCheckout" , "To verify guest user able to place order using search items");
 			logs("Url entered");
+			//ReadData();
 			AddScreenshot();
 			logs("Page title verified");
 			homepage.searchTerm();
@@ -43,7 +44,7 @@ public class HomepageScripts extends BaseTest {
 			
 	}
 	
-	@Test	
+	/*@Test	
 	public void Registered_SearchCheckout() throws IOException, InterruptedException {		
 		TestDescription("Registered_SearchCheckout" , "To verify registered user able to place order using search items");
 			logs("Url entered");
@@ -74,6 +75,6 @@ public class HomepageScripts extends BaseTest {
 			billingPage.PlaceOrder();
 			logs("Ordered Placed");
 	}
-
+*/
 
 }

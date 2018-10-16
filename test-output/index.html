@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,11 +103,6 @@
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-ACME" title="Testcases.HomepageScripts" hash-for-method="Guest_SearchCheckout">Guest_SearchCheckout</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ACME" title="Testcases.HomepageScripts" hash-for-method="Registered_SearchCheckout">Registered_SearchCheckout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-ACME -->
@@ -133,28 +128,19 @@
                   <a name="Guest_SearchCheckout">
                   </a> <!-- Guest_SearchCheckout -->
                   <span class="method-name">Guest_SearchCheckout</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at listeners.TestListener.onTestSkipped(TestListener.java:53)
+                  <div class="stack-trace">org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
+	at org.apache.poi.poifs.storage.HeaderBlock.&lt;init&gt;(HeaderBlock.java:133)
+	at org.apache.poi.poifs.storage.HeaderBlock.&lt;init&gt;(HeaderBlock.java:106)
+	at org.apache.poi.poifs.filesystem.POIFSFileSystem.&lt;init&gt;(POIFSFileSystem.java:137)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.&lt;init&gt;(HSSFWorkbook.java:382)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.&lt;init&gt;(HSSFWorkbook.java:364)
+	at utilities.BaseTest.ReadData(BaseTest.java:130)
+	at Testcases.HomepageScripts.Guest_SearchCheckout(HomepageScripts.java:19)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Registered_SearchCheckout">
-                  </a> <!-- Registered_SearchCheckout -->
-                  <span class="method-name">Registered_SearchCheckout</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at listeners.TestListener.onTestSkipped(TestListener.java:53)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 14 stack frames
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -216,20 +202,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Guest_SearchCheckout')
 data.setCell(0, 2, 'Testcases.HomepageScripts')
-data.setCell(0, 3, 21829);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Registered_SearchCheckout')
-data.setCell(1, 2, 'Testcases.HomepageScripts')
-data.setCell(1, 3, 17);
+data.setCell(0, 3, 1219);
 window.suiteTableData['ACME']= { tableData: data, tableDiv: 'times-div-ACME'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-ACME">
               </div> <!-- times-div-ACME -->
             </div> <!-- times-div -->
@@ -257,11 +239,19 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Testcases.HomepageScripts</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">beforeMethod(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Guest_SearchCheckout</span>
+                <span class="method-start">34169 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=Guest_SearchCheckout status=FAILURE method=HomepageScripts.Guest_SearchCheckout()[p...)</span>
+                <span class="method-start">35480 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

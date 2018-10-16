@@ -9,79 +9,22 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">ACME</th></tr>
-<tr><td><a href="#t0">HomepageScripts</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">21,864</td><td></td><td></td></tr>
+<tr><td><a href="#t0">HomepageScripts</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">46,254</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ACME</th></tr></tbody><tbody id="t0"><tr><th colspan="4">HomepageScripts &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Testcases.HomepageScripts</td><td><a href="#m0">beforeMethod</a></td><td rowspan="1">1539671788410</td><td rowspan="1">21801</td></tr><tr><th colspan="4">HomepageScripts &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Testcases.HomepageScripts</td><td><a href="#m1">Guest_SearchCheckout</a></td><td rowspan="1">1539671788398</td><td rowspan="1">21829</td></tr><tr class="failedeven"><td><a href="#m2">Registered_SearchCheckout</a></td><td rowspan="1">1539671810228</td><td rowspan="1">17</td></tr><tr><th colspan="4">HomepageScripts &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">Testcases.HomepageScripts</td><td><a href="#m3">beforeMethod</a></td><td rowspan="1">1539671810230</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ACME</th></tr></tbody><tbody id="t0"><tr><th colspan="4">HomepageScripts &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Testcases.HomepageScripts</td><td><a href="#m0">Guest_SearchCheckout</a></td><td rowspan="1">1539676900137</td><td rowspan="1">1219</td></tr></tbody>
 </table>
-<h2>HomepageScripts</h2><h3 id="m0">Testcases.HomepageScripts#beforeMethod</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Error forwarding the new session Error forwarding the request Failed to connect to /192.168.245.132:36272
-Command duration or timeout: 21.17 seconds
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;WIN-81NG0PGA72A&apos;, ip: &apos;172.17.1.50&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-	at utilities.BaseTest.beforeMethod(BaseTest.java:60)
+<h2>HomepageScripts</h2><h3 id="m0">Testcases.HomepageScripts#Guest_SearchCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
+	at org.apache.poi.poifs.storage.HeaderBlock.&lt;init&gt;(HeaderBlock.java:133)
+	at org.apache.poi.poifs.storage.HeaderBlock.&lt;init&gt;(HeaderBlock.java:106)
+	at org.apache.poi.poifs.filesystem.POIFSFileSystem.&lt;init&gt;(POIFSFileSystem.java:137)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.&lt;init&gt;(HSSFWorkbook.java:382)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.&lt;init&gt;(HSSFWorkbook.java:364)
+	at utilities.BaseTest.ReadData(BaseTest.java:130)
+	at Testcases.HomepageScripts.Guest_SearchCheckout(HomepageScripts.java:19)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.openqa.selenium.WebDriverException: Error forwarding the new session Error forwarding the request Failed to connect to /192.168.245.132:36272
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;WIN-81NG0PGA72A&apos;, ip: &apos;172.17.1.50&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.grid.web.servlet.handler.RequestHandler.process(RequestHandler.java:118)
-	at org.openqa.grid.web.servlet.DriverServlet.process(DriverServlet.java:85)
-	at org.openqa.grid.web.servlet.DriverServlet.doPost(DriverServlet.java:69)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
-	at org.seleniumhq.jetty9.servlet.ServletHolder.handle(ServletHolder.java:860)
-	at org.seleniumhq.jetty9.servlet.ServletHandler.doHandle(ServletHandler.java:535)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
-	at org.seleniumhq.jetty9.security.SecurityHandler.handle(SecurityHandler.java:548)
-	at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
-	at org.seleniumhq.jetty9.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
-	at org.seleniumhq.jetty9.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
-	at org.seleniumhq.jetty9.servlet.ServletHandler.doScope(ServletHandler.java:473)
-	at org.seleniumhq.jetty9.server.session.SessionHandler.doScope(SessionHandler.java:1564)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
-	at org.seleniumhq.jetty9.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
-	at org.seleniumhq.jetty9.server.Server.handle(Server.java:530)
-	at org.seleniumhq.jetty9.server.HttpChannel.handle(HttpChannel.java:347)
-	at org.seleniumhq.jetty9.server.HttpConnection.onFillable(HttpConnection.java:256)
-	at org.seleniumhq.jetty9.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
-	at org.seleniumhq.jetty9.io.FillInterest.fillable(FillInterest.java:102)
-	at org.seleniumhq.jetty9.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:247)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:140)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
-	at org.seleniumhq.jetty9.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:382)
-	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:708)
-	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:626)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Testcases.HomepageScripts#Guest_SearchCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at listeners.TestListener.onTestSkipped(TestListener.java:53)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Testcases.HomepageScripts#Registered_SearchCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at listeners.TestListener.onTestSkipped(TestListener.java:53)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Testcases.HomepageScripts#beforeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

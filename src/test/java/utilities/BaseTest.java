@@ -8,9 +8,15 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,7 +29,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-import utilities.ExtentManager;
 import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
 import Reusables.HomepageActions;
@@ -37,7 +42,7 @@ import com.aventstack.extentreports.Status;
 
 public class BaseTest extends ExtentManager {
 	public WebDriver driver;
-	protected ExtentTest extentTest;
+	protected 	ExtentTest extentTest;
 	public FileInputStream fis = null;
 
 	protected HomepageActions homepage;
@@ -88,17 +93,6 @@ public class BaseTest extends ExtentManager {
 		driver.quit();
 	}
 
-	public static String captureScreen(WebDriver driver, String screenName)
-			throws IOException {
-		TakesScreenshot screen = (TakesScreenshot) driver;
-		File src = screen.getScreenshotAs(OutputType.FILE);
-		String dest = System.getProperty("user.dir") + "//Test-ScreenShots//"
-				+ screenName + ".png";
-		File target = new File(dest);
-		FileUtils.copyFile(src, target);
-		return dest;
-	}
-
 	public void logs(String message) {
 		extentTest.log(Status.PASS, message);
 	}
@@ -126,5 +120,20 @@ public class BaseTest extends ExtentManager {
 	protected void TestDescription(String Title, String Description) {
 		extentTest = extent.createTest(Title, Description);
 	}
+	
+	
+	/*public int getCellNumber(String sheetName, String columnName) {
+        Sheet sheet1 = xlsWorkBook.getSheet(sheetName);
+        Row row = sheet1.getRow(0);
+        for (int i = 0; i <= row.getLastCellNum(); i++) {
+            Cell cell = row.getCell(i);
+            cell.setCellType(1);
+            String cellName = cell.getStringCellValue();
+            if (cellName.equalsIgnoreCase(columnName))
+                return i;
+        }
+        return 0;
+    }*/
+
 
 }
