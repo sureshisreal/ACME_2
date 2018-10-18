@@ -1,11 +1,23 @@
 package Reusables;
 
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import pageObjectsRepo.HomepageRepo;
 
 public class HomepageActions extends HomepageRepo {
 
-	public void searchTerm() {
-		searchTextbox.sendKeys("hammer");
+	public HomepageActions(WebDriver driver) {
+		super(driver);
+		System.out.println("driver : " + driver);
+	}
+
+	public void searchTerm(String SearchTerm) {
+		searchTextbox.sendKeys(SearchTerm);
 		searchSubmit.click();
 	}
 
@@ -13,15 +25,16 @@ public class HomepageActions extends HomepageRepo {
 		SignInRegister_Link.click();
 	}
 
-	public Boolean VerifyPageTitle() {
-		String HomepageTitle = titleText.getText();
-		System.out.println("HomepageTitle" + HomepageTitle);
-		if (HomepageTitle
-				.contains("Acme Tools - Best Online Tool Store - FREE Shipping Orders $49+")) {
-			System.out.println("Page Title Verified");
-			return true;
-		}
-		return false;
+	public void VerifyPageTitle() throws IOException {
+
+		String title = driver.getTitle();
+		System.out.println("PageTitle : " + title);
+		Assert.assertEquals(driver.getTitle(),
+				"Acme Tools - Best Online Tool Store - FREE Shipping Orders $49+");
+		logs("Page title : " + title);
+		logs("Page : " + title + " title : " + title);
+		AddScreenshot();
+		logs("Screenshot Captured");
 	}
 
 }

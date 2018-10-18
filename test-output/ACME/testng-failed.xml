@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [ACME]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ACME]" parallel="methods">
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
-  <test thread-count="2" name="HomepageScripts(failed)" parallel="tests">
+  <test thread-count="5" name="HomepageScripts(failed)" parallel="methods">
     <classes>
       <class name="Testcases.HomepageScripts">
         <methods>
           <include name="afterMethod"/>
+          <include name="Homepage_MultopleSearch1"/>
+          <include name="Homepage_MultopleSearch2"/>
+          <include name="Homepage_MultopleSearch"/>
           <include name="beforeMethod"/>
-          <include name="Guest_SearchCheckout"/>
         </methods>
       </class> <!-- Testcases.HomepageScripts -->
     </classes>

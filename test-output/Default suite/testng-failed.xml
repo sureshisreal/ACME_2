@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="Testcases.HomepageScripts">
         <methods>
-          <include name="Guest_SearchCheckout"/>
+          <include name="afterMethod"/>
+          <include name="Homepage_MultopleSearch"/>
+          <include name="beforeMethod"/>
         </methods>
       </class> <!-- Testcases.HomepageScripts -->
+      <class name="Testcases.CheckoutScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="Homepage_MultopleSearch"/>
+        </methods>
+      </class> <!-- Testcases.CheckoutScripts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

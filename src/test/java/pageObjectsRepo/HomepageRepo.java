@@ -1,9 +1,18 @@
 package pageObjectsRepo;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomepageRepo {
+import com.aventstack.extentreports.ExtentTest;
+
+import utilities.BaseTest;
+
+public class HomepageRepo extends BaseTest{
+	
+	public HomepageRepo(WebDriver driver){
+        this.driver = driver;
+    }
 	
 	@FindBy(id = "searchTerm")
 	public  WebElement searchTextbox;
@@ -16,5 +25,6 @@ public class HomepageRepo {
 	
 	@FindBy(xpath = "//title[contains(.,'Acme')]")
 	public  WebElement titleText;
+	
 	
 }

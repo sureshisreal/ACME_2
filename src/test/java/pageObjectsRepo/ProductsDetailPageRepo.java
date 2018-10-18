@@ -11,6 +11,8 @@ public class ProductsDetailPageRepo {
 	@FindBy( id = "productPageAdd2Cart")
 	public  WebElement AddToProductButton;
 	
+	@FindBy( id = "productPagePickUpToday")
+	public  WebElement productPagePickUpTodayButton;
 	
 	@FindBy( id = "minishopcart_total")
 	public  WebElement minishopcart_total;
@@ -21,6 +23,6 @@ public class ProductsDetailPageRepo {
 	@FindBy( id = "GotoCartButton2")
 	public  WebElement GotoCartButton;
 	
-	
+
 
 }

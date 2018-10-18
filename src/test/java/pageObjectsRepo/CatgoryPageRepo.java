@@ -8,4 +8,8 @@ public class CatgoryPageRepo {
 	@FindBy(xpath = "(.//div[@class='product_image'])[1]")
 	public WebElement FirstProduct;
 	
+	@FindBy(xpath = ".//*[@id='widget_breadcrumb']//li[@class='current']")
+	public WebElement SearchHeader;
+	
+	
 }

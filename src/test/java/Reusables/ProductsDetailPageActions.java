@@ -28,7 +28,11 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 		cart_text.click();
 		Thread.sleep(1000);
 		GotoCartButton.click();
-		
 	}
+
+	public void AddBopisProduct() {
+		productPagePickUpTodayButton.click();
+	}
+	
 
 }
