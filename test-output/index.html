@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,36 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.CheckoutScripts" hash-for-method="Homepage_MultopleSearch">Homepage_MultopleSearch</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.HomepageScripts" hash-for-method="Homepage_MultipleSearchItems">Homepage_MultipleSearchItems</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.HomepageScripts" hash-for-method="Homepage_MultopleSearch">Homepage_MultopleSearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.HomepageScripts" hash-for-method="Homepage_MultopleSearch1">Homepage_MultopleSearch1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.HomepageScripts" hash-for-method="Homepage_MultopleSearch2">Homepage_MultopleSearch2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -132,50 +117,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Testcases.CheckoutScripts</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Homepage_MultopleSearch">
-                  </a> <!-- Homepage_MultopleSearch -->
-                  <span class="method-name">Homepage_MultopleSearch</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Testcases.HomepageScripts</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Homepage_MultopleSearch">
-                  </a> <!-- Homepage_MultopleSearch -->
-                  <span class="method-name">Homepage_MultopleSearch</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Homepage_MultopleSearch1">
-                  </a> <!-- Homepage_MultopleSearch1 -->
-                  <span class="method-name">Homepage_MultopleSearch1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Homepage_MultopleSearch2">
-                  </a> <!-- Homepage_MultopleSearch2 -->
-                  <span class="method-name">Homepage_MultopleSearch2</span>
+                  <a name="Homepage_MultipleSearchItems">
+                  </a> <!-- Homepage_MultipleSearchItems -->
+                  <span class="method-name">Homepage_MultipleSearchItems</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;a href=&quot;JavaScript:document.CatalogSearchForm.submit();&quot; class=&quot;search-button&quot; id=&quot;search_submit&quot; name=&quot;search_submit_button&quot;&gt;...&lt;/a&gt; is not clickable at point (1214, 160). Other element would receive the click: &lt;div class=&quot;content&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 118 milliseconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;WIN-81NG0PGA72A&apos;, ip: &apos;172.17.1.32&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65311}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\P01242\AppData\Local\Temp\scoped_dir6308_24612}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=770e965e456a5e6c3c10d452269ae306, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 770e965e456a5e6c3c10d452269ae306
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at Reusables.HomepageActions.searchTerm(HomepageActions.java:23)
+	at Testcases.HomepageScripts.Homepage_MultipleSearchItems(HomepageScripts.java:22)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -192,7 +171,6 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; parallel=&quot;classes&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Testcases.CheckoutScripts&quot;/&gt;
       &lt;class name=&quot;Testcases.HomepageScripts&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -207,7 +185,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,28 +211,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Homepage_MultopleSearch1')
+data.setCell(0, 1, 'Homepage_MultipleSearchItems')
 data.setCell(0, 2, 'Testcases.HomepageScripts')
-data.setCell(0, 3, 932);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Homepage_MultopleSearch2')
-data.setCell(1, 2, 'Testcases.HomepageScripts')
-data.setCell(1, 3, 784);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Homepage_MultopleSearch')
-data.setCell(2, 2, 'Testcases.HomepageScripts')
-data.setCell(2, 3, 556);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Homepage_MultopleSearch')
-data.setCell(3, 2, 'Testcases.CheckoutScripts')
-data.setCell(3, 3, 489);
+data.setCell(0, 3, 198583);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -285,61 +251,15 @@ return data;
                 <span class="method-name">beforeMethod(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Testcases.CheckoutScripts</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Testcases.HomepageScripts</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">Homepage_MultopleSearch</span>
-                <span class="method-start">164780 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Homepage_MultipleSearchItems</span>
+                <span class="method-start">80656 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Homepage_MultopleSearch status=SUCCESS method=HomepageScripts.Homepage_MultopleSear...)</span>
-                <span class="method-start">165338 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">165523 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Testcases.CheckoutScripts</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">Homepage_MultopleSearch</span>
-                <span class="method-start">166225 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Homepage_MultopleSearch status=SUCCESS method=CheckoutScripts.Homepage_MultopleSear...)</span>
-                <span class="method-start">166716 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Testcases.HomepageScripts</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">Homepage_MultopleSearch1</span>
-                <span class="method-start">352526 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Homepage_MultopleSearch1 status=SUCCESS method=HomepageScripts.Homepage_MultopleSea...)</span>
-                <span class="method-start">353459 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">353587 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Homepage_MultopleSearch2</span>
-                <span class="method-start">549540 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Homepage_MultopleSearch2 status=SUCCESS method=HomepageScripts.Homepage_MultopleSea...)</span>
-                <span class="method-start">550326 ms</span>
+                <span class="method-name">afterMethod([TestResult name=Homepage_MultipleSearchItems status=FAILURE method=HomepageScripts.Homepage_Multipl...)</span>
+                <span class="method-start">279405 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

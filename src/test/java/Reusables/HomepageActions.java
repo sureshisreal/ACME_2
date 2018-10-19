@@ -3,9 +3,11 @@ package Reusables;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import com.aventstack.extentreports.ExtentTest;
+import com.google.common.base.Predicate;
 
 import pageObjectsRepo.HomepageRepo;
 
@@ -21,20 +23,22 @@ public class HomepageActions extends HomepageRepo {
 		searchSubmit.click();
 	}
 
-	public void SignInLink() {
+	public void SignInLink()  {
 		SignInRegister_Link.click();
+		logs("SignInRegister_Link clicked");
 	}
 
-	public void VerifyPageTitle() throws IOException {
 
+	public void VerifyPageTitle() throws IOException {
 		String title = driver.getTitle();
-		System.out.println("PageTitle : " + title);
 		Assert.assertEquals(driver.getTitle(),
 				"Acme Tools - Best Online Tool Store - FREE Shipping Orders $49+");
-		logs("Page title : " + title);
-		logs("Page : " + title + " title : " + title);
+		logs("Page title verified : " + title);
 		AddScreenshot();
-		logs("Screenshot Captured");
+	}
+
+	public void returnhomepage() {
+		AcmeLogo.click();		
 	}
 
 }

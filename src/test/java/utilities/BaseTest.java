@@ -2,7 +2,6 @@ package utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,13 +9,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -27,9 +23,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -39,6 +38,7 @@ import org.testng.annotations.Parameters;
 import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
 import Reusables.HomepageActions;
+import Reusables.MyAccountPageActions;
 import Reusables.ProductsDetailPageActions;
 import Reusables.RegisterationPageActions;
 import Reusables.ShippingPageActions;
@@ -46,10 +46,12 @@ import Reusables.ShoppingCartPageActions;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.google.common.base.Predicate;
 
 public class BaseTest extends ExtentManager {
 	public WebDriver driver = null;
 	public static ExtentTest extentTest;
+	public static WebDriverWait wait;
 	public FileInputStream fis = null;
 	protected JavascriptExecutor js;
 	
@@ -62,6 +64,8 @@ public class BaseTest extends ExtentManager {
 	protected ShippingPageActions shippingPage;
 	protected BillingPageActions billingPage;
 	protected RegisterationPageActions registerationPage;
+	protected MyAccountPageActions myaccountPage;
+
 
 
 	@BeforeMethod
@@ -73,13 +77,9 @@ public class BaseTest extends ExtentManager {
 		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),
 				capabilities);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//js.executeScript("document.cookie='currentZipcode=58102';");
-		System.out.println("Before Method");
 		driver.get("https://qa.acmetools.com");
-		System.out.println("URL entered");
 		js = (JavascriptExecutor) driver;
-		WebDriverWait wait = new WebDriverWait(driver, 10);
 
 		
 		homepage = PageFactory.initElements(driver, HomepageActions.class);
@@ -95,6 +95,8 @@ public class BaseTest extends ExtentManager {
 				.initElements(driver, BillingPageActions.class);
 		registerationPage = PageFactory.initElements(driver,
 				RegisterationPageActions.class);
+		myaccountPage = PageFactory.initElements(driver,
+				MyAccountPageActions.class);
 	}
 
 	@AfterMethod
@@ -175,7 +177,6 @@ public class BaseTest extends ExtentManager {
 	        }
 	        return 0;
 	    }
-
 
 
 

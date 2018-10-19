@@ -4,23 +4,14 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)" parallel="methods">
+  <test thread-count="5" name="Test(failed)" parallel="classes">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Testcases.CheckoutScripts">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Homepage_MultopleSearch"/>
-        </methods>
-      </class> <!-- Testcases.CheckoutScripts -->
       <class name="Testcases.HomepageScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="Homepage_MultopleSearch1"/>
-          <include name="Homepage_MultopleSearch2"/>
-          <include name="Homepage_MultopleSearch"/>
           <include name="beforeMethod"/>
+          <include name="Homepage_MultipleSearchItems"/>
         </methods>
       </class> <!-- Testcases.HomepageScripts -->
     </classes>

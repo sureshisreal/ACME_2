@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.aventstack.extentreports.ExtentTest;
-
 import utilities.BaseTest;
 
 public class HomepageRepo extends BaseTest{
@@ -26,5 +24,6 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(xpath = "//title[contains(.,'Acme')]")
 	public  WebElement titleText;
 	
-	
+	@FindBy(id = "AcmeToolsLogo_Content1")
+	public  WebElement AcmeLogo;
 }

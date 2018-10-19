@@ -1,11 +1,8 @@
 package Testcases;
 
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
 import java.util.List;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import utilities.BaseTest;
@@ -13,12 +10,11 @@ import utilities.BaseTest;
 public class HomepageScripts extends BaseTest{
 	
 	@Test
-	public void Homepage_MultopleSearch() throws IOException, InterruptedException {
-		TestDescription("Guest_SearchCheckout",
+	public void Homepage_MultipleSearchItems() throws IOException, InterruptedException {
+		TestDescription("Homepage_MultipleSearchItems",
 				"To verify guest user able to place order using search items");
-		logs("Url entered");
 		homepage.VerifyPageTitle();
-		/*List<String> SearchTermData = getColumnData("suresh", "SearchSKU");
+		List<String> SearchTermData = getColumnData("Search", "SearchSKU");
 		int searchList = SearchTermData.size();
 		for (int i = 0; i < searchList; i++) {
 			String SearchTermList = SearchTermData.get(i);
@@ -32,11 +28,11 @@ public class HomepageScripts extends BaseTest{
 			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
 			logs("Product added to the cart");
-			productsDetailPage.minishopcart_total();
-			logs("MiniCart Clicked");
-		}*/
-
+			homepage.returnhomepage();
+		}
+		productsDetailPage.minishopcart_total();
+		logs("MiniCart Clicked");
 	}
 	
-
+	
 }
