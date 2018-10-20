@@ -1,6 +1,9 @@
 package Reusables;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,5 +43,36 @@ public class HomepageActions extends HomepageRepo {
 	public void returnhomepage() {
 		AcmeLogo.click();		
 	}
+
+	public void HeaderValidations() {
+		WaitForElementLoad(freeShip_Banner);
+		ElementPresent(freeShip_Banner);
+		freeShip_Banner.click();
+		driver.switchTo().activeElement();	
+		assertTrue(freeShip_Modal_Overlay.getText().contains("FREE Ground "));
+		freeShip_Modal_Overlay_Close.click();
+		assertTrue(welcome_Banner.getText().contains("Welcome to AcmeTools"));
+
+	}
+
+	public void MenuValidations() throws IOException {
+		OrderStatus_Link.click();
+		ElementPresent(OrderStatus_Header);
+		logs("Order Status Link Verified");
+		customerServiceQuick_Link.click();
+		ElementPresent(CustomerService_Header);
+		logs("Customer Service Link Verified");
+		storeLocatorQuick_Link.click();
+		ElementPresent(StoreLocation_Header);
+		logs("StoreLocation Link Verified");
+		requestQuoteQuick_Link.click();
+		ElementPresent(RequestQuote_Header);
+		logs("Request Quote Link Verified");
+		MiniShoppingCart.click();
+		assertTrue(MiniShoppingCart_EmptyText.getText().contains("Your cart is empty"));
+		MiniShoppingCart_close.click();
+	}
+
+	
 
 }

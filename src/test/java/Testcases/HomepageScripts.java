@@ -9,7 +9,7 @@ import utilities.BaseTest;
 
 public class HomepageScripts extends BaseTest{
 	
-	@Test
+	/*@Test
 	public void Homepage_MultipleSearchItems() throws IOException, InterruptedException {
 		TestDescription("Homepage_MultipleSearchItems",
 				"To verify guest user able to place order using search items");
@@ -32,7 +32,17 @@ public class HomepageScripts extends BaseTest{
 		}
 		productsDetailPage.minishopcart_total();
 		logs("MiniCart Clicked");
+	}*/
+	
+	@Test
+	public void Homepage_Header_FieldValidations() throws IOException, InterruptedException {
+		TestDescription("Homepage_Header_FieldValidations",
+				"To verify guest user able to view all the fields in the homepage header");
+		homepage.VerifyPageTitle();
+		homepage.HeaderValidations();
+		homepage.MenuValidations();
 	}
+	
 	
 	
 }
