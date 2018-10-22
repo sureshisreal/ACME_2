@@ -7,14 +7,19 @@ import pageObjectsRepo.CatgoryPageRepo;
 public class CategorypageActions extends CatgoryPageRepo{
 
 	public void selectFirstProduct() throws InterruptedException {
-		Thread.sleep(3000);
+		String ProductName = FirstProductName.getText();
 		FirstProduct.click();
+		logs("First product Clicked");
+		System.out.println("ProductName" +ProductName);
+		System.out.println("VerifyProductTitle.getText()" +VerifyProductTitle.getText());
+		assertTrue(ProductName.contains(VerifyProductTitle.getText()));
+		//assertTrue(VerifyProductTitle.getText().contains(ProductName));
+		logs("Product Name Verified");
 	}
 
 	public void verifySearchHeader(String SearchTerm) throws InterruptedException {
-		Thread.sleep(1000);
-		String SearchHeaderText = SearchHeader.getText();
-		assertTrue(SearchHeaderText.contains(SearchTerm));
+		//WaitForElementLoad(SearchHeader);
+		assertTrue(SearchHeader.getText().contains(SearchTerm));
 		System.out.println("verifySearchHeader");
 	}
 

@@ -15,18 +15,9 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 		AddToProductButton.click();
 	}
 
-	public  void minishopcart_total() throws InterruptedException {
+	public  void minishopcart_total() {
 		System.out.println("In minishopcart_total method ");
-		Thread.sleep(3000);
-		//int cartsize = Integer.parseInt(ProductsDetailPageRepo.minishopcart_total.getText());
-//		String cartsize = ProductsDetailPageRepo.minishopcart_total.getText();
-//		int cartsizecount = Integer.parseInt(cartsize);
-//		System.out.println("Current cartsize is :" +cartsizecount);
-//		if (cartsizecount == 5) {
-//			System.out.println("valid");
-//		}
 		cart_text.click();
-		Thread.sleep(1000);
 		GotoCartButton.click();
 	}
 

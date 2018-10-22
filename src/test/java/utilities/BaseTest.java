@@ -97,6 +97,8 @@ public class BaseTest extends ExtentManager {
 				.initElements(driver, BillingPageActions.class);
 		registerationPage = PageFactory.initElements(driver,
 				RegisterationPageActions.class);
+
+
 		myaccountPage = PageFactory.initElements(driver,
 				MyAccountPageActions.class);
 	}
@@ -180,11 +182,11 @@ public class BaseTest extends ExtentManager {
 	        return 0;
 	    }
 
-	 public void WaitForElementLoad(WebElement element)
+	/* public void WaitForElementLoad(WebElement element)
 	 {
 	 	WebDriverWait wait=new WebDriverWait(driver, 60, 1000);
 	 	wait.until(ExpectedConditions.visibilityOf(element));
-	 }
+	 }*/
 	 
 	 public void ElementPresent(WebElement element){
 		 Assert.assertTrue(element != null);

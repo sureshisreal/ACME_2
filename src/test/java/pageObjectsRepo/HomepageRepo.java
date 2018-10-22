@@ -26,6 +26,7 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(xpath = "//title[contains(.,'Acme')]")
 	public  WebElement titleText;
 	
+
 	@FindBy(id = "AcmeToolsLogo_Content1")
 	public  WebElement AcmeLogo;
 	

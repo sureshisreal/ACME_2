@@ -47,4 +47,5 @@ public class ShippingPageRepo extends BaseTest{
 	public  WebElement UseSuggestedAddress_RadioButton;
 	
 	
+	
 }

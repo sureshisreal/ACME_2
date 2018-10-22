@@ -1,15 +1,30 @@
 package Reusables;
 
-import java.io.IOException;
-import java.util.List;
 
-import pageObjectsRepo.RegisterationpageRepo;
+import pageObjectsRepo.MyAccountRepo;
 
-public class MyAccountPageActions extends RegisterationpageRepo {
-
-	public void HomepageLogin() throws IOException {
-
+public class MyAccountPageActions extends MyAccountRepo {
+	
+	public boolean verifyMyAccountSummaryTitle() {
+		
+		String title = myAccountSummary_title.getText().toString();
+		
+		if(title.contains("My Account Summary")) {
+			System.out.println(title);
+			return true;
+		}else {
+			return false;
+		}
 	}
+	
+	public boolean verifyDescText() {
+		return false;
+		
+	
+		
+	}
+	
+
 
 	
 
