@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
-<<<<<<< HEAD
-  <test thread-count="2" name="ACMEQAAutomation(failed)" parallel="tests">
-=======
   <test thread-count="5" name="Test(failed)" parallel="classes">
-    <parameter name="browser" value="chrome"/>
->>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
     <classes>
-      <class name="Testcases.MyAccountScripts">
+      <class name="Testcases.RegisterationScripts">
+        <methods>
+          <include name="ForgotPassword_Error_Messages_Validations"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="Valid_SignIn"/>
+          <include name="Invalid_SignIn_Error_Messages_Validations"/>
+        </methods>
+      </class> <!-- Testcases.RegisterationScripts -->
+      <class name="Testcases.HomepageScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="myAccountSummary"/>
           <include name="beforeMethod"/>
-<<<<<<< HEAD
-=======
           <include name="Homepage_Header_FieldValidations"/>
->>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
         </methods>
-      </class> <!-- Testcases.MyAccountScripts -->
+      </class> <!-- Testcases.HomepageScripts -->
+      <class name="Testcases.PDPScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="Homepage_MultipleSearchItems"/>
+        </methods>
+      </class> <!-- Testcases.PDPScripts -->
+      <class name="Testcases.CheckoutScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="Registered_SearchCheckout"/>
+          <include name="Guest_SearchCheckout"/>
+        </methods>
+      </class> <!-- Testcases.CheckoutScripts -->
     </classes>
-<<<<<<< HEAD
-  </test> <!-- ACMEQAAutomation(failed) -->
-</suite> <!-- Failed suite [ACME] -->
-=======
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
->>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
