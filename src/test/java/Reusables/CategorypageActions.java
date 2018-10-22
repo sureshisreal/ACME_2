@@ -7,12 +7,12 @@ import pageObjectsRepo.CatgoryPageRepo;
 public class CategorypageActions extends CatgoryPageRepo{
 
 	public void selectFirstProduct() throws InterruptedException {
-		Thread.sleep(3000);
+		WaitForElementLoad(FirstProduct);
 		FirstProduct.click();
 	}
 
 	public void verifySearchHeader(String SearchTerm) throws InterruptedException {
-		Thread.sleep(1000);
+		WaitForElementLoad(SearchHeader);
 		String SearchHeaderText = SearchHeader.getText();
 		assertTrue(SearchHeaderText.contains(SearchTerm));
 		System.out.println("verifySearchHeader");

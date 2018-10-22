@@ -52,7 +52,6 @@ public class HomepageActions extends HomepageRepo {
 		assertTrue(freeShip_Modal_Overlay.getText().contains("FREE Ground "));
 		freeShip_Modal_Overlay_Close.click();
 		assertTrue(welcome_Banner.getText().contains("Welcome to AcmeTools"));
-
 	}
 
 	public void MenuValidations() throws IOException {
@@ -69,6 +68,8 @@ public class HomepageActions extends HomepageRepo {
 		ElementPresent(RequestQuote_Header);
 		logs("Request Quote Link Verified");
 		MiniShoppingCart.click();
+		WaitForElementLoad(MiniShoppingCart_EmptyText);
+		System.out.println("MiniShoppingCart_EmptyText.getText() " +MiniShoppingCart_EmptyText.getText());
 		assertTrue(MiniShoppingCart_EmptyText.getText().contains("Your cart is empty"));
 		MiniShoppingCart_close.click();
 	}

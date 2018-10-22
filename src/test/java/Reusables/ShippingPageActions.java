@@ -26,7 +26,6 @@ public class ShippingPageActions extends ShippingPageRepo {
 	public void UseEnteredAddress(){
 		System.out.println("UseEnteredAddress_RadioButton.isDisplayed()" +UseEnteredAddress_RadioButton.isDisplayed());
 		if(UseEnteredAddress_RadioButton.isDisplayed()) {
-		//if(UseEnteredAddress_RadioButton != null)
 			UseEnteredAddress_RadioButton.click();	}
 	}
 	

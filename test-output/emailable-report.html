@@ -9,100 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">7</td><td class="num">468,335</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">85,987</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">Testcases.CheckoutScripts</td><td><a href="#m0">Guest_SearchCheckout</a></td><td rowspan="1">1540194337303</td><td rowspan="1">2455</td></tr><tr class="failedeven"><td><a href="#m1">Registered_SearchCheckout</a></td><td rowspan="1">1540194400907</td><td rowspan="1">32389</td></tr><tr class="failedodd"><td rowspan="1">Testcases.HomepageScripts</td><td><a href="#m2">Homepage_Header_FieldValidations</a></td><td rowspan="1">1540194333474</td><td rowspan="1">65200</td></tr><tr class="failedeven"><td rowspan="1">Testcases.PDPScripts</td><td><a href="#m3">Homepage_MultipleSearchItems</a></td><td rowspan="1">1540194399855</td><td rowspan="1">206493</td></tr><tr class="failedodd"><td rowspan="3">Testcases.RegisterationScripts</td><td><a href="#m4">ForgotPassword_Error_Messages_Validations</a></td><td rowspan="1">1540194485238</td><td rowspan="1">22610</td></tr><tr class="failedodd"><td><a href="#m5">Invalid_SignIn_Error_Messages_Validations</a></td><td rowspan="1">1540194554972</td><td rowspan="1">45185</td></tr><tr class="failedodd"><td><a href="#m6">Valid_SignIn</a></td><td rowspan="1">1540194651524</td><td rowspan="1">35439</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Testcases.RegisterationScripts</td><td><a href="#m7">CreateAccount_Error_Messages_Validations</a></td><td rowspan="1">1540194401933</td><td rowspan="1">34150</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Testcases.HomepageScripts</td><td><a href="#m0">Homepage_Header_FieldValidations</a></td><td rowspan="1">1540197708420</td><td rowspan="1">37266</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">Testcases.CheckoutScripts#Guest_SearchCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at utilities.BaseTest.getColumnData(BaseTest.java:157)
-	at Testcases.CheckoutScripts.Guest_SearchCheckout(CheckoutScripts.java:21)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Testcases.CheckoutScripts#Registered_SearchCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at utilities.BaseTest.captureScreenShot(BaseTest.java:131)
-	at utilities.BaseTest.AddScreenshot(BaseTest.java:141)
-	at Reusables.RegisterationPageActions.HomepageLogin(RegisterationPageActions.java:23)
-	at Testcases.CheckoutScripts.Registered_SearchCheckout(CheckoutScripts.java:54)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Testcases.HomepageScripts#Homepage_Header_FieldValidations</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;MiniShopCartProductsList&apos;]//div[@class=&apos;content&apos;]&quot;}
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 47 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;WIN-81NG0PGA72A&apos;, ip: &apos;172.17.1.45&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55118}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\P01242\AppData\Local\Temp\scoped_dir6424_22038}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=91607eb295108b9cf0c5755927ef29a7, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 91607eb295108b9cf0c5755927ef29a7
-*** Element info: {Using=xpath, value=.//*[@id=&apos;MiniShopCartProductsList&apos;]//div[@class=&apos;content&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.getText(Unknown Source)
-	at Reusables.HomepageActions.MenuValidations(HomepageActions.java:72)
-	at Testcases.HomepageScripts.Homepage_Header_FieldValidations(HomepageScripts.java:43)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Testcases.PDPScripts#Homepage_MultipleSearchItems</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotVisibleException: element not interactable
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 28 milliseconds
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;WIN-81NG0PGA72A&apos;, ip: &apos;172.17.1.45&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:55115}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\P01242\AppData\Local\Temp\scoped_dir564_17823}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=0957d4591c8c8689700cf81d87bb751d, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 0957d4591c8c8689700cf81d87bb751d
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at Reusables.ProductsDetailPageActions.minishopcart_total(ProductsDetailPageActions.java:30)
-	at Testcases.PDPScripts.Homepage_MultipleSearchItems(PDPScripts.java:33)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Testcases.RegisterationScripts#ForgotPassword_Error_Messages_Validations</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 
-	at Reusables.RegisterationPageActions.ForgotpasswordValidations(RegisterationPageActions.java:64)
-	at Testcases.RegisterationScripts.ForgotPassword_Error_Messages_Validations(RegisterationScripts.java:35)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">Testcases.RegisterationScripts#Invalid_SignIn_Error_Messages_Validations</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at utilities.BaseTest.captureScreenShot(BaseTest.java:131)
-	at utilities.BaseTest.AddScreenshot(BaseTest.java:141)
-	at Reusables.RegisterationPageActions.SignInValidations(RegisterationPageActions.java:47)
-	at Testcases.RegisterationScripts.Invalid_SignIn_Error_Messages_Validations(RegisterationScripts.java:26)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">Testcases.RegisterationScripts#Valid_SignIn</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at utilities.BaseTest.captureScreenShot(BaseTest.java:131)
-	at utilities.BaseTest.AddScreenshot(BaseTest.java:141)
-	at Reusables.RegisterationPageActions.HomepageLogin(RegisterationPageActions.java:23)
-	at Testcases.RegisterationScripts.Valid_SignIn(RegisterationScripts.java:17)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">Testcases.RegisterationScripts#CreateAccount_Error_Messages_Validations</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">Testcases.HomepageScripts#Homepage_Header_FieldValidations</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
