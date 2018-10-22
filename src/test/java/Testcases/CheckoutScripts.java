@@ -15,11 +15,9 @@ public class CheckoutScripts extends BaseTest {
 	@Test	
 	public void Guest_SearchCheckout() throws IOException, InterruptedException {		
 		TestDescription("Guest_SearchCheckout" , "To verify guest user able to place order using search items");
-			logs("Url entered");
-			AddScreenshot(); 
-			logs("Page title verified");
-			List<String> SearchTermData = getColumnData("suresh","SearchSKU");
+			List<String> SearchTermData = getColumnData("Search","SearchSKU");
 			String SearchTerm = SearchTermData.get(0);
+			homepage.VerifyPageTitle();
 			homepage.searchTerm(SearchTerm);
 			logs("Search term entered");
 			AddScreenshot();		
@@ -45,7 +43,7 @@ public class CheckoutScripts extends BaseTest {
 			logs("Ordered Placed");
 	}
 	
-	@Test	
+	/*@Test	
 	public void Registered_SearchCheckout() throws IOException, InterruptedException {		
 		TestDescription("Registered_SearchCheckout" , "To verify registered user able to place order using search items");
 			logs("Url entered");
@@ -53,7 +51,7 @@ public class CheckoutScripts extends BaseTest {
 			homepage.SignInLink();
 			registerationPage.HomepageLogin();
 			logs("User signed In using valid credentials");
-			List<String> SearchTermData = getColumnData("suresh","SearchSKU");
+			List<String> SearchTermData = getColumnData("Search","SearchSKU");
 			String SearchTerm = SearchTermData.get(0);
 			homepage.searchTerm(SearchTerm);
 			logs("Search term entered");
@@ -78,7 +76,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.PlaceOrder();
 			logs("Ordered Placed");
 	}
-	
+	*/
 	
 	
 	/*

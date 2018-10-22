@@ -7,10 +7,10 @@
     <parameter name="browser" value="chrome" />
   <test thread-count="5" name="Test" parallel="classes">
     <classes>
-     <!--  <class name="Testcases.CheckoutScripts"/>
-      <class name="Testcases.PDPScripts"/>
-      <class name="Testcases.RegisterationScripts"/> -->
-      <class name="Testcases.HomepageScripts"/>
+        <class name="Testcases.CheckoutScripts"/>
+<!-- 	   <class name="Testcases.PDPScripts"/>
+      <class name="Testcases.RegisterationScripts"/> 
+      <class name="Testcases.HomepageScripts"/>  -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

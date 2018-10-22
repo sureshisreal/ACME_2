@@ -6,7 +6,7 @@ import pageObjectsRepo.BillingPageRepo;
 public class BillingPageActions extends BillingPageRepo {
 
 	public void VisaPayment() {
-		WaitForElementLoad(CardNumber_Textbox);
+		WaitUntilElementClickable(CardNumber_Textbox);
 		CardNumber_Textbox.sendKeys("4111111111111111");
 		CvvTextbox.sendKeys("321");
 		Select month =new Select(Billing_month);
