@@ -5,15 +5,15 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
-  <test thread-count="2" name="HomepageScripts(failed)" parallel="tests">
+  <test thread-count="2" name="ACMEQAAutomation(failed)" parallel="tests">
     <classes>
-      <class name="Testcases.HomepageScripts">
+      <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
+          <include name="myAccountSummary"/>
           <include name="beforeMethod"/>
-          <include name="Guest_SearchCheckout"/>
         </methods>
-      </class> <!-- Testcases.HomepageScripts -->
+      </class> <!-- Testcases.MyAccountScripts -->
     </classes>
-  </test> <!-- HomepageScripts(failed) -->
+  </test> <!-- ACMEQAAutomation(failed) -->
 </suite> <!-- Failed suite [ACME] -->

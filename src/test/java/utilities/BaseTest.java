@@ -32,6 +32,7 @@ import org.testng.annotations.Parameters;
 import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
 import Reusables.HomepageActions;
+import Reusables.MyAccountPageActions;
 import Reusables.ProductsDetailPageActions;
 import Reusables.RegisterationPageActions;
 import Reusables.ShippingPageActions;
@@ -52,6 +53,7 @@ public class BaseTest extends ExtentManager {
 	protected ShippingPageActions shippingPage;
 	protected BillingPageActions billingPage;
 	protected RegisterationPageActions registerationPage;
+	protected MyAccountPageActions myAccountPage;
 
 	@BeforeMethod
 	@Parameters(value = { "browser" })
@@ -78,6 +80,9 @@ public class BaseTest extends ExtentManager {
 				.initElements(driver, BillingPageActions.class);
 		registerationPage = PageFactory.initElements(driver,
 				RegisterationPageActions.class);
+		
+		myAccountPage = PageFactory.initElements(driver,
+				MyAccountPageActions.class);
 	}
 
 	@AfterMethod

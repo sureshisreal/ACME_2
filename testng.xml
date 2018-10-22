@@ -5,10 +5,17 @@
         <listener class-name="listeners.TestListener"/>
     </listeners>  
     <parameter name="browser" value="chrome" />
-	<test name="HomepageScripts">
+	<test name="ACMEQAAutomation">
 		<classes>
-			<class name="Testcases.HomepageScripts" />
+			<class name = "Testcases.MyAccountScripts" />
+		<!-- 	<class name="Testcases.HomepageScripts" /> -->
 		</classes>
 		
+		
+		
+		
+		
 	</test>
+	
+
 </suite> <!-- Suite -->

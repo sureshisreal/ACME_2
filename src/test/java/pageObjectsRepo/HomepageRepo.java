@@ -17,4 +17,7 @@ public class HomepageRepo {
 	@FindBy(xpath = "//title[contains(.,'Acme')]")
 	public  WebElement titleText;
 	
+	
+	
+	
 }
