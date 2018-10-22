@@ -27,11 +27,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -180,17 +178,6 @@ public class BaseTest extends ExtentManager {
 	        return 0;
 	    }
 
-	 public void WaitForElementLoad(WebElement element)
-	 {
-	 	WebDriverWait wait=new WebDriverWait(driver, 60, 1000);
-	 	wait.until(ExpectedConditions.visibilityOf(element));
-	 }
-	 
-	 public void ElementPresent(WebElement element){
-		 Assert.assertTrue(element != null);
-		 System.out.println("Element is Present");
-		 logs(element + "is present");
-		
-	 }
-	 
+
+
 } // Completed 
