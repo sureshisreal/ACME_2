@@ -1,6 +1,7 @@
 package Reusables;
 
-import pageObjectsRepo.MyAccountRepo;;
+
+import pageObjectsRepo.MyAccountRepo;
 
 public class MyAccountPageActions extends MyAccountRepo {
 	
@@ -24,5 +25,7 @@ public class MyAccountPageActions extends MyAccountRepo {
 	}
 	
 
+
+	
 
 }

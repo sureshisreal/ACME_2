@@ -20,7 +20,7 @@ public class MyAccountScripts extends BaseTest{
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		logs("Logged in as registered user");
-		Assert.assertEquals(true, myAccountPage.verifyMyAccountSummaryTitle());
+		Assert.assertEquals(true, myaccountPage.verifyMyAccountSummaryTitle());
 		logs("My Account Summary title verified");
 		
 		

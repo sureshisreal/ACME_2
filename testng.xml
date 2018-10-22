@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ACME" parallel="tests" thread-count="2">
-   <listeners>
+<suite name="Suite" parallel="classes">
+  <listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>  
+<<<<<<< HEAD
     <parameter name="browser" value="chrome" />
 	<test name="ACMEQAAutomation">
 		<classes>
@@ -18,4 +19,13 @@
 	</test>
 	
 
+=======
+  <test name="Test" thread-count="5" >
+      <parameter name="browser" value="chrome" />
+    <classes>
+     <!--   <class name="Testcases.CheckoutScripts"/> -->
+       <class name="Testcases.HomepageScripts"/>
+    </classes>
+  </test> <!-- Test -->
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
 </suite> <!-- Suite -->

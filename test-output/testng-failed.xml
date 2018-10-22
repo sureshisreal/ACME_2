@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [ACME]" parallel="tests">
-  <parameter name="browser" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="2" name="ACMEQAAutomation(failed)" parallel="tests">
+=======
+  <test thread-count="5" name="Test(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
     <classes>
       <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
           <include name="myAccountSummary"/>
           <include name="beforeMethod"/>
+<<<<<<< HEAD
+=======
+          <include name="Homepage_Header_FieldValidations"/>
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
         </methods>
       </class> <!-- Testcases.MyAccountScripts -->
     </classes>
+<<<<<<< HEAD
   </test> <!-- ACMEQAAutomation(failed) -->
 </suite> <!-- Failed suite [ACME] -->
+=======
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git

@@ -2,12 +2,10 @@ package listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import utilities.BaseTest;
 import utilities.ExtentManager;
 
 public class TestListener implements ITestListener {
@@ -49,8 +47,8 @@ public class TestListener implements ITestListener {
 
     @Override
     public synchronized void onTestSkipped(ITestResult result) {
-        System.out.println((result.getMethod().getMethodName() + " skipped!"));
-       test.get().skip(result.getThrowable());
+     //   System.out.println((result.getMethod().getMethodName() + " skipped!"));
+    //   test.get().skip(result.getThrowable());
     }
 
     @Override

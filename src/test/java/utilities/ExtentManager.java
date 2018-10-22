@@ -8,7 +8,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.Platform;
 
 import java.io.File;
-import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
