@@ -7,15 +7,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="classes">
     <classes>
-      <class name="Testcases.RegisterationScripts">
-        <methods>
-          <include name="ForgotPassword_Error_Messages_Validations"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Valid_SignIn"/>
-          <include name="Invalid_SignIn_Error_Messages_Validations"/>
-        </methods>
-      </class> <!-- Testcases.RegisterationScripts -->
       <class name="Testcases.HomepageScripts">
         <methods>
           <include name="afterMethod"/>
@@ -23,21 +14,6 @@
           <include name="Homepage_Header_FieldValidations"/>
         </methods>
       </class> <!-- Testcases.HomepageScripts -->
-      <class name="Testcases.PDPScripts">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Homepage_MultipleSearchItems"/>
-        </methods>
-      </class> <!-- Testcases.PDPScripts -->
-      <class name="Testcases.CheckoutScripts">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Registered_SearchCheckout"/>
-          <include name="Guest_SearchCheckout"/>
-        </methods>
-      </class> <!-- Testcases.CheckoutScripts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
