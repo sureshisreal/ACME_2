@@ -45,7 +45,7 @@ public class HomepageActions extends HomepageRepo {
 	}
 
 	public void HeaderValidations() {
-		//WaitForElementLoad(freeShip_Banner);
+		WaitForElementLoad(freeShip_Banner);
 		ElementPresent(freeShip_Banner);
 		freeShip_Banner.click();
 		driver.switchTo().activeElement();	
@@ -69,10 +69,8 @@ public class HomepageActions extends HomepageRepo {
 		ElementPresent(RequestQuote_Header);
 		logs("Request Quote Link Verified");
 		MiniShoppingCart.click();
-		//WaitForElementLoad(MiniShoppingCart_EmptyText);
 		assertTrue(MiniShoppingCart_EmptyText.getText().contains("Your cart is empty"));
 		MiniShoppingCart_close.click();
-		logs("Mini cart link verified ");
 	}
 
 	
