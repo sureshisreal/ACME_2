@@ -4,7 +4,7 @@
   <listeners>
         <listener class-name="listeners.TestListener"/>
     </listeners>  
-<<<<<<< HEAD
+
     <parameter name="browser" value="chrome" />
 	<test name="ACMEQAAutomation">
 		<classes>
@@ -19,13 +19,4 @@
 	</test>
 	
 
-=======
-  <test name="Test" thread-count="5" >
-      <parameter name="browser" value="chrome" />
-    <classes>
-     <!--   <class name="Testcases.CheckoutScripts"/> -->
-       <class name="Testcases.HomepageScripts"/>
-    </classes>
-  </test> <!-- Test -->
->>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
-</suite> <!-- Suite -->
+</suite>
