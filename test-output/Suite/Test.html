@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 22 14:26:33 IST 2018</td>
+<td>Started on:</td><td>Tue Oct 23 13:26:45 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>80 seconds (80506 ms)</td>
+<tr><td>Total time:</td><td>125 seconds (125879 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,27 +75,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Testcases.HomepageScripts.Homepage_MultipleSearchItems()'><b>Homepage_MultipleSearchItems</b><br>Test class: Testcases.HomepageScripts</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:212)
-	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:102)
-	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:71)
-	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:59)
-	at utilities.BaseTest.WaitForElementLoad(BaseTest.java:187)
-	at Reusables.CategorypageActions.selectFirstProduct(CategorypageActions.java:11)
-	at Testcases.HomepageScripts.Homepage_MultipleSearchItems(HomepageScripts.java:24)
+<td title='Testcases.MyAccountScripts.myAccountSummary()'><b>myAccountSummary</b><br>Test class: Testcases.MyAccountScripts</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at Testcases.MyAccountScripts.myAccountSummary(MyAccountScripts.java:31)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2049514765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2049514765'><pre>java.lang.NullPointerException
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:212)
-	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:102)
-	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:71)
-	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:59)
-	at utilities.BaseTest.WaitForElementLoad(BaseTest.java:187)
-	at Reusables.CategorypageActions.selectFirstProduct(CategorypageActions.java:11)
-	at Testcases.HomepageScripts.Homepage_MultipleSearchItems(HomepageScripts.java:24)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1279654706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1279654706'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at Testcases.MyAccountScripts.myAccountSummary(MyAccountScripts.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -110,8 +104,8 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>33</td>
-<td>Testcases.HomepageScripts@38c5cc4c</td></tr>
+<td>62</td>
+<td>Testcases.MyAccountScripts@5db250b4</td></tr>
 </table><p>
 </body>
 </html>
