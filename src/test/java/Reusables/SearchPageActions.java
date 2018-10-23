@@ -17,6 +17,8 @@ public class SearchPageActions extends ShippingPageRepo {
 	
 	public void Search_Invalid() {
 		
+		String newsearch = "new push";
+		
 	}
 
 }
