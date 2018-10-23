@@ -4,12 +4,18 @@ import static org.testng.AssertJUnit.assertTrue;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import pageObjectsRepo.RegisterationpageRepo;
 
 public class RegisterationPageActions extends RegisterationpageRepo {
 	
+
+	public RegisterationPageActions(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
 	public void HomepageLogin() throws IOException {
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));

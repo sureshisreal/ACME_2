@@ -6,10 +6,10 @@ import org.openqa.selenium.support.ui.Select;
 import pageObjectsRepo.ShippingPageRepo;
 
 
-public class ShippingPageActions extends ShippingPageRepo {
+public class SearchPageActions extends ShippingPageRepo {
 
 
-	public ShippingPageActions(WebDriver driver) {
+	public SearchPageActions(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

@@ -1,13 +1,21 @@
 package Reusables;
 
 import static org.testng.AssertJUnit.assertTrue;
+
+import org.openqa.selenium.WebDriver;
+
 import pageObjectsRepo.CatgoryPageRepo;
 
 
 public class CategorypageActions extends CatgoryPageRepo{
 
+	public CategorypageActions(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
 	public void selectFirstProduct() throws InterruptedException {
-		Thread.sleep(1000);
+		WaitUntilElementVisible(FirstProduct);
 		FirstProduct.click();
 	}
 

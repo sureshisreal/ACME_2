@@ -1,12 +1,17 @@
 package Reusables;
 
+import org.openqa.selenium.WebDriver;
+
 import pageObjectsRepo.ProductsDetailPageRepo;
 
 public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 
+	public ProductsDetailPageActions(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
 	public void quantity(String qty) throws InterruptedException {
-		//WaitUntilElementClickable(quantity);
-		WaitUntilElementVisible(quantity);
 		quantity.clear();
 		quantity.sendKeys(qty);
 	}

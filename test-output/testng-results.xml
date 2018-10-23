@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Suite" duration-ms="125879" started-at="2018-10-23T07:56:45Z" finished-at="2018-10-23T07:58:51Z">
+=======
+  <suite name="Suite" duration-ms="179423" started-at="2018-10-23T12:09:46Z" finished-at="2018-10-23T12:12:45Z">
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Test" duration-ms="125879" started-at="2018-10-23T07:56:45Z" finished-at="2018-10-23T07:58:51Z">
       <class name="Testcases.MyAccountScripts">
         <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="beforeMethod" is-config="true" duration-ms="62946" started-at="2018-10-23T07:56:45Z" finished-at="2018-10-23T07:57:48Z">
@@ -63,6 +72,37 @@ at java.lang.Thread.run(Unknown Source)
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- Testcases.MyAccountScripts -->
+=======
+    <test name="Test" duration-ms="179423" started-at="2018-10-23T12:09:46Z" finished-at="2018-10-23T12:12:45Z">
+      <class name="Testcases.HomepageScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.HomepageScripts@7d94beb9]" name="beforeMethod" is-config="true" duration-ms="63458" started-at="2018-10-23T12:09:46Z" finished-at="2018-10-23T12:10:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Homepage_Header_FieldValidations()[pri:0, instance:Testcases.HomepageScripts@7d94beb9]" name="Homepage_Header_FieldValidations" duration-ms="115846" started-at="2018-10-23T12:10:49Z" finished-at="2018-10-23T12:12:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homepage_Header_FieldValidations -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.HomepageScripts@7d94beb9]" name="afterMethod" is-config="true" duration-ms="95" started-at="2018-10-23T12:12:45Z" finished-at="2018-10-23T12:12:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Homepage_Header_FieldValidations status=SUCCESS method=HomepageScripts.Homepage_Header_FieldValidations()[pri:0, instance:Testcases.HomepageScripts@7d94beb9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Testcases.HomepageScripts -->
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

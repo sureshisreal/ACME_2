@@ -7,6 +7,7 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="classes">
     <classes>
+<<<<<<< HEAD
       <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
@@ -14,6 +15,15 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- Testcases.MyAccountScripts -->
+=======
+      <class name="Testcases.HomepageScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="Homepage_InvalidSearchItems"/>
+        </methods>
+      </class> <!-- Testcases.HomepageScripts -->
+>>>>>>> branch 'master' of https://github.com/sureshisreal/ACME_2.git
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,9 +1,15 @@
 package Reusables;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pageObjectsRepo.BillingPageRepo;
 
 public class BillingPageActions extends BillingPageRepo {
+
+	public BillingPageActions(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
 	public void VisaPayment() {
 		WaitUntilElementClickable(CardNumber_Textbox);

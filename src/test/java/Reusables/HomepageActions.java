@@ -24,9 +24,12 @@ public class HomepageActions extends HomepageRepo {
 	public void searchTerm(String SearchTerm) {
 		searchTextbox.sendKeys(SearchTerm);
 		searchSubmit.click();
+		//Assert.assertEquals(SearchHeader_Verify.getText(),SearchTerm);
+		logs("Search Term verified");
 	}
 
 	public void SignInLink()  {
+		WaitUntilElementVisible(SignInRegister_Link);
 		SignInRegister_Link.click();
 		logs("SignInRegister_Link clicked");
 	}
@@ -55,6 +58,7 @@ public class HomepageActions extends HomepageRepo {
 	}
 
 	public void MenuValidations() throws IOException {
+		WaitUntilElementVisible(OrderStatus_Link);
 		OrderStatus_Link.click();
 		ElementPresent(OrderStatus_Header);
 		logs("Order Status Link Verified");
