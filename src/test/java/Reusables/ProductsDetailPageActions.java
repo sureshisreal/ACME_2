@@ -5,7 +5,8 @@ import pageObjectsRepo.ProductsDetailPageRepo;
 public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 
 	public void quantity(String qty) throws InterruptedException {
-		WaitUntilElementClickable(quantity);
+		//WaitUntilElementClickable(quantity);
+		WaitUntilElementVisible(quantity);
 		quantity.clear();
 		quantity.sendKeys(qty);
 	}
