@@ -20,11 +20,11 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		System.out.println("Credentials :" + Username + "" +Password);
 		LogonId_Textbox.sendKeys(Username);
 		Password_Textbox.sendKeys(Password);
-		AddScreenshot();
+		//AddScreenshot();
 		SignIn_Button.click();	
 		String welcomeText= MyAccount_WelcomeText.getText();
 		assertTrue(welcomeText.contains("Welcome,"));
-		AddScreenshot();
+		//AddScreenshot();
 		logs("Login success \n UserName :" +Username+ "Password: "+Password);
 		
 	}

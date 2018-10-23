@@ -18,11 +18,39 @@ public class MyAccountPageActions extends MyAccountRepo {
 	}
 	
 	public boolean verifyDescText() {
-		return false;
+		
+		String descText = myaccount_desc_title.getText().toString();
+		if(descText.contains("Welcome")) {
+			
+		 return true;
+		
+		}
+		else {
+			return false;
+		}
+		
+		
 		
 	
 		
 	}
+	
+	
+	public boolean verifyDescSummary (){
+		
+		String descSummary = myaccount_desc_summary.getText().toString();
+		if(descSummary.contains("This is your account summary. You can change your personal information and manage the options available for your account.")) {
+			return true;
+		}
+		
+		else {
+			return false;
+		}
+		
+		
+	}
+	
+	
 	
 
 

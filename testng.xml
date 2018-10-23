@@ -9,8 +9,10 @@
     <classes>
     <!--     <class name="Testcases.CheckoutScripts"/>
 	   <class name="Testcases.PDPScripts"/>
-      <class name="Testcases.RegisterationScripts"/>  -->
-      <class name="Testcases.HomepageScripts"/> 
+      <class name="Testcases.RegisterationScripts"/>  
+      <class name="Testcases.HomepageScripts"/> -->
+      
+      <class name = "Testcases.MyAccountScripts"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

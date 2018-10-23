@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" parallel="classes">
     <classes>
-      <class name="Testcases.CheckoutScripts">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Guest_SearchCheckout"/>
-        </methods>
-      </class> <!-- Testcases.CheckoutScripts -->
-      <class name="Testcases.RegisterationScripts">
-        <methods>
-          <include name="ForgotPassword_Error_Messages_Validations"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Valid_SignIn"/>
-          <include name="CreateAccount_Error_Messages_Validations"/>
-          <include name="Invalid_SignIn_Error_Messages_Validations"/>
-        </methods>
-      </class> <!-- Testcases.RegisterationScripts -->
       <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
@@ -27,21 +14,6 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- Testcases.MyAccountScripts -->
-      <class name="Testcases.HomepageScripts">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Homepage_MultipleSearchItems"/>
-          <include name="Homepage_Header_FieldValidations"/>
-        </methods>
-      </class> <!-- Testcases.HomepageScripts -->
-      <class name="Testcases.PDPScripts">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="Homepage_MultipleSearchItems"/>
-        </methods>
-      </class> <!-- Testcases.PDPScripts -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
