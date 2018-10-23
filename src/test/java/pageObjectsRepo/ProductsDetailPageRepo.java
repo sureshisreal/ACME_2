@@ -1,11 +1,16 @@
 package pageObjectsRepo;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utilities.BaseTest;
 
 public class ProductsDetailPageRepo extends BaseTest{
+	
+	public ProductsDetailPageRepo(WebDriver driver){
+        this.driver = driver;
+    }
 	
 	@FindBy( className = "quantity_input")
 	public  WebElement quantity;

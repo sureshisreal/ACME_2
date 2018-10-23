@@ -1,11 +1,16 @@
 package pageObjectsRepo;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utilities.BaseTest;
 
 public class RegisterationpageRepo extends BaseTest {
+	
+	public RegisterationpageRepo(WebDriver driver){
+        this.driver = driver;
+    }
 	
 	//SignIn 
 	@FindBy(xpath = ".//*[@name='logonId']")

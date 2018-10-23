@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -28,14 +27,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
@@ -45,10 +45,6 @@ import Reusables.ProductsDetailPageActions;
 import Reusables.RegisterationPageActions;
 import Reusables.ShippingPageActions;
 import Reusables.ShoppingCartPageActions;
-
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.google.common.base.Predicate;
 
 public class BaseTest extends ExtentManager {
 	public WebDriver driver = null;
@@ -136,7 +132,8 @@ public class BaseTest extends ExtentManager {
 		return null;
 	}
 
-	protected void AddScreenshot() throws IOException {
+	protected void AddScreenshot() throws IOException{
+		
 		extentTest.log(Status.PASS,
 				"" + extentTest.addScreenCaptureFromPath(captureScreenShot()));
 	}
@@ -185,7 +182,6 @@ public class BaseTest extends ExtentManager {
 	 public void WaitUntilElementClickable(WebElement element)
 	 {
 	 	WebDriverWait wait=new WebDriverWait(driver, 60, 1000);
-	 	//wait.until(ExpectedConditions.visibilityOf(element));
 	 	wait.until(ExpectedConditions.elementToBeClickable(element));
 	 }
 	 
@@ -193,8 +189,8 @@ public class BaseTest extends ExtentManager {
 	 {
 	 	WebDriverWait wait=new WebDriverWait(driver, 60, 1000);
 	 	wait.until(ExpectedConditions.visibilityOf(element));
-	 	//wait.until(ExpectedConditions.elementToBeClickable(element));
 	 }
+	 
 	 
 	 public void ElementPresent(WebElement element){
 		 Assert.assertTrue(element != null);

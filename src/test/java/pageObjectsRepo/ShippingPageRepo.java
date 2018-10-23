@@ -1,11 +1,16 @@
 package pageObjectsRepo;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utilities.BaseTest;
 
 public class ShippingPageRepo extends BaseTest{
+	
+	public ShippingPageRepo(WebDriver driver){
+        this.driver = driver;
+    }
 	
 	@FindBy( id = "WC_shippingAddressCreateEditFormDiv_firstName")
 	public  WebElement Shipping_firstName;
