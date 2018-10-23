@@ -27,6 +27,9 @@ public class SearchPageActions extends ShippingPageRepo {
 		Select occupation =new Select(Shipping_occupation);
 		occupation.selectByValue("Carpentry Work");
 		PlaceOrder_Button.click();
+		
+		String ind = "infhu";
+				
 	}
 	
 	public void UseEnteredAddress(){
