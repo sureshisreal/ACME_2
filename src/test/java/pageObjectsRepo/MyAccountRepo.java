@@ -10,7 +10,7 @@ import utilities.BaseTest;
 public class MyAccountRepo extends BaseTest {
 	
 	public MyAccountRepo(WebDriver driver) {
-		// TODO Auto-generated constructor stub
+	    this.driver = driver;
 	}
 
 

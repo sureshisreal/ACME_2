@@ -9,7 +9,7 @@ import utilities.BaseTest;
 public class CatgoryPageRepo extends BaseTest {
 	
 	public CatgoryPageRepo(WebDriver driver) {
-		// TODO Auto-generated constructor stub
+	    this.driver = driver;
 	}
 
 	@FindBy(xpath = "(.//div[@class='product_image'])[1]")

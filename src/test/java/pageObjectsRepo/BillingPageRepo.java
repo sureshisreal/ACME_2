@@ -9,7 +9,7 @@ import utilities.BaseTest;
 public class BillingPageRepo extends BaseTest {
 	
 	public BillingPageRepo(WebDriver driver) {
-		// TODO Auto-generated constructor stub
+	    this.driver = driver;
 	}
 
 	@FindBy( id = "WC_PaymentEntry_account")
