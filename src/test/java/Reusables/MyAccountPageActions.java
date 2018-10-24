@@ -57,6 +57,36 @@ public class MyAccountPageActions extends MyAccountRepo {
 		
 	}
 	
+	public boolean verifyEditLink_accSummary() {
+		
+		personal_info_edit_link.click();
+		if(currentPageBreadcrumb.getText().toString().equals("Personal Information")) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		
+		
+	}
+	
+public boolean verifyLeftNavSettings() {
+		
+		String title = myacc_leftNav_settings.getText().toString();
+		
+		if(title.contains("SETTINGS")) {
+			System.out.println(title);
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+
+
+	
+	
+	
 	
 	
 

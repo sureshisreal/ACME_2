@@ -18,14 +18,9 @@ public class MyAccountScripts extends BaseTest{
 	public void myAccountSummary() throws IOException, InterruptedException{
 		
 		TestDescription("MyAccount_Summary_001" , "To verify the my Account Summary UI");
-		
-		
-		
-		
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		
-	
 		logs("Logged in as registered user");
 		Assert.assertEquals(true, myaccountPage.verifyMyAccountSummaryTitle());
 		logs("My Account Summary title verified");
@@ -46,30 +41,70 @@ public class MyAccountScripts extends BaseTest{
 		logs("Personal information section with name, address city and Email are present");
 		
 		ElementPresent(myaccountPage.personal_info_edit_link);
-		logs("Edit link for ");
+		logs("Edit link for personal info is available");
 		
-		
-		
-		
-		
-		
-		
-	 
-		
-		
-		
+		ElementPresent(myaccountPage.recent_order_history_title);
+		ElementPresent(myaccountPage.recent_order_history_view_all_orders);
+		logs("Order History Title with the view all orders link are present");
 		
 
-		
-		
-		
-		
-		
-		
-
-
-		
-		
 	}
+	
+	
+	
+	@Test
+	public void editLink_accSummary() throws IOException, InterruptedException{
+		TestDescription("MyAccount_Summary_002" , "To verify the Edit link working in the My Account Summary Page");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		
+		Assert.assertEquals(true, myaccountPage.verifyEditLink_accSummary());
+		logs("Edit link click in My Account Summary's personal info section navigates the user to the Personal information Edit page");
+
+	}
+	
+	
+	@Test
+	public void recentOrderHistory_NoOrders() throws IOException, InterruptedException{
+		TestDescription("MyAccount_Summary_03" , "To verify the recent order History section which does");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		
+		
+		
+		
+
+	}
+	
+	
+	
+	@Test
+	public void recentOrderHistory_Orders() throws IOException, InterruptedException{
+		TestDescription("MyAccount_Summary_04" , "To verify the order details are present in the recent Order History section within the account which has orders");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		
+		ElementPresent(myaccountPage.recent_OrderHistory_header_orderDate);
+		logs("Order Date coulmn header is present");
+		ElementPresent(myaccountPage.recent_OrderHistory_header_orderNumber);
+		logs("Order Number coulmn header is present");
+		ElementPresent(myaccountPage.recent_OrderHistory_header_PurchaseOrder);
+		logs("Purchase Order coulmn header is present");
+		ElementPresent(myaccountPage.recent_OrderHistory_header_Status);
+		logs("Status coulmn header is present");
+		ElementPresent(myaccountPage.recent_OrderHistory_header_TotalPrice);
+		logs("Total price coulmn header is present");
+		ElementPresent(myaccountPage.recent_OrderHistory_DetailsLink);
+		logs("Details link is present");
+		ElementPresent(myaccountPage.recent_OrderHistory_Reorder_CTA);
+		logs("Re-order CTA is present");
+
+	}
+	
+	
+	
 
 }

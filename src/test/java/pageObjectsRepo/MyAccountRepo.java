@@ -53,6 +53,48 @@ public class MyAccountRepo extends BaseTest {
 	public WebElement recent_order_history_view_all_orders;
 	
 	
+	@FindBy(className = "current")
+	public WebElement currentPageBreadcrumb;
+
+	@FindBy(xpath = "//tr[@class='ul column_heading']/th[contains(text(),'Order Number')]")
+	public WebElement recent_OrderHistory_header_orderNumber;
+	
+	@FindBy(xpath = "//tr[@class='ul column_heading']/th[contains(text(),'Order Date')]")
+	public WebElement recent_OrderHistory_header_orderDate;
+	
+	@FindBy(xpath = "//tr[@class='ul column_heading']/th[contains(text(),'Purchase Order')]")
+	public WebElement recent_OrderHistory_header_PurchaseOrder;
+	
+	@FindBy(xpath = "//tr[@class='ul column_heading']/th[contains(text(),'Status')]")
+	public WebElement recent_OrderHistory_header_Status;
+	
+	@FindBy(xpath = "//tr[@class='ul column_heading']/th[contains(text(),'Total Price')]")
+	public WebElement recent_OrderHistory_header_TotalPrice;
+
+	
+	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//tr[@class='ul row']")
+	public WebElement recent_OrderHistory_ordersListSection;
+	
+	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//div[contains(text(),'Re-Order')]")
+	public WebElement recent_OrderHistory_Reorder_CTA;
+	
+	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//a[contains(text(),'Details')]")
+	public WebElement recent_OrderHistory_DetailsLink;
+	
+	
+	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//td[contains(text(), 'No orders were found' )]")
+	public WebElement recent_OrderHistory_noOrdersFound;
+	
+	@FindBy(xpath = "(//div[@id='section_button_settings']//div)[1]")
+	public WebElement myacc_leftNav_settings;
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
