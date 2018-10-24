@@ -24,8 +24,7 @@ public class HomepageRepo extends BaseTest{
 	public  WebElement SignInRegister_Link;
 	
 	@FindBy(xpath = "//title[contains(.,'Acme')]")
-	public  WebElement titleText;
-	
+	public  WebElement titleText;	
 
 	@FindBy(id = "AcmeToolsLogo_Content1")
 	public  WebElement AcmeLogo;
@@ -75,11 +74,11 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(id = "MiniShopCartCloseButton_1")
 	public  WebElement MiniShoppingCart_close;
 	
-	
 	@FindBy(id = "DoYourBestWork_Content")
 	public  WebElement DoYourBestWork_Banner;
 	
-	
+	@FindBy(xpath = ".//*[@id='widget_breadcrumb']//li[@class='current']")
+	public WebElement SearchHeader_Verify;
 	
 	 
 	

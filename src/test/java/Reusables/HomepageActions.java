@@ -21,10 +21,11 @@ public class HomepageActions extends HomepageRepo {
 		System.out.println("driver : " + driver);
 	}
 
-	public void searchTerm(String SearchTerm) {
+	public void searchTerm(String SearchTerm) throws IOException {
 		searchTextbox.sendKeys(SearchTerm);
 		searchSubmit.click();
-		//Assert.assertEquals(SearchHeader_Verify.getText(),SearchTerm);
+		Assert.assertEquals(SearchHeader_Verify.getText(),SearchTerm);
+		AddScreenshot();
 		logs("Search Term verified");
 	}
 
@@ -33,7 +34,6 @@ public class HomepageActions extends HomepageRepo {
 		SignInRegister_Link.click();
 		logs("SignInRegister_Link clicked");
 	}
-
 
 	public void VerifyPageTitle() throws IOException {
 		String title = driver.getTitle();

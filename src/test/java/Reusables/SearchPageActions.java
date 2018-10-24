@@ -1,24 +1,24 @@
 package Reusables;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
-import pageObjectsRepo.ShippingPageRepo;
+import pageObjectsRepo.SearchResultpageRepo;
 
 
-public class SearchPageActions extends ShippingPageRepo {
+public class SearchPageActions extends SearchResultpageRepo {
 
 
 	public SearchPageActions(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	
-	public void Search_Invalid() {
-		
-		String newsearch = "new push";
-		String newsearch1 = "new push1";
+	public void Search_Invalid( String SearchTermList) {
+		WaitUntilElementVisible(SearchHeader_ZeroResult);
+		assertTrue(SearchHeader_ZeroResult.getText().contains(SearchTermList));
+		logs("Search Invalid verified");
 	}
 
 }

@@ -9,7 +9,7 @@ import utilities.BaseTest;
 
 public class HomepageScripts extends BaseTest{
 	
-	/*@Test
+	@Test
 	public void Homepage_SearchItems() throws IOException, InterruptedException {
 		TestDescription("Homepage_MultipleSearchItems",
 				"To verify guest user able to place order using search items");
@@ -19,10 +19,10 @@ public class HomepageScripts extends BaseTest{
 			homepage.searchTerm(SearchTermList);
 			logs("Search term entered");
 			AddScreenshot();	
-	}*/
+	}
 	
 	
-	/*@Test
+	@Test
 	public void Homepage_InvalidSearchItems() throws IOException, InterruptedException {
 		TestDescription("Homepage_MultipleSearchItems",
 				"To verify guest user able to place order using search items");
@@ -30,11 +30,10 @@ public class HomepageScripts extends BaseTest{
 		List<String> SearchTermData = getColumnData("Search", "InvalidSearch");
 			String SearchTermList = SearchTermData.get(0);
 			homepage.searchTerm(SearchTermList);
-			AddScreenshot();
-			
-	}*/
+			searchResultPage.Search_Invalid(SearchTermList);		
+	}
 	
-	/*@Test
+	@Test
 	public void Homepage_MultipleSearchItems() throws IOException, InterruptedException {
 		TestDescription("Homepage_MultipleSearchItems",
 				"To verify guest user able to place order using search items");
@@ -57,7 +56,7 @@ public class HomepageScripts extends BaseTest{
 		}
 		productsDetailPage.minishopcart_total();
 		logs("MiniCart Clicked");
-	}*/
+	}
 	
 	@Test
 	public void Homepage_Header_FieldValidations() throws IOException, InterruptedException {

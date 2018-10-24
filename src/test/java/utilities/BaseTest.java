@@ -43,6 +43,7 @@ import Reusables.HomepageActions;
 import Reusables.MyAccountPageActions;
 import Reusables.ProductsDetailPageActions;
 import Reusables.RegisterationPageActions;
+import Reusables.SearchPageActions;
 import Reusables.ShippingPageActions;
 import Reusables.ShoppingCartPageActions;
 
@@ -63,6 +64,7 @@ public class BaseTest extends ExtentManager {
 	protected BillingPageActions billingPage;
 	protected RegisterationPageActions registerationPage;
 	protected MyAccountPageActions myaccountPage;
+	protected SearchPageActions searchResultPage;
 
 
 
@@ -93,8 +95,10 @@ public class BaseTest extends ExtentManager {
 				.initElements(driver, BillingPageActions.class);
 		registerationPage = PageFactory.initElements(driver,
 				RegisterationPageActions.class);
-
-
+		registerationPage = PageFactory.initElements(driver,
+				RegisterationPageActions.class);
+		searchResultPage = PageFactory.initElements(driver,
+				SearchPageActions.class);
 		myaccountPage = PageFactory.initElements(driver,
 				MyAccountPageActions.class);
 	}
@@ -133,7 +137,6 @@ public class BaseTest extends ExtentManager {
 	}
 
 	protected void AddScreenshot() throws IOException{
-		
 		extentTest.log(Status.PASS,
 				"" + extentTest.addScreenCaptureFromPath(captureScreenShot()));
 	}
