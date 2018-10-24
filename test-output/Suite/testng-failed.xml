@@ -7,6 +7,7 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="classes">
     <classes>
+<<<<<<< HEAD
       <class name="Testcases.CheckoutScripts">
         <methods>
           <include name="afterMethod"/>
@@ -14,6 +15,15 @@
           <include name="Guest_SearchCheckout"/>
         </methods>
       </class> <!-- Testcases.CheckoutScripts -->
+=======
+      <class name="Testcases.MyAccountScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="recentOrderHistory_NoOrders"/>
+        </methods>
+      </class> <!-- Testcases.MyAccountScripts -->
+>>>>>>> 36f4d1cd7abdcf837a903003663f909ba33eb126
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

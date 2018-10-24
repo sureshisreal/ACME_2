@@ -194,10 +194,17 @@ public class BaseTest extends ExtentManager {
 	 	wait.until(ExpectedConditions.visibilityOf(element));
 	 }
 	 
-	 public void ElementPresent(WebElement element){
-		 Assert.assertTrue(element != null);
+	 public Boolean ElementPresent(WebElement element){
+		 if(element.isDisplayed()) {
 		 System.out.println("Element is Present");
 		 logs(element + "is present");
+		 return true;
+		 }
+		 else {
+			 logs(element + "is NOT present");
+			 return false;
+			 
+		 }
 		
 	 }
 	 

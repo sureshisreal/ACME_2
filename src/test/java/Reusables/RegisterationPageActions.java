@@ -34,6 +34,25 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		logs("Login success \n UserName :" +Username+ "Password: "+Password);
 		
 	}
+	
+	
+	public void HomepageLogin_AccwithNoOrders() throws IOException {
+		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String Username = UsernameData.get(1);
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String Password = PssswordData.get(1);
+		System.out.println("Credentials :" + Username + "" +Password);
+		LogonId_Textbox.sendKeys(Username);
+		Password_Textbox.sendKeys(Password);
+		//AddScreenshot();
+		SignIn_Button.click();	
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		//AddScreenshot();
+		logs("Login success \n UserName :" +Username+ "Password: "+Password);
+		
+	}
 
 	public void SignInValidations() throws IOException {
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
