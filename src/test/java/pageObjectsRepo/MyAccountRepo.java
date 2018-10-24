@@ -89,6 +89,49 @@ public class MyAccountRepo extends BaseTest {
 	public WebElement myacc_leftNav_settings;
 	
 	
+	@FindBy(xpath = "//div[@id='section_button_settings']//a[contains(text(),'Personal Information')]")
+	public WebElement myacc_leftNav_settings_personalInfo;
+	
+	
+	@FindBy(xpath = "//div[@id='section_button_settings']//a[contains(text(),'My Shipping Address Book')]")
+	public WebElement myacc_leftNav_settings_addressBook;
+	
+	
+	@FindBy(xpath = "//div[@id='section_button_settings']//a[contains(text(),'My Credit Card')]")
+	public WebElement myacc_leftNav_settings_creditCard;
+	
+	
+	@FindBy(xpath = "(//div[@id='section_button_wishlists']//div)[1]")
+	public WebElement myacc_leftNav_wishlists;
+	
+	@FindBy(xpath = "//div[@id='section_button_wishlists']//a[contains(text(),'Personal Wish List')]")
+	public WebElement myacc_leftNav_wishlist_personalWishlist;
+	
+	
+	@FindBy(xpath = "(//div[@id='section_button_orders']//div)[1]")
+	public WebElement myacc_leftNav_orders;
+	
+	@FindBy(xpath = "//div[@id='section_button_orders']//a[contains(text(),'Order History')]")
+	public WebElement myacc_leftNav_orders_orderHistory;
+	
+	@FindBy(xpath = "(//div[@id='section_button_coupons']//div)[1]")
+	public WebElement myacc_leftNav_coupons;
+	
+	@FindBy(xpath = "//div[@id='section_button_orders']//a[contains(text(),'Coupons')]")
+	public WebElement myacc_leftNav_coupons_sublink;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -83,6 +83,46 @@ public boolean verifyLeftNavSettings() {
 	}
 
 
+public boolean verifyLeftNavWishlists() {
+	
+	String title = myacc_leftNav_settings.getText().toString();
+	
+	if(title.contains("WISH LISTS")) {
+		System.out.println(title);
+		return true;
+	}else {
+		return false;
+	}
+}
+
+
+public boolean verifyLeftNavOrders() {
+	
+	String title = myacc_leftNav_orders.getText().toString();
+	
+	if(title.contains("ORDERS")) {
+		System.out.println(title);
+		return true;
+	}else {
+		return false;
+	}
+}
+
+public boolean verifyLeftNavCoupons() {
+	
+	String title = myacc_leftNav_coupons.getText().toString();
+	
+	if(title.contains("COUPONS")) {
+		System.out.println(title);
+		return true;
+	}else {
+		return false;
+	}
+}
+
+
+
+
 
 	
 	

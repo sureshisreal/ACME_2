@@ -57,15 +57,17 @@ public class MyAccountScripts extends BaseTest {
 	public void recentOrderHistory_NoOrders() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_03", "To verify the recent order History section which does");
 		homepage.SignInLink();
-		registerationPage.HomepageLogin();
+		registerationPage.HomepageLogin_AccwithNoOrders();
 		logs("Logged in as registered user");
+		ElementPresent(myaccountPage.recent_OrderHistory_noOrdersFound);
+		
+		
 
 	}
 
 	@Test
 	public void recentOrderHistory_Orders() throws IOException, InterruptedException {
-		TestDescription("MyAccount_Summary_04",
-				"To verify the order details are present in the recent Order History section within the account which has orders");
+		TestDescription("MyAccount_Summary_04","To verify the order details are present in the recent Order History section within the account which has orders");
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		logs("Logged in as registered user");
@@ -86,5 +88,37 @@ public class MyAccountScripts extends BaseTest {
 		logs("Re-order CTA is present");
 
 	}
+	
+	@Test
+	public void leftNavMenuLinks_UICheck() throws IOException, InterruptedException {
+		TestDescription("MyAccount_Summary_05",
+				"To verify if the left navigation menu has all the links present in it");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		assertTrue(myaccountPage.verifyLeftNavSettings());
+		ElementPresent(myaccountPage.myacc_leftNav_settings_personalInfo);
+		ElementPresent(myaccountPage.myacc_leftNav_settings_addressBook);
+		ElementPresent(myaccountPage.myacc_leftNav_settings_creditCard);
+		logs("SETTINGS menu is properly displayed");
+		
+		assertTrue(myaccountPage.verifyLeftNavWishlists());
+		ElementPresent(myaccountPage.myacc_leftNav_wishlist_personalWishlist);
+		logs("Wishlist menu is properly displayed");
+		
+		assertTrue(myaccountPage.verifyLeftNavOrders());
+		ElementPresent(myaccountPage.myacc_leftNav_orders_orderHistory);
+		logs("Orders menu is properly displayed");
+		
+		assertTrue(myaccountPage.verifyLeftNavCoupons());
+		ElementPresent(myaccountPage.myacc_leftNav_coupons_sublink);
+		logs("Coupons menu is properly displayed");
+		
+	}
+	
+	
+	
+	
+
 
 }
