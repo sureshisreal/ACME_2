@@ -11,18 +11,22 @@ public class CategorypageActions extends CatgoryPageRepo{
 
 	public CategorypageActions(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void selectFirstProduct() throws InterruptedException {
-		WaitUntilElementVisible(FirstProduct);
+		WaitUntilElementClickable(FirstProductName);
+		String ProductName = FirstProductName.getText();
 		FirstProduct.click();
+		logs("First product selected ");
+		WaitUntilElementVisible(PDP_TitleVerify);
+		assertTrue(ProductName.contains(PDP_TitleVerify.getText()));
+		logs("First product verified");
 	}
 
 	public void verifySearchHeader(String SearchTerm) throws InterruptedException {
 		String SearchHeaderText = SearchHeader.getText();
 		assertTrue(SearchHeaderText.contains(SearchTerm));
-		System.out.println("verifySearchHeader");
+		logs("Search page verified");
 	}	
 
 }

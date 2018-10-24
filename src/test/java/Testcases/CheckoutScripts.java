@@ -19,28 +19,17 @@ public class CheckoutScripts extends BaseTest {
 			String SearchTerm = SearchTermData.get(0);
 			homepage.VerifyPageTitle();
 			homepage.searchTerm(SearchTerm);
-			logs("Search term entered");
-			AddScreenshot();		
 			categorypage.verifySearchHeader(SearchTerm);
 			categorypage.selectFirstProduct();
-			logs("First Product Selected in the CLP");
 			productsDetailPage.quantity("5");
-			AddScreenshot();
-			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
-			logs("Product added to the cart");
 			productsDetailPage.minishopcart_total();
-			logs("MiniCart Clicked");
 			shoppingCartPage.guestCheckout();
-			logs("Guest Checkout button clicked in the shoppingCart Page");
-			AddScreenshot();
 			shippingPage.GuestShippingAddress();
-			logs("Shipping address entered");
 			shippingPage.UseEnteredAddress();
 			billingPage.VisaPayment();
-			logs("Visa payment entered");
 			billingPage.PlaceOrder();
-			logs("Ordered Placed");
+
 	}
 	
 	/*@Test	

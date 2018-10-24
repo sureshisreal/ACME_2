@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52956" started-at="2018-10-24T09:54:38Z" finished-at="2018-10-24T09:55:31Z">
+  <suite name="Suite" duration-ms="263908" started-at="2018-10-24T12:42:45Z" finished-at="2018-10-24T12:47:09Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52956" started-at="2018-10-24T09:54:38Z" finished-at="2018-10-24T09:55:31Z">
-      <class name="Testcases.HomepageScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.HomepageScripts@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="37379" started-at="2018-10-24T09:54:38Z" finished-at="2018-10-24T09:55:16Z">
+    <test name="Test" duration-ms="263908" started-at="2018-10-24T12:42:45Z" finished-at="2018-10-24T12:47:09Z">
+      <class name="Testcases.CheckoutScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="76035" started-at="2018-10-24T12:42:45Z" finished-at="2018-10-24T12:44:01Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Homepage_InvalidSearchItems()[pri:0, instance:Testcases.HomepageScripts@38c5cc4c]" name="Homepage_InvalidSearchItems" duration-ms="15438" started-at="2018-10-24T09:55:16Z" finished-at="2018-10-24T09:55:31Z">
+        <test-method status="PASS" signature="Guest_SearchCheckout()[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c]" name="Guest_SearchCheckout" duration-ms="187686" started-at="2018-10-24T12:44:01Z" finished-at="2018-10-24T12:47:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Homepage_InvalidSearchItems -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.HomepageScripts@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="110" started-at="2018-10-24T09:55:31Z" finished-at="2018-10-24T09:55:31Z">
+        </test-method> <!-- Guest_SearchCheckout -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="162" started-at="2018-10-24T12:47:09Z" finished-at="2018-10-24T12:47:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Homepage_InvalidSearchItems status=SUCCESS method=HomepageScripts.Homepage_InvalidSearchItems()[pri:0, instance:Testcases.HomepageScripts@38c5cc4c] output={null}]]]>
+                <![CDATA[[TestResult name=Guest_SearchCheckout status=SUCCESS method=CheckoutScripts.Guest_SearchCheckout()[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.HomepageScripts -->
+      </class> <!-- Testcases.CheckoutScripts -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

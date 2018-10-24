@@ -24,9 +24,10 @@ public class HomepageActions extends HomepageRepo {
 	public void searchTerm(String SearchTerm) throws IOException {
 		searchTextbox.sendKeys(SearchTerm);
 		searchSubmit.click();
+		WaitUntilElementVisible(SearchHeader_Verify);
 		Assert.assertEquals(SearchHeader_Verify.getText(),SearchTerm);
 		AddScreenshot();
-		logs("Search Term verified");
+		logs("Search Term entered and verified");
 	}
 
 	public void SignInLink()  {

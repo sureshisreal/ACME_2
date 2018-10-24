@@ -19,10 +19,15 @@ public class BillingPageActions extends BillingPageRepo {
 		month.selectByValue("05");
 		Select year =new Select(Billing_year);
 		year.selectByValue("2025");
+		logs("Visa payment entered");
 	}
 	
 	public void PlaceOrder(){
 		PlaceOrder_Button.click();
+		WaitUntilElementVisible(OrderNumber_Text);
+		logs("Ordered Placed");
+		logs("Order Number : "+OrderNumber_Text.getText());
+		logs("Order Date : "+OrderDate_Text.getText());
 	}
 
 	

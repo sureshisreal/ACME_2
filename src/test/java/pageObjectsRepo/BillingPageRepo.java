@@ -26,5 +26,14 @@ public class BillingPageRepo extends BaseTest {
 	
 	@FindBy( xpath = ".//*[@id='WC_CheckoutButton_2'][contains(.,'Place Order')]")
 	public  WebElement PlaceOrder_Button;
+	
+	@FindBy( id = "WC_OrderShippingBillingConfirmationPage_span_1")
+	public  WebElement OrderNumber_Text;
+	
+	@FindBy( id = "orderDateParagraph")
+	public  WebElement OrderDate_Text;
+	
+	
+	
 
 }

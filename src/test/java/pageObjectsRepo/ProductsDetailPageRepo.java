@@ -11,7 +11,7 @@ public class ProductsDetailPageRepo extends BaseTest{
 	public ProductsDetailPageRepo(WebDriver driver){
         this.driver = driver;
     }
-	
+
 	@FindBy( className = "quantity_input")
 	public  WebElement quantity;
 	
