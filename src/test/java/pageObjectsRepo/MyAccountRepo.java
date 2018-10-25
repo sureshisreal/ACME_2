@@ -13,7 +13,6 @@ public class MyAccountRepo extends BaseTest {
 	    this.driver = driver;
 	}
 
-
 	@FindBy(className = "myaccount_title")
 	public WebElement myAccountSummary_title;
 	
@@ -29,14 +28,11 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(xpath = "//div[text()='Name']")
 	public WebElement personal_info_name_label;
 	
-	
 	@FindBy(xpath = "//div[text()='Address']")
 	public WebElement personal_info_address_label;
 	
-	
 	@FindBy(xpath = "//div[text()='City']")
 	public WebElement personal_info_city_label;
-	
 	
 	@FindBy(xpath = "//div[text()='E-mail']")
 	public WebElement personal_info_email_label;
@@ -44,14 +40,11 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(xpath = "//a[contains(text(),'Edit')]") 
 	public WebElement personal_info_edit_link;
 	
-	
 	@FindBy(xpath = "span[text()='Recent Order History']")
 	public WebElement recent_order_history_title;
 	
-	
 	@FindBy(xpath = "//a[contains(text(),'View all Orders')]") 
 	public WebElement recent_order_history_view_all_orders;
-	
 	
 	@FindBy(className = "current")
 	public WebElement currentPageBreadcrumb;
@@ -71,7 +64,6 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(xpath = "//tr[@class='ul column_heading']/th[contains(text(),'Total Price')]")
 	public WebElement recent_OrderHistory_header_TotalPrice;
 
-	
 	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//tr[@class='ul row']")
 	public WebElement recent_OrderHistory_ordersListSection;
 	
@@ -81,32 +73,26 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//a[contains(text(),'Details')]")
 	public WebElement recent_OrderHistory_DetailsLink;
 	
-	
 	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//td[contains(text(), 'No orders were found' )]")
 	public WebElement recent_OrderHistory_noOrdersFound;
 	
 	@FindBy(xpath = "(//div[@id='section_button_settings']//div)[1]")
 	public WebElement myacc_leftNav_settings;
 	
-	
 	@FindBy(xpath = "//div[@id='section_button_settings']//a[contains(text(),'Personal Information')]")
 	public WebElement myacc_leftNav_settings_personalInfo;
-	
 	
 	@FindBy(xpath = "//div[@id='section_button_settings']//a[contains(text(),'My Shipping Address Book')]")
 	public WebElement myacc_leftNav_settings_addressBook;
 	
-	
 	@FindBy(xpath = "//div[@id='section_button_settings']//a[contains(text(),'My Credit Card')]")
 	public WebElement myacc_leftNav_settings_creditCard;
-	
 	
 	@FindBy(xpath = "(//div[@id='section_button_wishlists']//div)[1]")
 	public WebElement myacc_leftNav_wishlists;
 	
 	@FindBy(xpath = "//div[@id='section_button_wishlists']//a[contains(text(),'Personal Wish List')]")
 	public WebElement myacc_leftNav_wishlist_personalWishlist;
-	
 	
 	@FindBy(xpath = "(//div[@id='section_button_orders']//div)[1]")
 	public WebElement myacc_leftNav_orders;

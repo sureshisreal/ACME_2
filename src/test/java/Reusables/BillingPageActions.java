@@ -1,5 +1,7 @@
 package Reusables;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pageObjectsRepo.BillingPageRepo;
@@ -22,9 +24,10 @@ public class BillingPageActions extends BillingPageRepo {
 		logs("Visa payment entered");
 	}
 	
-	public void PlaceOrder(){
+	public void PlaceOrder() throws IOException{
 		PlaceOrder_Button.click();
 		WaitUntilElementVisible(OrderNumber_Text);
+		AddScreenshot();
 		logs("Ordered Placed");
 		logs("Order Number : "+OrderNumber_Text.getText());
 		logs("Order Date : "+OrderDate_Text.getText());
