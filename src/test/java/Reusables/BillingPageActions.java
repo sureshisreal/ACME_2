@@ -31,6 +31,7 @@ public class BillingPageActions extends BillingPageRepo {
 		logs("Ordered Placed");
 		logs("Order Number : "+OrderNumber_Text.getText());
 		logs("Order Date : "+OrderDate_Text.getText());
+		
 	}
 
 	

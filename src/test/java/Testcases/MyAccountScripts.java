@@ -116,6 +116,19 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 	
+	@Test
+	public void personalInformation_PageUICheck() throws IOException, InterruptedException {
+		TestDescription("MyAccount_Summary_06",
+				"To verify if the left navigation menu has all the links present in it");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_personalInfo.click();
+		
+		
+		
+	}
+	
 	
 	
 	
