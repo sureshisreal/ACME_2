@@ -12,7 +12,8 @@ import pageObjectsRepo.MyAccountRepo;
 import utilities.BaseTest;
 
 public class MyAccountScripts extends BaseTest {
-
+	
+/*
 	@Test
 	public void myAccountSummary() throws IOException, InterruptedException {
 
@@ -29,6 +30,10 @@ public class MyAccountScripts extends BaseTest {
 		ElementPresent(myaccountPage.personal_information_title);
 		logs("Personal information Title is present");
 		ElementPresent(myaccountPage.personal_info_name_label);
+		
+		
+		
+		
 		ElementPresent(myaccountPage.personal_info_address_label);
 		ElementPresent(myaccountPage.personal_info_city_label);
 		ElementPresent(myaccountPage.personal_info_email_label);
@@ -38,20 +43,37 @@ public class MyAccountScripts extends BaseTest {
 		ElementPresent(myaccountPage.recent_order_history_title);
 		ElementPresent(myaccountPage.recent_order_history_view_all_orders);
 		logs("Order History Title with the view all orders link are present");
+		
+		
+		
+		
 
 	}
 
+	
+
+	
+	
 	@Test
 	public void editLink_accSummary() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_002", "To verify the Edit link working in the My Account Summary Page");
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		logs("Logged in as registered user");
+		
+		myaccountPage.storePersonlInfo_accSummary();
+		AddScreenshot();
 
 		Assert.assertEquals(true, myaccountPage.verifyEditLink_accSummary());
+		
+		
 		logs("Edit link click in My Account Summary's personal info section navigates the user to the Personal information Edit page");
+		myaccountPage.verifyPersonlInfo_accSummary();
+		AddScreenshot();
 
 	}
+	
+
 
 	@Test
 	public void recentOrderHistory_NoOrders() throws IOException, InterruptedException {
@@ -89,6 +111,8 @@ public class MyAccountScripts extends BaseTest {
 
 	}
 	
+	*/
+	
 	@Test
 	public void leftNavMenuLinks_UICheck() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_05",
@@ -116,6 +140,8 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 	
+	/*
+	
 	@Test
 	public void personalInformation_PageUICheck() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_06",
@@ -125,9 +151,13 @@ public class MyAccountScripts extends BaseTest {
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
 		
-		
+	
 		
 	}
+	
+	*/
+	
+	
 	
 	
 	

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="344506" started-at="2018-10-24T13:02:43Z" finished-at="2018-10-24T13:08:28Z">
+  <suite name="Suite" duration-ms="88912" started-at="2018-10-25T11:35:42Z" finished-at="2018-10-25T11:37:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="344506" started-at="2018-10-24T13:02:43Z" finished-at="2018-10-24T13:08:28Z">
-      <class name="Testcases.CheckoutScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.CheckoutScripts@451816fd]" name="beforeMethod" is-config="true" duration-ms="68405" started-at="2018-10-24T13:02:43Z" finished-at="2018-10-24T13:03:52Z">
+    <test name="Test" duration-ms="88912" started-at="2018-10-25T11:35:42Z" finished-at="2018-10-25T11:37:11Z">
+      <class name="Testcases.MyAccountScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="beforeMethod" is-config="true" duration-ms="56226" started-at="2018-10-25T11:35:42Z" finished-at="2018-10-25T11:36:39Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Guest_SearchCheckout()[pri:0, instance:Testcases.CheckoutScripts@451816fd]" name="Guest_SearchCheckout" duration-ms="275941" started-at="2018-10-24T13:03:52Z" finished-at="2018-10-24T13:08:28Z">
+        <test-method status="PASS" signature="leftNavMenuLinks_UICheck()[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="leftNavMenuLinks_UICheck" duration-ms="32632" started-at="2018-10-25T11:36:39Z" finished-at="2018-10-25T11:37:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Guest_SearchCheckout -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.CheckoutScripts@451816fd]" name="afterMethod" is-config="true" duration-ms="110" started-at="2018-10-24T13:08:28Z" finished-at="2018-10-24T13:08:28Z">
+        </test-method> <!-- leftNavMenuLinks_UICheck -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="afterMethod" is-config="true" duration-ms="30" started-at="2018-10-25T11:37:11Z" finished-at="2018-10-25T11:37:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Guest_SearchCheckout status=SUCCESS method=CheckoutScripts.Guest_SearchCheckout()[pri:0, instance:Testcases.CheckoutScripts@451816fd] output={null}]]]>
+                <![CDATA[[TestResult name=leftNavMenuLinks_UICheck status=SUCCESS method=MyAccountScripts.leftNavMenuLinks_UICheck()[pri:0, instance:Testcases.MyAccountScripts@5db250b4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.CheckoutScripts -->
+      </class> <!-- Testcases.MyAccountScripts -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -13,6 +13,8 @@ public class MyAccountRepo extends BaseTest {
 	    this.driver = driver;
 	}
 
+	
+	//MyAccount Summary Page Elements
 
 	@FindBy(className = "myaccount_title")
 	public WebElement myAccountSummary_title;
@@ -30,16 +32,31 @@ public class MyAccountRepo extends BaseTest {
 	public WebElement personal_info_name_label;
 	
 	
+	@FindBy(xpath = "//div[@class='info_table']//div[contains(text(),'Name')]/following-sibling::div")
+	public WebElement personal_info_name_value;
+	
+
+	
 	@FindBy(xpath = "//div[text()='Address']")
 	public WebElement personal_info_address_label;
+	
+	
+	@FindBy(xpath = "//div[@class='info_table']//div[contains(text(),'Address')]/following-sibling::div")
+	public WebElement personal_info_address_value;
 	
 	
 	@FindBy(xpath = "//div[text()='City']")
 	public WebElement personal_info_city_label;
 	
 	
+	@FindBy(xpath = "//div[@class='info_table']//div[contains(text(),'City')]/following-sibling::div")
+	public WebElement personal_info_city_value;
+	
 	@FindBy(xpath = "//div[text()='E-mail']")
 	public WebElement personal_info_email_label;
+	
+	@FindBy(xpath = "//div[@class='info_table']//div[contains(text(),'E-mail')]/following-sibling::div")
+	public WebElement personal_info_email_value;
 	
 	@FindBy(xpath = "//a[contains(text(),'Edit')]") 
 	public WebElement personal_info_edit_link;
@@ -85,6 +102,9 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//td[contains(text(), 'No orders were found' )]")
 	public WebElement recent_OrderHistory_noOrdersFound;
 	
+	
+	//My Account Page Left Navigation Page Elements
+	
 	@FindBy(xpath = "(//div[@id='section_button_settings']//div)[1]")
 	public WebElement myacc_leftNav_settings;
 	
@@ -117,8 +137,142 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(xpath = "(//div[@id='section_button_coupons']//div)[1]")
 	public WebElement myacc_leftNav_coupons;
 	
-	@FindBy(xpath = "//div[@id='section_button_orders']//a[contains(text(),'Coupons')]")
+	@FindBy(xpath = "//div[@id='section_button_coupons']//a[contains(text(),'Coupons')]")
 	public WebElement myacc_leftNav_coupons_sublink;
+	
+	//Personal Information Page Elements
+	
+	@FindBy(name = "firstName")
+	public WebElement myacc_pi_fname;
+	
+	
+	@FindBy(name = "lastName")
+	public WebElement myacc_pi_lastName;
+	
+
+	@FindBy(name = "address1")
+	public WebElement myacc_pi_address1;
+	
+	
+	@FindBy(name = "city")
+	public WebElement myacc_pi_city;
+	
+	
+	@FindBy(name = "email1")
+	public WebElement myacc_pi_email1;
+	
+	
+	@FindBy(name = "verifyemail1")
+	public WebElement myacc_pi_verifyemail1;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//h2[contains(text(),'Personal Information')]")
+	public WebElement pi_header;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//div[contains(text(),'Welcome Back')]")
+	public WebElement pi_wecomeBackText;
+	
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//p[contains(text(),'Last logon')]")
+	public WebElement pi_lastLogonText;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Password')]")
+	public WebElement pi_passwordLabel;
+	
+	@FindBy(name = "logonPassword_old")
+	public WebElement pi_passwordField;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Verify password')]")
+	public WebElement pi_verifyPasswordLabel;
+	
+	@FindBy(name = "logonPasswordVerify_old")
+	public WebElement pi_verifyPasswordField;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'First name:')]")
+	public WebElement pi_fnameLabel;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Last name:')]")
+	public WebElement pi_lnameLabel;
+	
+	@FindBy(xpath = "//div[@class='my_account']//div[contains(text(),'Company:')]")
+	public WebElement pi_companyLabel;
+			
+	
+	@FindBy(name = "organizationName")
+	public WebElement pi_companyField;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Street address 1:')]")
+	public WebElement pi_address1Label;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Street address 2:')]")
+	public WebElement pi_address2Label;
+	
+	@FindBy(name = "address2")
+	public WebElement pi_address2Field;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'City')]")
+	public WebElement pi_cityLabel;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'ZIP code:')]")
+	public WebElement pi_zipcodeLabel;
+	
+	
+	@FindBy(name = "zipCode")
+	public WebElement pi_zipCodeField;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'State:')]")
+	public WebElement pi_stateLabel;
+	
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Email:')]")
+	public WebElement pi_emailLabel;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Verify Email')]")
+	public WebElement pi_verifyEmailLabel;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Phone number:')]")
+	public WebElement pi_phoneNumberLabel;
+	
+	@FindBy(name = "phone1")
+	public WebElement pi_phoneNumField;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Occupation:')]")
+	public WebElement pi_occupationLabel;
+	
+	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Birth Month:')]")
+	public WebElement pi_birthMonthLabel;
+	
+	
+	@FindBy(xpath = "//div[@class='my_account']//a[contains(text(),'Privacy Policy')]")
+	public WebElement pi_privacyPolicyLink;
+	
+	@FindBy(name = "sendMeEmail")
+	public WebElement pi_emailSubscriptionsCheckbox;
+	
+	@FindBy(xpath = "//div[@class='my_account']//li[@id='reg_subscribe_email']")
+	public WebElement pi_emailSubscriptionsText;
+	
+	
+	@FindBy(xpath = "//a[contains(text(),'Update')]")
+	public WebElement pi_updateCTA;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

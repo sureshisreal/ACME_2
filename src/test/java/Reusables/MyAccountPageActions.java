@@ -1,11 +1,20 @@
 package Reusables;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.commons.collections.map.HashedMap;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import pageObjectsRepo.MyAccountRepo;
 
 public class MyAccountPageActions extends MyAccountRepo {
+	
+	public HashMap <String,String> accSumm_personalInfo = new HashMap<String,String>();
+
 	
 	public MyAccountPageActions(WebDriver driver) {
 		super(driver);
@@ -85,7 +94,7 @@ public boolean verifyLeftNavSettings() {
 
 public boolean verifyLeftNavWishlists() {
 	
-	String title = myacc_leftNav_settings.getText().toString();
+	String title = myacc_leftNav_wishlists.getText().toString();
 	
 	if(title.contains("WISH LISTS")) {
 		System.out.println(title);
@@ -121,6 +130,42 @@ public boolean verifyLeftNavCoupons() {
 }
 
 
+
+public void storePersonlInfo_accSummary() {
+	
+	accSumm_personalInfo.put("Name",personal_info_name_value.getText().toString().trim());
+	accSumm_personalInfo.put("Address", personal_info_address_value.getText().toString().trim());
+	accSumm_personalInfo.put("City",personal_info_city_value.getText().toString().trim());
+	accSumm_personalInfo.put("Email", personal_info_email_value.getText().toString().trim());
+	System.out.println(accSumm_personalInfo);
+
+	logs("My Account Summary - Personal info values are stored in Hashmap --> " + accSumm_personalInfo.toString());
+	
+	
+	
+}
+
+
+public void verifyPersonlInfo_accSummary(){
+	
+	Assert.assertTrue(accSumm_personalInfo.get("Name").contains(myacc_pi_fname.getAttribute("value")));
+	logs("firstname is matching");
+	Assert.assertTrue(accSumm_personalInfo.get("Name").contains(myacc_pi_lastName.getAttribute("value")));
+	logs("Last Name is matching");
+	Assert.assertTrue(accSumm_personalInfo.get("Address").contains(myacc_pi_address1.getAttribute("value")));
+	logs("Address 1 is matching");
+	Assert.assertTrue(accSumm_personalInfo.get("City").contains(myacc_pi_city.getAttribute("value")));
+	logs("City is matching");
+	Assert.assertTrue(accSumm_personalInfo.get("Email").contains(myacc_pi_email1.getAttribute("value")));
+	logs("Email is matching");
+	//myacc_pi_verifyemail1.sendKeys("newjdsnjd");
+	Assert.assertTrue(accSumm_personalInfo.get("Email").contains(myacc_pi_verifyemail1.getAttribute("value")));
+	logs("Verify Email is matching");
+	
+	
+	
+	
+}
 
 
 
