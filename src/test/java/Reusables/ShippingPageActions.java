@@ -32,14 +32,14 @@ public class ShippingPageActions extends ShippingPageRepo {
 	}
 	
 	public void UseEnteredAddress() throws InterruptedException{
-		Thread.sleep(45000);
+		Thread.sleep(60000);
 		System.out.println("UseEnteredAddress_RadioButton.isDisplayed()" +UseEnteredAddress_RadioButton.isDisplayed());
 		if(UseEnteredAddress_RadioButton.isDisplayed()) {
 			UseEnteredAddress_RadioButton.click();	}
 	}
 	
 	public void UseSuggestedAddress() throws InterruptedException{
-		Thread.sleep(45000);
+		Thread.sleep(60000);
 		if(UseSuggestedAddress_RadioButton !=null)
 		UseSuggestedAddress_RadioButton.click();
 	}
