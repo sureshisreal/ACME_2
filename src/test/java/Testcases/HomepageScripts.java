@@ -11,7 +11,7 @@ public class HomepageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_SearchItems() throws IOException, InterruptedException {
-		TestDescription("Homepage_MultipleSearchItems",
+		TestDescription("Homepage_SearchItems",
 				"To verify guest user able to place order using search items");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "SearchSKU");
@@ -24,8 +24,8 @@ public class HomepageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_InvalidSearchItems() throws IOException, InterruptedException {
-		TestDescription("Homepage_MultipleSearchItems",
-				"To verify guest user able to place order using search items");
+		TestDescription("Homepage_InvalidSearchItems",
+				"To verify guest user able to view th invalid search result page");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "InvalidSearch");
 			String SearchTermList = SearchTermData.get(0);
@@ -36,7 +36,7 @@ public class HomepageScripts extends BaseTest{
 	@Test
 	public void Homepage_MultipleSearchItems() throws IOException, InterruptedException {
 		TestDescription("Homepage_MultipleSearchItems",
-				"To verify guest user able to place order using search items");
+				"To verify guest user able to place order using multiple search items");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "SearchSKU");
 		int searchList = SearchTermData.size();
