@@ -140,7 +140,7 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 	
-	/*
+	
 	
 	@Test
 	public void personalInformation_PageUICheck() throws IOException, InterruptedException {
@@ -150,12 +150,13 @@ public class MyAccountScripts extends BaseTest {
 		registerationPage.HomepageLogin();
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
+		myaccountPage.personalInfo_UIValidation();
 		
 	
 		
 	}
 	
-	*/
+	
 	
 	
 	

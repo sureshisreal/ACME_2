@@ -162,8 +162,46 @@ public void verifyPersonlInfo_accSummary(){
 	Assert.assertTrue(accSumm_personalInfo.get("Email").contains(myacc_pi_verifyemail1.getAttribute("value")));
 	logs("Verify Email is matching");
 	
+}
+
+
+public void personalInfo_UIValidation() {
 	
-	
+	Assert.assertTrue(currentPageBreadcrumb.getText().toString().equals("Personal Information"));
+	ElementPresent(pi_header);
+	ElementPresent(pi_wecomeBackText);
+	ElementPresent(pi_lastLogonText);
+	ElementPresent(pi_passwordLabel);
+	ElementPresent(pi_passwordField);
+	ElementPresent(pi_verifyPasswordLabel);
+	ElementPresent(pi_verifyPasswordField);
+	ElementPresent(pi_fnameLabel);
+	ElementPresent(myacc_pi_fname);
+	ElementPresent(pi_lnameLabel);
+	ElementPresent(myacc_pi_lastName);
+	ElementPresent(pi_companyLabel);
+	ElementPresent(pi_companyField);
+	ElementPresent(pi_address1Label);
+	ElementPresent(myacc_pi_address1);
+	ElementPresent(pi_address2Label);
+	ElementPresent(pi_address2Field);
+	ElementPresent(pi_cityLabel);
+	ElementPresent(myacc_pi_city);
+	ElementPresent(pi_zipcodeLabel);
+	ElementPresent(pi_zipCodeField);
+	ElementPresent(pi_stateLabel);
+	ElementPresent(pi_emailLabel);
+	ElementPresent(myacc_pi_email1);
+	ElementPresent(pi_verifyEmailLabel);
+	ElementPresent(myacc_pi_verifyemail1);
+	ElementPresent(pi_phoneNumberLabel);
+	ElementPresent(pi_phoneNumField);
+	ElementPresent(pi_occupationLabel);
+	ElementPresent(pi_birthMonthLabel);
+	ElementPresent(pi_privacyPolicyLink);
+	ElementPresent(pi_emailSubscriptionsCheckbox);
+	Assert.assertTrue(pi_emailSubscriptionsText.getText().toString().contains("Please subscribe me to the Acme Tools mailing list, so I can learn about special offers and promotions."));
+	ElementPresent(pi_updateCTA);
 	
 }
 
