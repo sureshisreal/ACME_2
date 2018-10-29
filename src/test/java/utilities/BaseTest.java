@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -67,9 +68,13 @@ public class BaseTest extends ExtentManager {
 	protected RegisterationPageActions registerationPage;
 	protected MyAccountPageActions myaccountPage;
 	protected SearchPageActions searchResultPage;
+<<<<<<< HEAD
 	protected MyAccountCCPageActions myaccCCpage;
 	protected MyAccAddressBookPageActions aBookPage;
 
+=======
+	protected Random rand = new Random(); 
+>>>>>>> d6dd0497d25a720e4bba71b59fd5fae4863a0515
 
 
 	@BeforeMethod
@@ -84,6 +89,7 @@ public class BaseTest extends ExtentManager {
 		//js.executeScript("document.cookie='currentZipcode=58102';");
 		driver.get("https://qa.acmetools.com");
 		js = (JavascriptExecutor) driver;
+	
 
 		
 		homepage = PageFactory.initElements(driver, HomepageActions.class);
@@ -153,7 +159,6 @@ public class BaseTest extends ExtentManager {
 	protected void TestDescription(String Title, String Description) {
 		extentTest = extent.createTest(Title, Description);
 	}
-	
 	
 	public List<String> getColumnData(String sheetName, String columnName) throws IOException {
 		

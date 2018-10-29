@@ -1,5 +1,8 @@
 package pageObjectsRepo;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,13 +21,17 @@ public class CatgoryPageRepo extends BaseTest {
 	@FindBy(xpath = "(.//div[@class='hawk-name product_name'])[1]")
 	public WebElement FirstProductName;
 	
-	@FindBy(css = ".product_name a")
-	public WebElement AllProductNames;
+	@FindBy(xpath = ".//*[@class='product_name']")
+	public List<WebElement> AllProductNames;
 
 	@FindBy(xpath = ".//*[@id='widget_breadcrumb']//li[@class='current']")
 	public WebElement SearchHeader;
 	
 	@FindBy(xpath = ".//div[@class='top namePartPriceContainer']//h1[@class='main_header']")
 	public WebElement PDP_TitleVerify;
+	
+	 public WebElement RandomCategorySelect(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='product_name'])["+i+"]"));
+	    }
 	
 }

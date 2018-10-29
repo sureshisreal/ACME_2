@@ -3,6 +3,8 @@ package Reusables;
 import static org.testng.AssertJUnit.assertTrue;
 
 import java.io.IOException;
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -52,7 +54,7 @@ public class HomepageActions extends HomepageRepo {
 		assertTrue(welcome_Banner.getText().contains("Welcome to AcmeTools"));
 	}
 
-	public void MenuValidations() throws IOException {
+	public void TopMenuValidations() throws IOException {
 		WaitUntilElementVisible(OrderStatus_Link);
 		OrderStatus_Link.click();
 		ElementPresent(OrderStatus_Header);
@@ -71,6 +73,86 @@ public class HomepageActions extends HomepageRepo {
 		System.out.println("MiniShoppingCart_EmptyText.getText() " +MiniShoppingCart_EmptyText.getText());
 		assertTrue(MiniShoppingCart_EmptyText.getText().contains("Your cart is empty"));
 		MiniShoppingCart_close.click();
+	}
+
+	public void MenuValidations() throws IOException {
+		WaitUntilElementVisible(Menu_Category);
+		Menu_Category.click();
+		logs("Categories Menu clicked");
+		AddScreenshot();
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		assertTrue(Menu_CategoryVerify.getText().contains("Categories"));
+		logs("Categories Menu verified");
+		Menu_Brands.click();
+		logs(" Menu Brands clicked");
+		AddScreenshot();
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		assertTrue(Menu_CategoryVerify.getText().contains("Brands"));
+		logs(" Menu Brands verified");
+		Menu_Deals.click();
+		logs(" Menu Deals clicked");
+		AddScreenshot();
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		assertTrue(Menu_CategoryVerify.getText().contains("Deals"));
+		logs(" Menu Deals verified");
+		Menu_WhatsNew.click();
+		logs(" Menu What'snew clicked");
+		AddScreenshot();
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		assertTrue(Menu_CategoryVerify.getText().contains("What's"));	
+		logs(" Menu What'snew verified");
+	}
+
+	public void CategoryMenuSelection() throws IOException {
+		WaitUntilElementVisible(Menu_Category);
+		Menu_Category.click();
+		logs("Category Header Selected");
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		int rand_int = rand.nextInt(Categorypage_AllCategory.size()+1); 
+		System.out.println("rand_int " +rand_int);
+		AddScreenshot();
+		String CategoryName = Categorypage_RandomCategory(rand_int).getText();
+		logs("Random Category selected : " +CategoryName);
+		Categorypage_RandomCategory(rand_int).click();
+		WaitUntilElementVisible(SearchHeader_Verify);
+		AddScreenshot();
+		Assert.assertEquals(SearchHeader_Verify.getText(),CategoryName);
+		int rand_int1 = rand.nextInt(SubCategorypage_SubCCategory.size()+1); 
+		System.out.println("SubCategory Header" +rand_int1);
+		String SubCategoryName = SubCategorypage_RandomCategory(rand_int1).getText();
+		AddScreenshot();
+		SubCategorypage_RandomCategory(rand_int1).click();
+		logs("Random SubCategory selected : " +SubCategoryName);
+		Assert.assertEquals(SearchHeader_Verify.getText(),SubCategoryName);
+		AddScreenshot();
+
+	}
+
+	public void BrandMenuSelection() throws IOException {
+		WaitUntilElementVisible(Menu_Category);
+		Menu_Brands.click();
+		logs("Brand Header Selected");
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		int rand_int = rand.nextInt(Brand_SubCCategory.size()+1); 
+		System.out.println("rand_int " +rand_int);
+		AddScreenshot();
+		String BrandName = Brands_RandomCategory(rand_int).getText();
+		logs("Random Category selected : " +BrandName);
+		Brands_RandomCategory(rand_int).click();
+		WaitUntilElementVisible(SearchHeader_Verify);
+		AddScreenshot();
+		Assert.assertEquals(SearchHeader_Verify.getText(),BrandName);
+		if(SubCategorypage_SubCCategory.size() > 0) {
+		int rand_int1 = rand.nextInt(SubCategorypage_SubCCategory.size()+1); 
+		System.out.println("SubCategory Header" +rand_int1);
+		String SubCategoryName = SubCategorypage_RandomCategory(rand_int1).getText();
+		AddScreenshot();
+		SubCategorypage_RandomCategory(rand_int1).click();
+		logs("Random SubCategory selected : " +SubCategoryName);
+		Assert.assertEquals(SearchHeader_Verify.getText(),SubCategoryName);
+		AddScreenshot();
+		}
+
 	}
 
 	

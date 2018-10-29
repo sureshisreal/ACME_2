@@ -36,5 +36,13 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 		productPagePickUpTodayButton.click();
 	}
 
+	public void VerifyPage() {
+		WaitUntilElementVisible(PDPpage_Container);
+		logs("PDP page verified");
+		
+	}
+	
+	
+
 
 }

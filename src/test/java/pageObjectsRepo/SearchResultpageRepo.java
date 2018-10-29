@@ -17,6 +17,14 @@ public class SearchResultpageRepo extends BaseTest{
 	@FindBy(xpath = "(.//*[@id='hawkitemlist']//div)[1]")
 	public WebElement SearchHeader_ZeroResult;
 	
+	@FindBy(id = "widget_breadcrumb")
+	public  WebElement BrandName_BreadCrumb;
+	
+	@FindBy(xpath = ".//*[@class='container hawksearchwrap']")
+	public  WebElement Searchpage_Container;
+	
+	
+	
 	
 	
 }
