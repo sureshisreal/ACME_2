@@ -16,6 +16,8 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	
+	String pinfo_username, pinfo_passwd;
 
 	public void HomepageLogin() throws IOException {
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
@@ -58,18 +60,18 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	public void HomepageLogin_pinfoAcc() throws IOException {
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> UsernameData = getColumnData("SignIn","Username");
-		String Username = UsernameData.get(2);
+		String pinfo_username = UsernameData.get(2);
 		List<String> PssswordData = getColumnData("SignIn","Password");
-		String Password = PssswordData.get(2);
-		System.out.println("Credentials :" + Username + "" +Password);
-		LogonId_Textbox.sendKeys(Username);
-		Password_Textbox.sendKeys(Password);
+		String pinfo_passwd = PssswordData.get(2);
+		System.out.println("Credentials :" + pinfo_username + "" +pinfo_passwd);
+		LogonId_Textbox.sendKeys(pinfo_username);
+		Password_Textbox.sendKeys(pinfo_passwd);
 		//AddScreenshot();
 		SignIn_Button.click();	
 		String welcomeText= MyAccount_WelcomeText.getText();
 		assertTrue(welcomeText.contains("Welcome,"));
 		//AddScreenshot();
-		logs("Login success \n UserName :" +Username+ "Password: "+Password);
+		logs("Login success \n UserName :" +pinfo_username+ "Password: "+pinfo_passwd);
 		
 	}
 	
@@ -127,6 +129,57 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	public void CreateAccountValidations() {
 		
 	}
+	
+	public void loginWithOldPassword() {
+		
+		LogonId_Textbox.sendKeys(pinfo_username);
+		Password_Textbox.sendKeys(pinfo_passwd);
+		SignIn_Button.click();
+		Assert.assertTrue(logonErrorMessage.getText().toString().contains("Either the logon ID or password entered is incorrect. Enter the information again"));
+		logs("Validation with old password doesn't allow user to edit");
+	}
+	
+	public void loginWithNewPassword() throws IOException {
+		
+		LogonId_Textbox.sendKeys(pinfo_username);
+		Password_Textbox.sendKeys("Qwerty!2345");
+		SignIn_Button.click();
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		AddScreenshot();
+		logs("Login success \n with new UserName and password" + pinfo_username + "Qwerty!2345");
+		
+		
+		
+	}
+	
+	
+	public void loginwithOldEmail() {
+		
+		LogonId_Textbox.sendKeys(pinfo_username);
+		Password_Textbox.sendKeys(pinfo_passwd);
+		SignIn_Button.click();
+		Assert.assertTrue(logonErrorMessage.getText().toString().contains("Either the logon ID or password entered is incorrect. Enter the information again"));
+		logs("Validation with old Email ID doesn't allow user to edit");
+	}
+	
+	public void loginwithNewEmail() throws IOException {
+		
+		LogonId_Textbox.sendKeys("pinfoedited@yopmail.com");
+		Password_Textbox.sendKeys(pinfo_passwd);
+		SignIn_Button.click();
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		AddScreenshot();
+		logs("Login success \n with new UserName and password" + "pinfoedited@yopmail.com" + pinfo_passwd);
+		
+		
+		
+	}
+	
+	
+	
+	
 
 	
 

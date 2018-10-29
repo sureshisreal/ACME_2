@@ -264,8 +264,7 @@ public class MyAccountRepo extends BaseTest {
 	public WebElement pi_updateCTA;
 	
 	
-	@FindBy(xpath = "//ul[@id='quickLinksBar']//a[contains(text(),'Sign Out')]")
-	public WebElement SignOut;
+
 		
 	
 	

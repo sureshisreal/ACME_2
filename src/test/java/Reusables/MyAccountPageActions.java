@@ -217,8 +217,177 @@ public void personalInfo_editPasswordCheck() throws IOException {
 
 }
 
+public void editPersonalInfoValues() throws IOException {
+	
+	List<String> pinfoFName = getColumnData("MyAcc_PInfo","firstName");
+	String fname = pinfoFName.get(0);
+	List<String> pinfoLName = getColumnData("MyAcc_PInfo","lastName");
+	String lname = pinfoLName.get(0);
+	
+	List<String> pinfoCompany = getColumnData("MyAcc_PInfo","company");
+	String company = pinfoCompany.get(0);
+	List<String> pinfoaddress1 = getColumnData("MyAcc_PInfo","address1");
+	String address1 = pinfoaddress1.get(0);
+	
+	List<String> pinfoaddress2 = getColumnData("MyAcc_PInfo","address2");
+	String address2 = pinfoaddress2.get(0);
+	List<String> pinfozipcode = getColumnData("MyAcc_PInfo","zipcode");
+	String zipcode = pinfozipcode.get(0);
+	
+	List<String> pinfocity = getColumnData("MyAcc_PInfo","city");
+	String city = pinfocity.get(0);
+	
+	List<String> pinfostate = getColumnData("MyAcc_PInfo","state");
+	String state = pinfostate.get(0);
+	
+	List<String> pinfoemail = getColumnData("MyAcc_PInfo","email");
+	String email = pinfoemail.get(0);
+
+	
+	List<String> pinfophonenumber = getColumnData("MyAcc_PInfo","phonenumber");
+	String phonenumber = pinfophonenumber.get(0);
+	
+	myacc_pi_fname.clear();
+	myacc_pi_fname.sendKeys(fname);
+	myacc_pi_lastName.clear();
+	myacc_pi_lastName.sendKeys(lname);
+	pi_companyField.clear();
+	pi_companyField.sendKeys(company);
+	myacc_pi_address1.clear();
+	myacc_pi_address1.sendKeys(address1);
+	pi_address2Field.clear();
+	pi_address2Field.sendKeys(address2);
+	myacc_pi_city.clear();
+	myacc_pi_city.sendKeys(city);
+	myacc_pi_email1.clear();
+	myacc_pi_email1.sendKeys(email);
+	myacc_pi_verifyemail1.clear();
+	myacc_pi_verifyemail1.sendKeys(email);
+	pi_phoneNumField.clear();
+	pi_phoneNumField.sendKeys(phonenumber);
+	AddScreenshot();
+	pi_updateCTA.click();
+	logs("Update of Personal information is done successfully");
+	AddScreenshot();
+	personal_info_edit_link.click();
+	
+	
+	Assert.assertTrue(fname.contains(myacc_pi_fname.getAttribute("value")));
+	logs("firstname is updated successfully");
+	Assert.assertTrue(lname.contains(myacc_pi_lastName.getAttribute("value")));
+	logs("Last Name is  updated successfully");
+	Assert.assertTrue(address1.contains(myacc_pi_address1.getAttribute("value")));
+	logs("Address 1 updated successfully");
+	Assert.assertTrue(city.contains(myacc_pi_city.getAttribute("value")));
+	logs("City is updated successfully");
+	Assert.assertTrue(email.contains(myacc_pi_email1.getAttribute("value")));
+	logs("Email is updated successfully");
+
+	Assert.assertTrue(email.contains(myacc_pi_verifyemail1.getAttribute("value")));
+	logs("Verify Email is updated successfully");
+	
+	Assert.assertTrue(company.contains(pi_companyField.getAttribute("value")));
+	logs("Company value is updated successfully");
+	
+	Assert.assertTrue(address2.contains(pi_address2Field.getAttribute("value")));
+	logs("address 2 value is updated successfully");
+	
+	Assert.assertTrue(phonenumber.contains(pi_phoneNumField.getAttribute("value")));
+	logs("phone num value is updated successfully");
+	
+	AddScreenshot();
+	pi_revertbackToOriginal();
 
 
+	
+}
+ 
+public void pi_revertbackToOriginal() throws IOException {
+	
+	
+	List<String> pinfoFName = getColumnData("MyAcc_PInfo","firstName");
+	String fname = pinfoFName.get(1);
+	List<String> pinfoLName = getColumnData("MyAcc_PInfo","lastName");
+	String lname = pinfoLName.get(1);
+	
+	List<String> pinfoCompany = getColumnData("MyAcc_PInfo","company");
+	String company = pinfoCompany.get(1);
+	List<String> pinfoaddress1 = getColumnData("MyAcc_PInfo","address1");
+	String address1 = pinfoaddress1.get(1);
+	
+	List<String> pinfoaddress2 = getColumnData("MyAcc_PInfo","address2");
+	String address2 = pinfoaddress2.get(1);
+	List<String> pinfozipcode = getColumnData("MyAcc_PInfo","zipcode");
+	String zipcode = pinfozipcode.get(1);
+	
+	List<String> pinfocity = getColumnData("MyAcc_PInfo","city");
+	String city = pinfocity.get(1);
+	
+	List<String> pinfostate = getColumnData("MyAcc_PInfo","state");
+	String state = pinfostate.get(1);
+	
+	List<String> pinfoemail = getColumnData("MyAcc_PInfo","email");
+	String email = pinfoemail.get(1);
+
+	
+	List<String> pinfophonenumber = getColumnData("MyAcc_PInfo","phonenumber");
+	String phonenumber = pinfophonenumber.get(1);
+	
+	myacc_pi_fname.clear();
+	myacc_pi_fname.sendKeys(fname);
+	myacc_pi_lastName.clear();
+	myacc_pi_lastName.sendKeys(lname);
+	pi_companyField.clear();
+	pi_companyField.sendKeys(company);
+	myacc_pi_address1.clear();
+	myacc_pi_address1.sendKeys(address1);
+	pi_address2Field.clear();
+	pi_address2Field.sendKeys(address2);
+	myacc_pi_city.clear();
+	myacc_pi_city.sendKeys(city);
+	myacc_pi_email1.clear();
+	myacc_pi_email1.sendKeys(email);
+	myacc_pi_verifyemail1.clear();
+	myacc_pi_verifyemail1.sendKeys(email);
+	pi_phoneNumField.clear();
+	pi_phoneNumField.sendKeys(phonenumber);
+	AddScreenshot();
+	pi_updateCTA.click();
+	logs("Personal Info data got reverted back successfully");
+	AddScreenshot();
+	
+}
+
+
+
+
+public void pinfo_editEmailValidations() throws IOException {
+	List<String> pinfoEmail = getColumnData("MyAcc_PInfo","email");
+	String email = pinfoEmail.get(0);
+	myacc_pi_email1.clear();
+	myacc_pi_email1.sendKeys(email);
+	myacc_pi_verifyemail1.clear();
+	myacc_pi_verifyemail1.sendKeys(email);
+	AddScreenshot();
+	pi_updateCTA.click();
+	logs("Edited with new Email ID in personal information section");
+	
+}
+
+public void revertToOriginalEmail() throws IOException {
+	
+
+	List<String> pinfoemail = getColumnData("MyAcc_PInfo","email");
+	String email = pinfoemail.get(1);
+	myacc_pi_email1.clear();
+	myacc_pi_email1.sendKeys(email);
+	myacc_pi_verifyemail1.clear();
+	myacc_pi_verifyemail1.sendKeys(email);
+	AddScreenshot();
+	pi_updateCTA.click();
+	logs("Reverted back with original Email ID in personal information section");
+	
+}
 
 	
 	
