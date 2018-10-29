@@ -10,8 +10,8 @@
       <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="leftNavMenuLinks_UICheck"/>
           <include name="beforeMethod"/>
+          <include name="personalInformation_PageUICheck"/>
         </methods>
       </class> <!-- Testcases.MyAccountScripts -->
     </classes>
