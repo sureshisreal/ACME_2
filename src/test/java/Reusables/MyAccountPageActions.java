@@ -1,6 +1,7 @@
 package Reusables;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -204,6 +205,18 @@ public void personalInfo_UIValidation() {
 	ElementPresent(pi_updateCTA);
 	
 }
+
+public void personalInfo_editPasswordCheck() throws IOException {
+	List<String> pinfoPassword = getColumnData("MyAcc_PInfo","newPassword");
+	String newPassword = pinfoPassword.get(0);
+	List<String> pinfoVerifyPassword = getColumnData("MyAcc_PInfo","newVerifyPassword");
+	String newVerifyPassword = pinfoVerifyPassword.get(0);
+	pi_passwordField.sendKeys(newPassword);
+	pi_verifyPasswordField.sendKeys(newVerifyPassword);
+	pi_updateCTA.click();
+
+}
+
 
 
 
