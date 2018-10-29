@@ -30,6 +30,10 @@ public class ProductsDetailPageRepo extends BaseTest{
 	@FindBy( id = "GotoCartButton2")
 	public  WebElement GotoCartButton;
 	
+	@FindBy( xpath = ".//*[@class='container pdpPage']")
+	public  WebElement PDPpage_Container;
+	
+	
 
 
 }

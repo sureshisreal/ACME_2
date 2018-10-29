@@ -2,6 +2,7 @@ package pageObjectsRepo;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import utilities.BaseTest;
 
 public class HomepageRepo extends BaseTest{
-	
+
+
 	public HomepageRepo(WebDriver driver){
         this.driver = driver;
     }
@@ -80,6 +82,45 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(xpath = ".//*[@id='widget_breadcrumb']//li[@class='current']")
 	public WebElement SearchHeader_Verify;
 	
-	 
+	@FindBy(xpath = ".//*[@class='departmentButton']//span[contains(.,'Categories')]")
+	public WebElement Menu_Category;
 	
+	@FindBy(xpath = ".//*[@class='departmentButton']//span[contains(.,'Brands')]")
+	public WebElement Menu_Brands;
+		
+	@FindBy(xpath = ".//*[@class='departmentButton']//span[contains(.,'Deals')]")
+	public WebElement Menu_Deals;
+	
+	@FindBy(xpath = ".//*[@class='departmentButton']//span[contains(.,'New')]")
+	public WebElement Menu_WhatsNew;	
+	
+	@FindBy(xpath = ".//*[@class='category-page']")
+	public WebElement Menu_CategoryVerify;
+	
+	@FindBy(xpath = ".//*[@class='departmentButton'][contains(.,'Brands')]/following-sibling::div//li")
+	public WebElement RandomMenu_BrandName;
+	
+	@FindBy(xpath = "(.//*[@class='promonewrow']//b)[1]")
+	public  WebElement Categorypage_FirstCategory;
+	
+	@FindBy(xpath = ".//*[@class='promonewrow']//b")
+	public  List<WebElement> Categorypage_AllCategory;
+	
+	 public WebElement Categorypage_RandomCategory(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='promonewrow']//b)["+i+"]"));
+	    }
+	 
+	@FindBy(xpath = ".//*[@class='product_group_name product_info']")
+	public  List<WebElement> SubCategorypage_SubCCategory;
+	 
+	 public WebElement SubCategorypage_RandomCategory(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='product_group_name product_info'])["+i+"]"));
+	    }
+	 
+	@FindBy(xpath = " .//*[@class='brandListing column-list-js']//a")
+	public  List<WebElement> Brand_SubCCategory;
+	
+	public WebElement Brands_RandomCategory(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='brandListing column-list-js']//a)["+i+"]"));
+	    }
 }
