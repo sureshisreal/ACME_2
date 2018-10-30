@@ -59,7 +59,7 @@ public class RegisterationpageRepo extends BaseTest {
 	public  WebElement Register_Button;
 	
 //Logout 	
-	@FindBy(xpath = "//ul[@id='quickLinksBar']//a[contains(text(),'Sign Out')]")
+	@FindBy(xpath = "//ul[@id='quickLinksBar']//a[@id='SigniIn_alt']")
 	public WebElement SignOut;
 
 	

@@ -60,10 +60,10 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	public void HomepageLogin_pinfoAcc() throws IOException {
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> UsernameData = getColumnData("SignIn","Username");
-		String pinfo_username = UsernameData.get(1);
+		String pinfo_username = UsernameData.get(2);
 		
 		List<String> PssswordData = getColumnData("SignIn","Password");
-		String pinfo_passwd = PssswordData.get(1);
+		String pinfo_passwd = PssswordData.get(2);
 		String H;
 		System.out.println(pinfo_username);
 		System.out.println(pinfo_passwd);
@@ -135,7 +135,16 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		
 	}
 	
-	public void loginWithOldPassword() {
+	public void loginWithOldPassword() throws IOException {
+		
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String pinfo_username = UsernameData.get(2);
+		
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String pinfo_passwd = PssswordData.get(2);
+		String H;
+		System.out.println(pinfo_username);
+		System.out.println(pinfo_passwd);
 		
 		LogonId_Textbox.sendKeys(pinfo_username);
 		Password_Textbox.sendKeys(pinfo_passwd);
@@ -146,6 +155,10 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	
 	public void loginWithNewPassword() throws IOException {
 		
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String pinfo_username = UsernameData.get(2);
+		
+		LogonId_Textbox.clear();
 		LogonId_Textbox.sendKeys(pinfo_username);
 		Password_Textbox.sendKeys("Qwerty!2345");
 		SignIn_Button.click();
@@ -159,7 +172,16 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	}
 	
 	
-	public void loginwithOldEmail() {
+	public void loginwithOldEmail() throws IOException {
+		
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String pinfo_username = UsernameData.get(2);
+		
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String pinfo_passwd = PssswordData.get(2);
+		String H;
+		System.out.println(pinfo_username);
+		System.out.println(pinfo_passwd);
 		
 		LogonId_Textbox.sendKeys(pinfo_username);
 		Password_Textbox.sendKeys(pinfo_passwd);
@@ -170,6 +192,12 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	
 	public void loginwithNewEmail() throws IOException {
 		
+		
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String pinfo_passwd = PssswordData.get(2);
+		String H;
+		System.out.println(pinfo_passwd);
+		LogonId_Textbox.clear();
 		LogonId_Textbox.sendKeys("pinfoedited@yopmail.com");
 		Password_Textbox.sendKeys(pinfo_passwd);
 		SignIn_Button.click();

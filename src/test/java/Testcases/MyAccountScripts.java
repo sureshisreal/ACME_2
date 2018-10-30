@@ -3,6 +3,8 @@ package Testcases;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -156,7 +158,7 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 	
-	*/
+	
 	
 	@Test
 	public void personalInformation_editing() throws IOException, InterruptedException {
@@ -178,7 +180,7 @@ public class MyAccountScripts extends BaseTest {
 }
 	
 	
-	/*
+
 	@Test
 	public void personalInformation_editingEmail() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_08",
@@ -195,7 +197,8 @@ public class MyAccountScripts extends BaseTest {
 		myaccountPage.revertToOriginalEmail();
 	}
 	
-	
+
+	 
 	@Test
 	public void myAcc_ShippingInfo_UIValidation() throws IOException, InterruptedException {
 		TestDescription("MyAccount_addressBook_09",
@@ -209,6 +212,8 @@ public class MyAccountScripts extends BaseTest {
 		
 
 }
+		
+		 
 	
 	@Test
 	public void myAcc_ShippingInfo_addressPrePopulation_test() throws IOException, InterruptedException {
@@ -217,11 +222,43 @@ public class MyAccountScripts extends BaseTest {
 		homepage.SignInLink();
 		registerationPage.HomepageLoginSpecificAcc(3);
 		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_personalInfo.click();
+		HashMap <String, String> pInfoDetails = new HashMap<String, String>();
+		
+		pInfoDetails = myaccountPage.getPersonalInfoValues();
+		System.out.println(pInfoDetails);
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		aBookPage.comparePinfo_aBook(pInfoDetails);
 		
 		
 	}
 	
 	*/
+	
+	@Test
+	public void myAcc_ShippingInfo_addNewAddress_emptyField_test() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_11","To ensure if all the fields are blank in the address book while adding new address in Address book");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		aBookPage.ensureBlankFields_addNewAddress();
+		
+
+}
+	
+	@Test
+	public void myAcc_ShippingInfo_addNewAddress() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_12","To ensure if all the fields are blank in the address book while adding new address in Address book");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		aBookPage.addNewAddress();
+		
+	}
+	
+	
 	
 	
 	

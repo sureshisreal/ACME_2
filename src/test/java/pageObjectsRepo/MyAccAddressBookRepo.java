@@ -37,6 +37,9 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Last name:')]")
 	public WebElement aBook_lnameLabel;
 	
+	@FindBy(name = "nickName")
+	public WebElement aBook_Recipient_field;
+	
 	@FindBy(name = "firstName")
 	public WebElement aBook_fname_field;
 	
@@ -104,6 +107,8 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	
 	@FindBy(xpath = "//a[contains(text(),'Update')]")
 	public WebElement aBook_updateCTA;
+	
+	
 
 	
 	
