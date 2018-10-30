@@ -1,5 +1,8 @@
 package pageObjectsRepo;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +14,9 @@ public class ProductsDetailPageRepo extends BaseTest{
 	public ProductsDetailPageRepo(WebDriver driver){
         this.driver = driver;
     }
+	
+	@FindBy(xpath = ".//div[@class='top namePartPriceContainer']//h1[@class='main_header']")
+	public WebElement PDP_TitleVerify;
 
 	@FindBy( className = "quantity_input")
 	public  WebElement quantity;
@@ -32,6 +38,53 @@ public class ProductsDetailPageRepo extends BaseTest{
 	
 	@FindBy( xpath = ".//*[@class='container pdpPage']")
 	public  WebElement PDPpage_Container;
+	
+	@FindBy( id = "widget_breadcrumb")
+	public  WebElement PDPpage_BreadCrumb;
+	
+	@FindBy( css = ".mp-semi.prod-name")
+	public  WebElement PDPpage_SkuName;
+	
+	@FindBy( className = "ratings")
+	public  WebElement PDPpage_Rating;
+	
+	@FindBy( className = "avail-info")
+	public  WebElement PDPpage_AvailInfo;
+
+	@FindBy( className = "shipping-info")
+	public  WebElement PDPpage_ShippingInfo;
+	
+	@FindBy( className = "quantity_section")
+	public  WebElement PDPpage_QtyInfo;
+	
+	@FindBy( className = "addtoCartWrap")
+	public  WebElement PDPpage_AddToCart;
+	
+	@FindBy( className = "prod-det-bott")
+	public  WebElement PDPpage_ProductSpecification;
+	
+	@FindBy( id = "footer")
+	public  WebElement PDPpage_footer;
+	
+	@FindBy( xpath = "(.//*[@class='subheader-bar'][contains(.,'Recommended')]/following-sibling::div//li//div[@class='product_name']//a)")
+	public  List<WebElement> PDPpage_RecommendedProducts;
+	
+	 public WebElement AddRecommendedCount(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='subheader-bar'][contains(.,'Recommended')]/following-sibling::div//li//div[@class='product_name']//a)["+i+"]"));
+	    }
+	 
+	 @FindBy( xpath = "(.//*[@class='header-bar'][contains(.,'Also')]/following-sibling::div//li//div[@class='product_name']//a)")
+		public  List<WebElement> PDPpage_AlsoViewedProducts;
+	 
+	 public WebElement AddAlsoViewedCount(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='header-bar'][contains(.,'Also')]/following-sibling::div//li//div[@class='product_name']//a)["+i+"]"));
+	    }
+	 
+	
+	
+	
+	
+	
 	
 	
 

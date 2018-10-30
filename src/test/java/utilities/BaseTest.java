@@ -68,11 +68,8 @@ public class BaseTest extends ExtentManager {
 	protected RegisterationPageActions registerationPage;
 	protected MyAccountPageActions myaccountPage;
 	protected SearchPageActions searchResultPage;
-
 	protected MyAccountCCPageActions myaccCCpage;
 	protected MyAccAddressBookPageActions aBookPage;
-
-
 	protected Random rand = new Random(); 
 
 
@@ -162,7 +159,7 @@ public class BaseTest extends ExtentManager {
 	public List<String> getColumnData(String sheetName, String columnName) throws IOException {
 		
 		 System.out.println(" " +sheetName + " " + columnName);
-	        FileInputStream file = new FileInputStream(new File("C:\\Users\\P01242\\git\\ACME_2\\TestData.xlsx"));
+	        FileInputStream file = new FileInputStream(new File("TestData.xlsx"));
 		xlsWorkBook = new XSSFWorkbook(file);
 		Sheet sheet1 = xlsWorkBook.getSheet(sheetName);
         List<String> columnDataList = new ArrayList<String>();
