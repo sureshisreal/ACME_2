@@ -68,13 +68,12 @@ public class BaseTest extends ExtentManager {
 	protected RegisterationPageActions registerationPage;
 	protected MyAccountPageActions myaccountPage;
 	protected SearchPageActions searchResultPage;
-<<<<<<< HEAD
+
 	protected MyAccountCCPageActions myaccCCpage;
 	protected MyAccAddressBookPageActions aBookPage;
 
-=======
+
 	protected Random rand = new Random(); 
->>>>>>> d6dd0497d25a720e4bba71b59fd5fae4863a0515
 
 
 	@BeforeMethod

@@ -177,6 +177,8 @@ public class MyAccountScripts extends BaseTest {
 
 }
 	
+	
+	/*
 	@Test
 	public void personalInformation_editingEmail() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_08",
@@ -207,5 +209,20 @@ public class MyAccountScripts extends BaseTest {
 		
 
 }
+	
+	@Test
+	public void myAcc_ShippingInfo_addressPrePopulation_test() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_10",
+				"When the registered user, who hasn't saved any address to his address book explicitly, navigates to the shipping address book, verify if the following fields are pre-populated with the values from the personal information of the user");
+		homepage.SignInLink();
+		registerationPage.HomepageLoginSpecificAcc(3);
+		logs("Logged in as registered user");
+		
+		
+	}
+	
+	*/
+	
+	
 	
 }

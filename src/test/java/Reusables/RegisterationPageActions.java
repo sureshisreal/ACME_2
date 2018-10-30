@@ -60,9 +60,14 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	public void HomepageLogin_pinfoAcc() throws IOException {
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> UsernameData = getColumnData("SignIn","Username");
-		String pinfo_username = UsernameData.get(2);
+		String pinfo_username = UsernameData.get(1);
+		
 		List<String> PssswordData = getColumnData("SignIn","Password");
-		String pinfo_passwd = PssswordData.get(2);
+		String pinfo_passwd = PssswordData.get(1);
+		String H;
+		System.out.println(pinfo_username);
+		System.out.println(pinfo_passwd);
+		
 		System.out.println("Credentials :" + pinfo_username + "" +pinfo_passwd);
 		LogonId_Textbox.sendKeys(pinfo_username);
 		Password_Textbox.sendKeys(pinfo_passwd);
@@ -176,6 +181,26 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		
 		
 	}
+	
+	public void HomepageLoginSpecificAcc(int i) throws IOException {
+		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String Username = UsernameData.get(i);
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String Password = PssswordData.get(i);
+		System.out.println("Credentials :" + Username + "" +Password);
+		LogonId_Textbox.sendKeys(Username);
+		Password_Textbox.sendKeys(Password);
+		//AddScreenshot();
+		SignIn_Button.click();	
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		//AddScreenshot();
+		logs("Login success \n UserName :" +Username+ "Password: "+Password);
+		
+	}
+	
+	
 	
 	
 	
