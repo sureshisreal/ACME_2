@@ -27,11 +27,20 @@ public class CatgoryPageRepo extends BaseTest {
 	@FindBy(xpath = ".//*[@id='widget_breadcrumb']//li[@class='current']")
 	public WebElement SearchHeader;
 	
+	@FindBy(xpath = ".//*[@class='category-page']")
+	public WebElement CategoryVerify;
+	
 	@FindBy(xpath = ".//div[@class='top namePartPriceContainer']//h1[@class='main_header']")
 	public WebElement PDP_TitleVerify;
 	
 	 public WebElement RandomCategorySelect(int i) {
 		 return driver.findElement(By.xpath("(.//*[@class='product_name'])["+i+"]"));
 	    }
-	
+	 
+	 @FindBy(xpath = ".//*[@id='widget_breadcrumb']//li")
+	 public List<WebElement> Breadcrumb_Navigation;
+	 
+	 public WebElement BreacrumbNavigation(int i) {
+		 return driver.findElement(By.xpath("(.//*[@id='widget_breadcrumb']//li)["+i+"]"));
+	    }
 }

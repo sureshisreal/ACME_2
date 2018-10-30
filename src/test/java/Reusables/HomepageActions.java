@@ -155,6 +155,16 @@ public class HomepageActions extends HomepageRepo {
 
 	}
 
+	public void WhatsNew_MenuSelection() throws IOException {
+		WaitUntilElementVisible(Menu_WhatsNew);
+		Menu_WhatsNew.click();
+		logs(" Menu What'snew clicked");
+		AddScreenshot();
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		assertTrue(Menu_CategoryVerify.getText().contains("What's"));	
+		logs(" Menu What'snew verified");
+	}
+
 	
 
 }

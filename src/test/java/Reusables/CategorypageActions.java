@@ -47,6 +47,18 @@ public class CategorypageActions extends CatgoryPageRepo{
 	public void VerifyPage() {
 		WaitUntilElementVisible(SearchHeader);
 		logs("Category pages verified");
+	}
+
+	public void Breadcrumbs() {
+		WaitUntilElementVisible(SearchHeader);
+		int Breadcrumbsize = Breadcrumb_Navigation.size();
+		for( int i=0 ; i<Breadcrumbsize ; i++) {
+			String BreadcrumbName = BreacrumbNavigation(i).getText();
+			BreacrumbNavigation(i).click();
+			assertTrue(CategoryVerify.getText().contains(BreadcrumbName));
+			driver.navigate().back();
+		}
+		
 	}	
 
 }
