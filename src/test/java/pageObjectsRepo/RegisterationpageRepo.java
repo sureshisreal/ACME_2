@@ -58,8 +58,11 @@ public class RegisterationpageRepo extends BaseTest {
 	@FindBy(xpath = ".//*[@class='btn'][contains(.,'Register')]")
 	public  WebElement Register_Button;
 	
-	
+//Logout 	
+	@FindBy(xpath = "//ul[@id='quickLinksBar']//a[contains(text(),'Sign Out')]")
+	public WebElement SignOut;
 
+	
 	
 	
 }

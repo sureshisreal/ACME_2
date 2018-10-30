@@ -41,6 +41,8 @@ import com.aventstack.extentreports.Status;
 import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
 import Reusables.HomepageActions;
+import Reusables.MyAccAddressBookPageActions;
+import Reusables.MyAccountCCPageActions;
 import Reusables.MyAccountPageActions;
 import Reusables.ProductsDetailPageActions;
 import Reusables.RegisterationPageActions;
@@ -66,6 +68,11 @@ public class BaseTest extends ExtentManager {
 	protected RegisterationPageActions registerationPage;
 	protected MyAccountPageActions myaccountPage;
 	protected SearchPageActions searchResultPage;
+
+	protected MyAccountCCPageActions myaccCCpage;
+	protected MyAccAddressBookPageActions aBookPage;
+
+
 	protected Random rand = new Random(); 
 
 
@@ -103,6 +110,11 @@ public class BaseTest extends ExtentManager {
 				SearchPageActions.class);
 		myaccountPage = PageFactory.initElements(driver,
 				MyAccountPageActions.class);
+		myaccCCpage = PageFactory.initElements(driver, 
+				MyAccountCCPageActions.class);
+		aBookPage = PageFactory.initElements(driver, 
+				MyAccAddressBookPageActions.class);
+		
 	}
 
 	@AfterMethod

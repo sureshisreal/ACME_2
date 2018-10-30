@@ -141,7 +141,7 @@ public class MyAccountScripts extends BaseTest {
 	}
 	
 	
-	*/
+	
 	
 	@Test
 	public void personalInformation_PageUICheck() throws IOException, InterruptedException {
@@ -156,6 +156,8 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 	
+	*/
+	
 	@Test
 	public void personalInformation_editing() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_07",
@@ -165,12 +167,62 @@ public class MyAccountScripts extends BaseTest {
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
 		myaccountPage.personalInfo_editPasswordCheck();
-		
-		
-		
-		
-
+		registerationPage.SignOut.click();
+		registerationPage.loginWithOldPassword();
+		registerationPage.loginWithNewPassword();
+		myaccountPage.myacc_leftNav_settings_personalInfo.click();
+		myaccountPage.pi_passwordField.sendKeys("P@ssw0rd");
+		myaccountPage.pi_verifyPasswordField.sendKeys("P@ssw0rd");
+		myaccountPage.editPersonalInfoValues();	
 
 }
+	
+	
+	/*
+	@Test
+	public void personalInformation_editingEmail() throws IOException, InterruptedException {
+		TestDescription("MyAccount_Summary_08",
+				"To Change the values of the user's Login Details and validating those changes");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin_pinfoAcc();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_personalInfo.click();
+		myaccountPage.pinfo_editEmailValidations();
+		registerationPage.SignOut.click();
+		registerationPage.loginwithOldEmail();
+		registerationPage.loginwithNewEmail();
+		myaccountPage.myacc_leftNav_settings_personalInfo.click();
+		myaccountPage.revertToOriginalEmail();
+	}
+	
+	
+	@Test
+	public void myAcc_ShippingInfo_UIValidation() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_09",
+				"To verify the My Shipping address book Page UI elements");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		Assert.assertTrue(myaccountPage.currentPageBreadcrumb.getText().toString().contains("My Address Book"));
+		aBookPage.aBook_UIValidation();
+		
+
+}
+	
+	@Test
+	public void myAcc_ShippingInfo_addressPrePopulation_test() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_10",
+				"When the registered user, who hasn't saved any address to his address book explicitly, navigates to the shipping address book, verify if the following fields are pre-populated with the values from the personal information of the user");
+		homepage.SignInLink();
+		registerationPage.HomepageLoginSpecificAcc(3);
+		logs("Logged in as registered user");
+		
+		
+	}
+	
+	*/
+	
+	
 	
 }
