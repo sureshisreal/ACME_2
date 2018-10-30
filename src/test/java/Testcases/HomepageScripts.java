@@ -9,8 +9,7 @@ import utilities.BaseTest;
 
 public class HomepageScripts extends BaseTest{
 	
-	
-/*	@Test
+	@Test
 	public void Homepage_Header_FieldValidations() throws IOException, InterruptedException {
 		TestDescription("Homepage_Header_FieldValidations",
 				"To verify guest user able to view all the fields in the homepage header");
@@ -18,17 +17,39 @@ public class HomepageScripts extends BaseTest{
 		homepage.HeaderValidations();
 		homepage.TopMenuValidations();
 		homepage.MenuValidations();
-	}*/
+	}
 	
+	@Test
+	public void Homepage_Header_FieldValidations_Reg() throws IOException, InterruptedException {
+		TestDescription("Homepage_Header_FieldValidations",
+				"To verify registered user able to view all the fields in the homepage header");
+		homepage.VerifyPageTitle();
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		homepage.HeaderValidations();
+		homepage.TopMenuValidations();
+		homepage.MenuValidations();
+	}
 	
-/*	@Test
+	@Test
 	public void Homepage_AddRandomProductFromMenuCategory() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuCategory",
 				"To verify guest user able to add product from the header menu Categories");
 		homepage.VerifyPageTitle();
 		homepage.CategoryMenuSelection();
 		categorypage.selectRandomProduct();
-	}*/
+	}
+	
+	@Test
+	public void Homepage_AddRandomProductFromMenuCategory_Reg() throws IOException, InterruptedException {
+		TestDescription("Homepage_AddRandomProductFromMenuCategory",
+				"To verify registered user able to add product from the header menu Categories");
+		homepage.VerifyPageTitle();
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		homepage.CategoryMenuSelection();
+		categorypage.selectRandomProduct();
+	}
 	
 	@Test
 	public void Homepage_AddRandomProductFromMenuBrands() throws IOException, InterruptedException {
@@ -36,6 +57,37 @@ public class HomepageScripts extends BaseTest{
 				"To verify guest user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();
 		homepage.BrandMenuSelection();
+		categorypage.selectRandomProduct();
+	}
+	
+	@Test
+	public void Homepage_AddRandomProductFromMenuBrands_Reg() throws IOException, InterruptedException {
+		TestDescription("Homepage_AddRandomProductFromMenuBrands",
+				"To verify registered user able to add product from the header menu Brands");
+		homepage.VerifyPageTitle();
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		homepage.BrandMenuSelection();
+		categorypage.selectRandomProduct();
+	}
+	
+	@Test
+	public void Homepage_AddRandomProductFromMenuWhatsNew() throws IOException, InterruptedException {
+		TestDescription("Homepage_AddRandomProductFromMenuBrands",
+				"To verify guest user able to add product from the header menu Brands");
+		homepage.VerifyPageTitle();
+		homepage.WhatsNew_MenuSelection();
+		categorypage.selectRandomProduct();
+	}
+	
+	@Test
+	public void Homepage_AddRandomProductFromMenuWhatsNew_Reg() throws IOException, InterruptedException {
+		TestDescription("Homepage_AddRandomProductFromMenuBrands",
+				"To verify registered user able to add product from the header menu Brands");
+		homepage.VerifyPageTitle();
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		homepage.WhatsNew_MenuSelection();
 		categorypage.selectRandomProduct();
 	}
 	

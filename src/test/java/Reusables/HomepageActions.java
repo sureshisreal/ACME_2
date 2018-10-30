@@ -103,7 +103,7 @@ public class HomepageActions extends HomepageRepo {
 		logs(" Menu What'snew verified");
 	}
 
-	public void CategoryMenuSelection() throws IOException {
+	public void CategoryMenuSelection() throws IOException, InterruptedException {
 		WaitUntilElementVisible(Menu_Category);
 		Menu_Category.click();
 		logs("Category Header Selected");
@@ -117,6 +117,7 @@ public class HomepageActions extends HomepageRepo {
 		WaitUntilElementVisible(SearchHeader_Verify);
 		AddScreenshot();
 		Assert.assertEquals(SearchHeader_Verify.getText(),CategoryName);
+		WaitUntilElementVisible(Menu_CategoryVerify);
 		int rand_int1 = rand.nextInt(SubCategorypage_SubCCategory.size()+1); 
 		System.out.println("SubCategory Header" +rand_int1);
 		String SubCategoryName = SubCategorypage_RandomCategory(rand_int1).getText();
@@ -125,7 +126,6 @@ public class HomepageActions extends HomepageRepo {
 		logs("Random SubCategory selected : " +SubCategoryName);
 		Assert.assertEquals(SearchHeader_Verify.getText(),SubCategoryName);
 		AddScreenshot();
-
 	}
 
 	public void BrandMenuSelection() throws IOException {
@@ -153,6 +153,16 @@ public class HomepageActions extends HomepageRepo {
 		AddScreenshot();
 		}
 
+	}
+
+	public void WhatsNew_MenuSelection() throws IOException {
+		WaitUntilElementVisible(Menu_WhatsNew);
+		Menu_WhatsNew.click();
+		logs(" Menu What'snew clicked");
+		AddScreenshot();
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		assertTrue(Menu_CategoryVerify.getText().contains("What's"));	
+		logs(" Menu What'snew verified");
 	}
 
 	
