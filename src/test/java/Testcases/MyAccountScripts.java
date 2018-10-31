@@ -233,7 +233,7 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 	
-	*/
+
 	
 	@Test
 	public void myAcc_ShippingInfo_addNewAddress_emptyField_test() throws IOException, InterruptedException {
@@ -245,11 +245,12 @@ public class MyAccountScripts extends BaseTest {
 		aBookPage.ensureBlankFields_addNewAddress();
 		
 
-}
+}*/
+	
 	
 	@Test
 	public void myAcc_ShippingInfo_addNewAddress() throws IOException, InterruptedException {
-		TestDescription("MyAccount_addressBook_12","To ensure if all the fields are blank in the address book while adding new address in Address book");
+		TestDescription("MyAccount_addressBook_12","To add new address in Address book");
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		logs("Logged in as registered user");

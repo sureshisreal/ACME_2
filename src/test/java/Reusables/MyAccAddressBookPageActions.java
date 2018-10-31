@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.collections.map.HashedMap;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import pageObjectsRepo.MyAccAddressBookRepo;
@@ -122,11 +125,37 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 	}
 
 
-	public void addNewAddress() throws InterruptedException {
+	public void addNewAddress() throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		aBook_addNew_CTA.click();
 		Thread.sleep(10000);
 		
+		aBook_stateDiv.click();
+		int randomNum = ThreadLocalRandom.current().nextInt(1, 54);
+		
+		System.out.println(randomNum);
+
+		for(int i=1;i<=randomNum;i++) {
+		aBook_stateTab2.sendKeys(Keys.ARROW_DOWN);
+		}
+		aBook_stateTab2.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+		AddScreenshot();
+		aBook_Recipient_field.sendKeys("rec1");
+		aBook_fname_field.sendKeys("fname");
+		aBook_lastName_field.sendKeys("lname");
+		AddScreenshot();
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+
 		
 		
 		
