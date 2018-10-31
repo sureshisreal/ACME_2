@@ -37,6 +37,9 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Last name:')]")
 	public WebElement aBook_lnameLabel;
 	
+	@FindBy(name = "nickName")
+	public WebElement aBook_Recipient_field;
+	
 	@FindBy(name = "firstName")
 	public WebElement aBook_fname_field;
 	
@@ -82,6 +85,16 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'State:')]")
 	public WebElement aBook_stateLabel;
 	
+	@FindBy(xpath = "//div[@id='stateDiv']//span")
+	public WebElement aBook_stateDiv;
+	
+	
+	@FindBy(xpath = "//div[@id='stateDiv']//table")
+	public WebElement aBook_stateTable;
+	
+	@FindBy(xpath = "//table[@class='dijitReset dijitMenuTable']")
+	public WebElement aBook_stateTab2;
+	
 	
 	@FindBy(xpath = "//div[@class='my_account']//label[contains(text(),'Phone number:')]")
 	public WebElement aBook_phoneNumberLabel;
@@ -104,6 +117,8 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	
 	@FindBy(xpath = "//a[contains(text(),'Update')]")
 	public WebElement aBook_updateCTA;
+	
+	
 
 	
 	

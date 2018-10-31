@@ -29,6 +29,8 @@ public class CheckoutScripts extends BaseTest {
 
 	}
 	
+	
+/*	
 	@Test	
 	public void Registered_SearchCheckout() throws IOException, InterruptedException {		
 		TestDescription("Registered_SearchCheckout" , "To verify registered user able to place order using search items");
@@ -49,7 +51,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.VisaPayment();
 			billingPage.PlaceOrder();
 	}
-	
+	*/
 	
 	
 	/*
