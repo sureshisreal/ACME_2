@@ -142,7 +142,7 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 		Thread.sleep(3000);
 		AddScreenshot();
 		aBook_Recipient_field.sendKeys("rec1");
-		aBook_fname_field.sendKeys("fname");
+		aBook_fname_field.sendKeys("fnameindhu");
 		aBook_lastName_field.sendKeys("lname");
 		AddScreenshot();
 
