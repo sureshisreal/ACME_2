@@ -217,8 +217,6 @@ public class MyAccountScripts extends BaseTest {
 		homepage.SignInLink();
 		registerationPage.HomepageLoginSpecificAcc(3);
 		logs("Logged in as registered user");
-		
-		
 	}
 	
 	*/
