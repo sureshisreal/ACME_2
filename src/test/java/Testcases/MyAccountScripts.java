@@ -245,7 +245,7 @@ public class MyAccountScripts extends BaseTest {
 		aBookPage.ensureBlankFields_addNewAddress();
 		
 
-}*/
+}
 	
 	
 	@Test
@@ -259,9 +259,36 @@ public class MyAccountScripts extends BaseTest {
 		
 		
 	}
+	*/
+	
+	@Test
+	public void myAcc_ShippingInfo_removeAddress() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_13","To remove  address in Address book");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		aBookPage.addNewAddress();
+		aBookPage.removeAddress();
+		
+	}
+	
+	@Test
+	public void myAcc_ShippingInfo_restrictRemoveAddress() throws IOException, InterruptedException {
+		TestDescription("MyAccount_addressBook_14","To restrict removal of address in Address book if only one address is saved");
+		homepage.SignInLink();
+		registerationPage.HomepageLoginSpecificAcc(3);
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		aBookPage.aBook_remove_CTA.click();
+		
+		
 	
 	
 	
 	
+	
+	
+}
 	
 }

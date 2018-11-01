@@ -1,7 +1,9 @@
 package Reusables;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -129,7 +131,12 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 		// TODO Auto-generated method stub
 		aBook_addNew_CTA.click();
 		Thread.sleep(10000);
+		Assert.assertTrue(aBook_submitCTA.isDisplayed());
+		Assert.assertTrue(aBook_cancelCTA.isDisplayed());
+		Assert.assertFalse(aBook_updateCTA.isDisplayed());
 		
+		logs("While adding new address submit and cancel CTA is present and update CTA is not displayed");
+/*		
 		aBook_stateDiv.click();
 		int randomNum = ThreadLocalRandom.current().nextInt(1, 54);
 		
@@ -145,22 +152,66 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 		aBook_fname_field.sendKeys("fnameindhu");
 		aBook_lastName_field.sendKeys("lname");
 		AddScreenshot();
+*/
+		
+		
+		List<String> recipientData = getColumnData("addrBook","Recipient");
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String recipient = recipientData.get(0) + timeStamp;
+		
+		List<String> firstNameData = getColumnData("addrBook","firstName");
+		String firstName = firstNameData.get(0);
+		List<String> lastNameData = getColumnData("addrBook","lastName");
+		String lastName = lastNameData.get(0);
+		List<String> addr1Data = getColumnData("addrBook","address1");
+		String addr1 = addr1Data.get(0);
+		List<String> addr2Data = getColumnData("addrBook","address2");
+		String addr2 = addr2Data.get(0);
+		List<String> companyData = getColumnData("addrBook","company");
+		String company = companyData.get(0);
+		List<String> zipcodeData = getColumnData("addrBook","zipcode");
+		String zipcode = zipcodeData.get(0);
+		List<String> cityData = getColumnData("addrBook","city");
+		String city = cityData.get(0);
+		List<String> emailData = getColumnData("addrBook","email");
+		String email = emailData.get(0);
+		List<String> phNumData = getColumnData("addrBook","phonenumber");
+		String phNum = phNumData.get(0);
+		
+		aBook_Recipient_field.sendKeys(recipient);
+		aBook_fname_field.sendKeys(firstName);
+		aBook_lastName_field.sendKeys(lastName);
+		aBook_address1_field.sendKeys(addr1);
+		aBook_address2Field.sendKeys(addr2);
+		aBook_companyField.sendKeys(company);
+		aBook_zipCodeField.sendKeys(zipcode);
+		aBook_email1_field.sendKeys(email);
+		aBook_city_field.sendKeys(city);
+		aBook_phoneNumField.clear();
+		aBook_phoneNumField.sendKeys(phNum);
+		aBook_verifyemail1_field.sendKeys(email);
+		logs("All the new address details are entered in the corresponding fields");
+		aBook_submitCTA.click();
+		Thread.sleep(5000);
+		Assert.assertTrue(aBook_newAddressAdded_successMsg.isDisplayed());
+		logs("New Address is added in the address Book ");		
+		AddScreenshot();
+		//To check if the newly added address is present in the dropdown needs to be verified once finding out the Dojo code.
+		
+	}
 
-		
-		
-		
-		
-		
-		
 
-		
-		
+	public void removeAddress() throws InterruptedException, IOException {
+		// TODO Auto-generated method stub
+		aBook_addrDropdown.click();
+		aBook_addrMenu.sendKeys(Keys.ARROW_DOWN);
+		aBook_addrMenu.sendKeys(Keys.ENTER);
+		aBook_remove_CTA.click();
+		Thread.sleep(3000);
+		Assert.assertTrue(aBook_removeAddress_successMsg.isDisplayed());
+		logs("Address is removed in the address Book ");	
+		AddScreenshot();
 
-		
-		
-		
-		
-		
 	}
 	
 }
