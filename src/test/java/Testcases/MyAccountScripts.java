@@ -281,14 +281,6 @@ public class MyAccountScripts extends BaseTest {
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_addressBook.click();
 		aBookPage.aBook_remove_CTA.click();
-		
-		
-	
-	
-	
-	
-	
-	
 }
 	
 }

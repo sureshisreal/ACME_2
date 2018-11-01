@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.collections.map.HashedMap;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -136,7 +137,7 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 		Assert.assertFalse(aBook_updateCTA.isDisplayed());
 		
 		logs("While adding new address submit and cancel CTA is present and update CTA is not displayed");
-/*		
+		
 		aBook_stateDiv.click();
 		int randomNum = ThreadLocalRandom.current().nextInt(1, 54);
 		
@@ -147,12 +148,18 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 		}
 		aBook_stateTab2.sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
-		AddScreenshot();
+
+		Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementsByClassName('dijitSelectLabel')[2].innerHTML='New York';");
+		Thread.sleep(1000);
+    	AddScreenshot();
 		aBook_Recipient_field.sendKeys("rec1");
 		aBook_fname_field.sendKeys("fnameindhu");
 		aBook_lastName_field.sendKeys("lname");
+
 		AddScreenshot();
-*/
+
 		
 		
 		List<String> recipientData = getColumnData("addrBook","Recipient");
@@ -197,6 +204,11 @@ public class MyAccAddressBookPageActions extends MyAccAddressBookRepo{
 		logs("New Address is added in the address Book ");		
 		AddScreenshot();
 		//To check if the newly added address is present in the dropdown needs to be verified once finding out the Dojo code.
+
+		AddScreenshot();		
+		
+		
+		
 		
 	}
 
