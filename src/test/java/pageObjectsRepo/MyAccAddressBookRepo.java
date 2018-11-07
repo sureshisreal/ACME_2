@@ -20,9 +20,9 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	public WebElement aBook_header;
 	
 	
-	@FindBy(xpath = "//div[@class='my_account']//table[@aria-describedby='drop_down_address_book_ACCE_DESC']")
+	/*@FindBy(xpath = "//div[@class='my_account']//table[@aria-describedby='drop_down_address_book_ACCE_DESC']")
 	public WebElement aBook_addrDropdown;
-	
+	*/
 	
 	@FindBy(xpath = "//div[@class='my_account']//a[contains(text(),'Add New')]")
 	public WebElement aBook_addNew_CTA;
@@ -117,6 +117,28 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	
 	@FindBy(xpath = "//a[contains(text(),'Update')]")
 	public WebElement aBook_updateCTA;
+	
+	@FindBy(xpath = "//a[contains(text(),'Submit')]")
+	public WebElement aBook_submitCTA;
+	
+	@FindBy(xpath = "//a[contains(text(),'Cancel')]")
+	public WebElement aBook_cancelCTA;
+	
+	@FindBy(xpath = "//div[@id='msgpopup_content_wrapper']//*[contains(text(),'The new address has been successfully added to the address book.')]")
+	public WebElement aBook_newAddressAdded_successMsg;
+	
+	@FindBy(xpath = "//table[@id='addressId']")
+	public WebElement aBook_addrDropdown;
+	
+	@FindBy(xpath = "//div[@id='addressId_menu']")
+	public WebElement aBook_addrMenu;
+	
+	
+	@FindBy(xpath = "//div[@id='msgpopup_content_wrapper']//*[contains(text(),'The selected address has been removed from the address list')]")
+	public WebElement aBook_removeAddress_successMsg;
+	
+	
+
 	
 	
 

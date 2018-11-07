@@ -10,8 +10,8 @@
       <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
+          <include name="myAcc_ShippingInfo_removeAddress"/>
           <include name="beforeMethod"/>
-          <include name="myAcc_ShippingInfo_addNewAddress"/>
         </methods>
       </class> <!-- Testcases.MyAccountScripts -->
     </classes>
