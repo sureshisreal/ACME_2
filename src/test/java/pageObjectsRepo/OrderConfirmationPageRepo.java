@@ -1,17 +1,14 @@
 package pageObjectsRepo;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utilities.BaseTest;
 
-public class ShippingPageRepo extends BaseTest{
+public class OrderConfirmationPageRepo extends BaseTest{
 	
-	public ShippingPageRepo(WebDriver driver){
+	public OrderConfirmationPageRepo(WebDriver driver){
         this.driver = driver;
     }
 	
@@ -54,11 +51,6 @@ public class ShippingPageRepo extends BaseTest{
 	@FindBy( xpath = "(.//*[@name='addressOption'])[1]")
 	public  WebElement UseSuggestedAddress_RadioButton;
 	
-	 @FindBy(xpath = ".//*[@name='shippingMethodSelect']")
-	 public List<WebElement> Shippingmethod_OptionsCount;
-	 
-	 public WebElement Shippingmethod_Options(int i) {
-		 return driver.findElement(By.xpath("(.//*[@name='shippingMethodSelect'])["+i+"]"));
-	    }
+	
 	
 }

@@ -13,6 +13,22 @@ public class ShippingPageActions extends ShippingPageRepo {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public void ShippingAddressFieldValidation() {
+		WaitUntilElementVisible(Shipping_firstName);
+		ElementPresent(Shipping_firstName);
+		ElementPresent(Shipping_lastName);
+		ElementPresent(Shipping_address1);
+		ElementPresent(Shipping_organizationName);
+		ElementPresent(Shipping_zipCode);
+		ElementPresent(Shipping_city);
+		ElementPresent(Shipping_state);
+		ElementPresent(Shipping_phone);
+		ElementPresent(Shipping_email1);
+		logs("Shipping fields validated");
+		PlaceOrder_Button.click();
+	}
 
 	public void GuestShippingAddress() {
 		WaitUntilElementVisible(Shipping_firstName);
@@ -43,5 +59,12 @@ public class ShippingPageActions extends ShippingPageRepo {
 		if(UseSuggestedAddress_RadioButton !=null)
 		UseSuggestedAddress_RadioButton.click();
 	}
+	
+	public void shippingOptions() throws InterruptedException{
+		int randshipping = rand.nextInt(Shippingmethod_OptionsCount.size()+1); 
+		Shippingmethod_Options(randshipping);
+	}
+	
+	
 
 }

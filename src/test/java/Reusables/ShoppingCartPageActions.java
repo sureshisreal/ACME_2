@@ -3,6 +3,7 @@ package Reusables;
 import static org.testng.AssertJUnit.assertTrue;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
@@ -59,6 +60,16 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 		logs("Empty Cart Verified");
 	}
 
-	
+	public void ReturningCustomer() throws IOException {
+		WaitUntilElementVisible(returning_customerId);
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String Username = UsernameData.get(0);
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String Password = PssswordData.get(0);
+		System.out.println("Credentials :" + Username + "" +Password);
+		returning_customerId.sendKeys(Username);
+		returning_customerpassword.sendKeys(Password);
+		signInCheckout_button.click();
+	}
 
 }
