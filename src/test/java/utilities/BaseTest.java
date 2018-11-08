@@ -42,6 +42,7 @@ import Reusables.BillingPageActions;
 import Reusables.CategorypageActions;
 import Reusables.HomepageActions;
 import Reusables.MyAccAddressBookPageActions;
+import Reusables.MyAccCouponsPageActions;
 import Reusables.MyAccountCCPageActions;
 import Reusables.MyAccountPageActions;
 import Reusables.ProductsDetailPageActions;
@@ -70,6 +71,7 @@ public class BaseTest extends ExtentManager {
 	protected SearchPageActions searchResultPage;
 	protected MyAccountCCPageActions myaccCCpage;
 	protected MyAccAddressBookPageActions aBookPage;
+	protected MyAccCouponsPageActions couponsPage;
 	protected Random rand = new Random(); 
 
 
@@ -111,6 +113,9 @@ public class BaseTest extends ExtentManager {
 				MyAccountCCPageActions.class);
 		aBookPage = PageFactory.initElements(driver, 
 				MyAccAddressBookPageActions.class);
+		couponsPage = PageFactory.initElements(driver, 
+				MyAccCouponsPageActions.class);
+		
 		
 	}
 
