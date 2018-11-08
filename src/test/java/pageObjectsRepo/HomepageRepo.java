@@ -46,6 +46,9 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(id = "orderStatusQuickLink_alt")
 	public  WebElement OrderStatus_Link;
 	
+	@FindBy(id = "myAccountQuickLink_alt")
+	public  WebElement myAccount_Link;
+	
 	@FindBy(xpath = ".//*[@class='main_content']//h1[contains(.,'Order Status')]")
 	public  WebElement OrderStatus_Header;
 	
