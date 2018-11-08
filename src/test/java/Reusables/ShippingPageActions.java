@@ -31,6 +31,7 @@ public class ShippingPageActions extends ShippingPageRepo {
 	}
 
 	public void GuestShippingAddress() {
+		if(Shipping_firstName.isDisplayed()) {
 		WaitUntilElementVisible(Shipping_firstName);
 		Shipping_firstName.sendKeys("FirstName");
 		Shipping_lastName.sendKeys("lastName");
@@ -45,6 +46,7 @@ public class ShippingPageActions extends ShippingPageRepo {
 		occupation.selectByValue("Carpentry Work");
 		logs("Shipping address entered");
 		PlaceOrder_Button.click();
+		}
 	}
 	
 	public void UseEnteredAddress() throws InterruptedException{

@@ -154,10 +154,8 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	}
 	
 	public void loginWithNewPassword() throws IOException {
-		
 		List<String> UsernameData = getColumnData("SignIn","Username");
 		String pinfo_username = UsernameData.get(2);
-		
 		LogonId_Textbox.clear();
 		LogonId_Textbox.sendKeys(pinfo_username);
 		Password_Textbox.sendKeys("Qwerty!2345");
@@ -166,9 +164,6 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		assertTrue(welcomeText.contains("Welcome,"));
 		AddScreenshot();
 		logs("Login success \n with new UserName and password" + pinfo_username + "Qwerty!2345");
-		
-		
-		
 	}
 	
 	

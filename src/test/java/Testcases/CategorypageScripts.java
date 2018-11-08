@@ -10,7 +10,7 @@ import utilities.BaseTest;
 public class CategorypageScripts extends BaseTest{
 
 	@Test
-	public void Categorypage_BreadcrumbsNavigation() throws IOException, InterruptedException {
+	public void Categorypage_BreadcrumbsNavigation_001() throws IOException, InterruptedException {
 		TestDescription("Categorypage_BreadcrumbsNavigation",
 				"To verify guest user able to navigate using breadcrumbs");
 		homepage.VerifyPageTitle();
@@ -19,7 +19,7 @@ public class CategorypageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Categorypage_BreadcrumbsNavigation_Reg() throws IOException, InterruptedException {
+	public void Categorypage_BreadcrumbsNavigation_Reg_002() throws IOException, InterruptedException {
 		TestDescription("Categorypage_BreadcrumbsNavigation_Reg",
 				"To verify registered user able to navigate using breadcrumbs");
 		homepage.VerifyPageTitle();
@@ -30,7 +30,7 @@ public class CategorypageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Categorypage_Validations() throws IOException, InterruptedException {
+	public void Categorypage_Validations_003() throws IOException, InterruptedException {
 		TestDescription("Categorypage_Validations",
 				"To verify guest user able to view all the available fields in the categorypage");
 		homepage.VerifyPageTitle();
@@ -39,7 +39,7 @@ public class CategorypageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Categorypage_Validations_Reg() throws IOException, InterruptedException {
+	public void Categorypage_Validations_Reg_004() throws IOException, InterruptedException {
 		TestDescription("Categorypage_Validations_Reg",
 				"To verify guest user able to view all the available fields in the categorypage");
 		homepage.VerifyPageTitle();
@@ -50,7 +50,7 @@ public class CategorypageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Categorypage_AddTopSellingItem() throws IOException, InterruptedException {
+	public void Categorypage_AddTopSellingItem_005() throws IOException, InterruptedException {
 		TestDescription("Categorypage_AddTopSellingItem",
 				"To verify guest user able to add top selling item in the categorypage");
 		homepage.VerifyPageTitle();
@@ -59,7 +59,7 @@ public class CategorypageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Categorypage_AddTopSellingItem_Reg() throws IOException, InterruptedException {
+	public void Categorypage_AddTopSellingItem_Reg_006() throws IOException, InterruptedException {
 		TestDescription("Categorypage_AddTopSellingItem_Reg",
 				"To verify guest user able to add top selling item in the categorypage");
 		homepage.VerifyPageTitle();

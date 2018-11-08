@@ -18,6 +18,10 @@ public class ShoppingCartPageRepo extends BaseTest {
 	@FindBy( xpath = "(.//*[@id='guestShopperContinue'])[1]")
 	public  WebElement guestShopperContinue;
 	
+	@FindBy( id = "(.//*[@id='shopcartCheckout'])[1]")
+	public  WebElement regShopperContinue;
+	
+	
 	@FindBy( xpath = "(.//*[@id='guestShopperContinue'])[2]")
 	public  WebElement guestShopperContinue_footer;
 	
@@ -26,6 +30,10 @@ public class ShoppingCartPageRepo extends BaseTest {
 	
 	@FindBy( className = "skuNo")
 	public  WebElement Sku_label;
+	
+	
+	@FindBy( css = "a[id^='catalogEntry_name']")
+	public  List<WebElement> ProductName_link;
 	
 	@FindBy( css = ".remove_address_link")
 	public  List<WebElement> Remove_link;
@@ -70,10 +78,23 @@ public class ShoppingCartPageRepo extends BaseTest {
 	@FindBy( xpath = ".//*[@class='shopping_cart_box currentOrder']")
 	public  WebElement EmptyCart;
 	
+	@FindBy( xpath = "//a[contains(.,'click here')]")
+	public  WebElement ForgotpassWord_SignIn;
 	
-	
+	@FindBy( xpath = ".//*[@class='title header-bar']")
+	public  WebElement ForgotpassWord_Registerationpage;
 
+	@FindBy( id = "WC_PasswordResetForm_Link_2")
+	public  WebElement ForgotpassWord_SendLink;
 	
+	@FindBy( id = "error_msg")
+	public  WebElement ForgotpassWord_Error;
+	
+	@FindBy( name = "logonId")
+	public  WebElement ForgotpassWord_Textbox;
+	
+	@FindBy( css = ".promotion_button a")
+	public  WebElement shoppingcart_promo;
 	
 	
 

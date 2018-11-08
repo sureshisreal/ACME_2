@@ -10,7 +10,7 @@ import utilities.BaseTest;
 public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
-	public void ShoppingCart_FieldValidations() throws IOException, InterruptedException {
+	public void ShoppingCart_FieldValidations_001() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_FieldValidations",
 				"To verify guest user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -26,7 +26,7 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_FieldValidations_Reg() throws IOException, InterruptedException {
+	public void ShoppingCart_FieldValidations_Reg_002() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_FieldValidations_Reg",
 				"To verify registered user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -44,7 +44,7 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_RemoveProduct() throws IOException, InterruptedException {
+	public void ShoppingCart_RemoveProduct_003() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_RemovePRoduct",
 				"To verify guest user able to remove product in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -61,7 +61,7 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_RemoveProduct_Reg() throws IOException, InterruptedException {
+	public void ShoppingCart_RemoveProduct_Reg_004() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_RemovePRoduct_Reg",
 				"To verify registered user able to remove product in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -80,43 +80,45 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_InlineItem() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_RemovePRoduct",
-				"To verify guest user able to remove product in the shoppingcart page");
-		List<String> SearchTermData = getColumnData("Search","SearchSKU");
-		String SearchTerm = SearchTermData.get(0);
-		homepage.VerifyPageTitle();
-		homepage.searchTerm(SearchTerm);
-		categorypage.verifySearchHeader(SearchTerm);
-		categorypage.selectFirstProduct();
-		productsDetailPage.quantity("1");
-		productsDetailPage.AddToCart();
-		productsDetailPage.minishopcart_total();
-		shoppingCartPage.RemoveProduct();
-		shoppingCartPage.EmptyCartMsg();
-	}
-	
-	@Test
-	public void ShoppingCart_InlineItem_Reg() throws IOException, InterruptedException {
+	public void ShoppingCart_InlineItem_005() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_InlineItem",
-				"To verify registered user able to remove product in the shoppingcart page");
+				"To verify guest user able to view sepaerate line items in the shoppingcart page");
+		int loop=2;
+		for(int i=0; i<loop ; i++) {
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();
-		homepage.SignInLink();
-		registerationPage.HomepageLogin();
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
-		shoppingCartPage.RemoveProduct();
-		shoppingCartPage.EmptyCartMsg();
+		}
+		shoppingCartPage.shoppingcartInlinCheck(loop);
 	}
 	
 	@Test
-	public void ShoppingCart_ReturningCustomer() throws IOException, InterruptedException {
+	public void ShoppingCart_InlineItem_Reg_006() throws IOException, InterruptedException {
+		TestDescription("ShoppingCart_InlineItem_Reg",
+				"To verify registered user able to view sepaerate line items in the shoppingcart page");
+		int loop=2;
+		for(int i=0; i<loop ; i++) {
+		List<String> SearchTermData = getColumnData("Search","SearchSKU");
+		String SearchTerm = SearchTermData.get(0);
+		homepage.VerifyPageTitle();
+		homepage.searchTerm(SearchTerm);
+		categorypage.verifySearchHeader(SearchTerm);
+		categorypage.selectFirstProduct();
+		productsDetailPage.quantity("1");
+		productsDetailPage.AddToCart();
+		productsDetailPage.minishopcart_total();
+		}
+		shoppingCartPage.shoppingcartInlinCheck(loop);
+	}
+	
+	@Test
+	public void ShoppingCart_ReturningCustomer_007() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_ReturningCustomer",
 				"To verify guest user able to signin in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -131,5 +133,52 @@ public class ShoppingCartScripts extends BaseTest{
 		shoppingCartPage.ReturningCustomer();
 	}
 	
+	@Test
+	public void ShoppingCart_ReturningCustomer_Invalid_007() throws IOException, InterruptedException {
+		TestDescription("ShoppingCart_ReturningCustomer",
+				"To verify guest user able to signin in the shoppingcart page");
+		List<String> SearchTermData = getColumnData("Search","SearchSKU");
+		String SearchTerm = SearchTermData.get(0);
+		homepage.VerifyPageTitle();
+		homepage.searchTerm(SearchTerm);
+		categorypage.verifySearchHeader(SearchTerm);
+		categorypage.selectFirstProduct();
+		productsDetailPage.quantity("1");
+		productsDetailPage.AddToCart();
+		productsDetailPage.minishopcart_total();
+		shoppingCartPage.Invalid_ReturningCustomer();
+	}
+	
+	@Test
+	public void ShoppingCart_ForgotPassword() throws IOException, InterruptedException {
+		TestDescription("ShoppingCart_ReturningCustomer",
+				"To verify guest user able to signin in the shoppingcart page");
+		List<String> SearchTermData = getColumnData("Search","SearchSKU");
+		String SearchTerm = SearchTermData.get(0);
+		homepage.VerifyPageTitle();
+		homepage.searchTerm(SearchTerm);
+		categorypage.verifySearchHeader(SearchTerm);
+		categorypage.selectFirstProduct();
+		productsDetailPage.quantity("1");
+		productsDetailPage.AddToCart();
+		productsDetailPage.minishopcart_total();
+		shoppingCartPage.ForgotPassword();
+	}
+	
+	@Test
+	public void ShoppingCart_Promocode() throws IOException, InterruptedException {
+		TestDescription("ShoppingCart_ReturningCustomer",
+				"To verify guest user able to signin in the shoppingcart page");
+		List<String> SearchTermData = getColumnData("Search","SearchSKU");
+		String SearchTerm = SearchTermData.get(0);
+		homepage.VerifyPageTitle();
+		homepage.searchTerm(SearchTerm);
+		categorypage.verifySearchHeader(SearchTerm);
+		categorypage.selectFirstProduct();
+		productsDetailPage.quantity("1");
+		productsDetailPage.AddToCart();
+		productsDetailPage.minishopcart_total();
+		shoppingCartPage.promocode();
+	}
 	
 }

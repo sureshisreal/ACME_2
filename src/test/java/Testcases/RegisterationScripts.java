@@ -9,7 +9,7 @@ import utilities.BaseTest;
 public class RegisterationScripts extends BaseTest{
 	
 	@Test
-	public void Valid_SignIn() throws IOException {
+	public void Valid_SignIn_001() throws IOException {
 		TestDescription("Registered User Sign In",
 				"To verify whether registered user able to sign-in using valid credentials");
 		homepage.VerifyPageTitle();
@@ -18,7 +18,7 @@ public class RegisterationScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Invalid_SignIn_Error_Messages_Validations() throws IOException {
+	public void Invalid_SignIn_Error_Messages_Validations_002() throws IOException {
 		TestDescription("Invalid_SignIn_Error_Messages_Validations",
 				"To verify error messages are getting displayed while sign in using invalid credentials");
 		homepage.VerifyPageTitle();
@@ -27,7 +27,7 @@ public class RegisterationScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ForgotPassword_Error_Messages_Validations() throws IOException {
+	public void ForgotPassword_Error_Messages_Validations_003() throws IOException {
 		TestDescription("ForgotPassword_Error_Messages_Validations",
 				"To verify error messages are getting displayed for oinvalid data in the forgot password page");
 		homepage.VerifyPageTitle();
@@ -36,7 +36,7 @@ public class RegisterationScripts extends BaseTest{
 	}
 	
 	@Test
-	public void CreateAccount_Error_Messages_Validations() throws IOException {
+	public void CreateAccount_Error_Messages_Validations_004() throws IOException {
 		TestDescription("ForgotPassword_Error_Messages_Validations",
 				"To verify error messages are getting displayed for oinvalid data in the forgot password page");
 		homepage.VerifyPageTitle();

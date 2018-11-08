@@ -10,9 +10,9 @@ import utilities.BaseTest;
 public class OrderConformationPageScripts extends BaseTest{
 	
 	@Test
-	public void BillingPage_FieldValidations() throws IOException, InterruptedException {
-		TestDescription("BillingPage_FieldValidations",
-				"To verify guest user able to view all the fields in the Billing page");
+	public void OrderConformationPage_FieldValidations() throws IOException, InterruptedException {
+		TestDescription("OrderConformationPage_FieldValidations",
+				"To verify guest user able to view all the fields in the order confirmation page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();
@@ -28,9 +28,9 @@ public class OrderConformationPageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void BillingPage_FieldValidations_Reg() throws IOException, InterruptedException {
-		TestDescription("BillingPage_FieldValidations",
-				"To verify guest user able to view all the fields in the Billing page");
+	public void OrderConformationPage_FieldValidations_Reg() throws IOException, InterruptedException {
+		TestDescription("OrderConformationPage_FieldValidations",
+				"To verify registered user able to view all the fields in the order confirmation page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();
