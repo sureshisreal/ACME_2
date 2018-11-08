@@ -70,7 +70,7 @@ public class ShippingPageActions extends ShippingPageRepo {
 	
 	public void UseEnteredAddress() throws InterruptedException{
 		Thread.sleep(60000);
-		System.out.println("UseEnteredAddress_RadioButton.isDisplayed()" +UseEnteredAddress_RadioButton.isDisplayed());
+		//System.out.println("UseEnteredAddress_RadioButton.isDisplayed()" +UseEnteredAddress_RadioButton.isDisplayed());
 		if(UseEnteredAddress_RadioButton.isDisplayed()) {
 			UseEnteredAddress_RadioButton.click();	}
 	}
@@ -85,6 +85,9 @@ public class ShippingPageActions extends ShippingPageRepo {
 		int randshipping = rand.nextInt(Shippingmethod_OptionsCount.size()+1); 
 		Shippingmethod_Options(randshipping);
 	}
+	
+	
+	
 	
 	
 

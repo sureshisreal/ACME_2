@@ -15,7 +15,7 @@ import utilities.BaseTest;
 
 public class MyAccountScripts extends BaseTest {
 	
-/*
+
 	@Test
 	public void myAccountSummary() throws IOException, InterruptedException {
 
@@ -326,7 +326,7 @@ public class MyAccountScripts extends BaseTest {
 
 	}
 	
-	*/
+	
 	
 	@Test
 	public void myAcc_Coupons_UIValidation() throws IOException, InterruptedException {

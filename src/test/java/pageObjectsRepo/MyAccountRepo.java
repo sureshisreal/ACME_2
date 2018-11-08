@@ -25,7 +25,7 @@ public class MyAccountRepo extends BaseTest {
 	@FindBy(className = "myaccount_desc")
 	public WebElement myaccount_desc_summary;
 	
-	@FindBy(xpath = "span[text()='Personal Information']")
+	@FindBy(xpath = "//div[@class='my_account']//span[contains(text(),'Personal Information')]")
 	public WebElement personal_information_title;
 	
 	@FindBy(xpath = "//div[text()='Name']")
@@ -97,6 +97,10 @@ public class MyAccountRepo extends BaseTest {
 	
 	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//a[contains(text(),'Details')]")
 	public WebElement recent_OrderHistory_DetailsLink;
+	
+	
+	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//a[contains(text(),'Details')]/preceding-sibling::span")
+	public WebElement recent_OrderHistory_ordNum;
 	
 	
 	@FindBy(xpath ="//div[@id='ProcessedOrdersStatusDisplay']//td[contains(text(), 'No orders were found' )]")
