@@ -130,6 +130,10 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	@FindBy(xpath = "//table[@id='addressId']")
 	public WebElement aBook_addrDropdown;
 	
+	
+	@FindBy(xpath = "//td[contains(text(),'rnameforremove')]")
+	public WebElement aBook_removeaddr;
+	
 	@FindBy(xpath = "//div[@id='addressId_menu']")
 	public WebElement aBook_addrMenu;
 	
@@ -138,7 +142,8 @@ public class MyAccAddressBookRepo  extends BaseTest {
 	public WebElement aBook_removeAddress_successMsg;
 	
 	
-
+	@FindBy(xpath = "//div[contains(text(),'Your address cannot be removed')]")
+	public WebElement aBook_removeAddressRestric_tooltip;
 	
 	
 

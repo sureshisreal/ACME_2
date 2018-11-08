@@ -259,7 +259,7 @@ public class MyAccountScripts extends BaseTest {
 		
 		
 	}
-	*/
+	
 	
 	@Test
 	public void myAcc_ShippingInfo_removeAddress() throws IOException, InterruptedException {
@@ -269,9 +269,17 @@ public class MyAccountScripts extends BaseTest {
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_addressBook.click();
 		aBookPage.addNewAddress();
+		logs("New address 1 added");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
+		aBookPage.addNewAddressforRemove();
+		logs("Address to be removed has been added");
+		myaccountPage.myacc_leftNav_settings_addressBook.click();
 		aBookPage.removeAddress();
 		
 	}
+	
+	
+	
 	
 	@Test
 	public void myAcc_ShippingInfo_restrictRemoveAddress() throws IOException, InterruptedException {
@@ -280,7 +288,62 @@ public class MyAccountScripts extends BaseTest {
 		registerationPage.HomepageLoginSpecificAcc(3);
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_addressBook.click();
-		aBookPage.aBook_remove_CTA.click();
+		aBookPage.restrictRemoveAddress();
+		
+		
 }
+
+
+	
+	
+	@Test
+	public void myAcc_creditCard_UIValidation() throws IOException, InterruptedException {
+		
+		TestDescription("MyAccount_creditCard_15","To check the UI of the Credit card information");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_creditCard.click();
+		myaccCCpage.mcc_UIValidation();
+
+		
+	}
+	
+	
+	
+	@Test
+	public void myAcc_creditCard_addNewCreditCardInfo() throws IOException, InterruptedException {
+		
+		TestDescription("MyAccount_creditCard_16","To Add new credit card information in My Account");
+		homepage.SignInLink();
+		registerationPage.HomepageLoginSpecificAcc(1);
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_settings_creditCard.click();
+		myaccCCpage.addNewCreditCardInfo();
+		ElementPresent(myaccountPage.myAccountSummary_title);
+		ElementPresent(myaccountPage.myacc_quickCheckout_successMsg);
+		logs("Credit card information added successfully");
+
+	}
+	
+	*/
+	
+	@Test
+	public void myAcc_Coupons_UIValidation() throws IOException, InterruptedException {
+		TestDescription("MyAccount_coupons_17","To check the UI of the Coupons page in My Account");
+		homepage.SignInLink();
+		registerationPage.HomepageLogin();
+		logs("Logged in as registered user");
+		myaccountPage.myacc_leftNav_coupons_sublink.click();
+		Assert.assertTrue(myaccountPage.currentPageBreadcrumb.getText().toString().trim().equals("My Coupons"));
+		logs("Current Breadcrumb is My Coupons");
+		ElementPresent(couponsPage.coupons_header);
+		ElementPresent(couponsPage.coupons_noCouponsMsg);
+		logs("My Account Coupon Page UI Validation is completed");
+		AddScreenshot();
+		
+	}
+		
+	
 	
 }

@@ -264,7 +264,10 @@ public class MyAccountRepo extends BaseTest {
 	public WebElement pi_updateCTA;
 	
 	
+	@FindBy(xpath = "//div[@id='msgpopup_content_wrapper']//*[contains(text(),'Quick checkout profile updated successfully!')]")
+	public WebElement myacc_quickCheckout_successMsg;
 
+	
 		
 	
 	
