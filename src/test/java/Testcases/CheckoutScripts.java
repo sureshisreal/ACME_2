@@ -44,7 +44,7 @@ public class CheckoutScripts extends BaseTest {
 			productsDetailPage.AddToCart();
 			productsDetailPage.minishopcart_total();
 			shippingPage.GuestShippingAddress();
-			shippingPage.UseEnteredAddress();
+			//shippingPage.UseEnteredAddress();
 			billingPage.VisaPayment();
 			billingPage.PlaceOrder();
 	}

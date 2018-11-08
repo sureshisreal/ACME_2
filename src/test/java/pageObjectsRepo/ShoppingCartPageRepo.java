@@ -18,7 +18,7 @@ public class ShoppingCartPageRepo extends BaseTest {
 	@FindBy( xpath = "(.//*[@id='guestShopperContinue'])[1]")
 	public  WebElement guestShopperContinue;
 	
-	@FindBy( id = "(.//*[@id='shopcartCheckout'])[1]")
+	@FindBy( xpath = "(.//*[@id='shopcartCheckout'])[1]")
 	public  WebElement regShopperContinue;
 	
 	

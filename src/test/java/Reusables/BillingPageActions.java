@@ -15,6 +15,7 @@ public class BillingPageActions extends BillingPageRepo {
 
 	public void VisaPayment() {
 		WaitUntilElementClickable(CardNumber_Textbox);
+		CardNumber_Textbox.clear();
 		CardNumber_Textbox.sendKeys("4111111111111111");
 		CvvTextbox.sendKeys("321");
 		Select month =new Select(Billing_month);
@@ -34,6 +35,7 @@ public class BillingPageActions extends BillingPageRepo {
 	}
 	
 	public void PlaceOrder() throws IOException{
+		WaitUntilElementClickable(PlaceOrder_Button);
 		PlaceOrder_Button.click();
 		WaitUntilElementVisible(OrderNumber_Text);
 		AddScreenshot();

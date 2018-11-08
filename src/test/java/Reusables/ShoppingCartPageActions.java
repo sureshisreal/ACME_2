@@ -16,15 +16,15 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void guestCheckout() throws InterruptedException, IOException {
-		WaitUntilElementVisible(regShopperContinue);
+	public void RegCheckout() throws InterruptedException, IOException {
+		//WaitUntilElementVisible(regShopperContinue);
 		AddScreenshot();
 		regShopperContinue.click();
 		logs("Reg Checkout button clicked in the shoppingCart Page");
 
 	}
 	
-	public void RegCheckout() throws InterruptedException, IOException {
+	public void  guestCheckout() throws InterruptedException, IOException {
 		WaitUntilElementVisible(guestShopperContinue);
 		AddScreenshot();
 		guestShopperContinue.click();

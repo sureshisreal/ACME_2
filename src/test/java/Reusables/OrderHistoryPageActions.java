@@ -28,6 +28,48 @@ public class OrderHistoryPageActions extends OrderHistoryPageRepo {
 		AddScreenshot();
 
 	}
+
+	public void oh_UIvalidation() throws IOException {
+		// TODO Auto-generated method stub
+		ElementPresent(oh_header);
+		ElementPresent(oh_orderNumber);
+		ElementPresent(oh_orderDate);
+		ElementPresent(oh_PurchaseOrder);
+		ElementPresent(oh_Status);
+		ElementPresent(oh_TotalPrice);
+		ElementPresent(oh_ordersListSection);
+		ElementPresent(oh_Reorder_CTA);
+		ElementPresent(oh_DetailsLink);
+		logs("Order History Page UI validation is complete");
+		AddScreenshot();
+		
+		
+	}
+
+	public void guest_orderStatus_UIValidation() throws IOException {
+		// TODO Auto-generated method stub
+		
+		ElementPresent(os_header);
+		ElementPresent(os_membersHeader);
+		ElementPresent(os_logonIDLabel);
+		ElementPresent(os_logonIDField);
+		ElementPresent(os_passwordLabel);
+		ElementPresent(os_passwordField);
+		ElementPresent(os_forgotYourPasswordLink);
+		ElementPresent(os_signIn_CTA);
+		ElementPresent(os_guestHeader);
+		ElementPresent(os_orderNumLabel);
+		ElementPresent(os_ordNumField);
+		ElementPresent(os_billZipcodeLabel);
+		ElementPresent(os_billZipcodeField);
+		ElementPresent(os_findOrderCTA);
+		logs("Guest user Order Status Page UI validation is completed");
+		AddScreenshot();
+		
+		
+		
+		
+	}
 	
 	
 	
