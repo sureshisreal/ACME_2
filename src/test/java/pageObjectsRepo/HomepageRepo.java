@@ -58,6 +58,9 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(xpath = ".//*[@class='main_content']//h1[contains(.,'Customer')]")
 	public  WebElement CustomerService_Header;
 	
+	@FindBy(xpath = ".//*[@class='main_content']//h1[contains(.,'Account')]")
+	public  WebElement MyAccount_Header;
+	
 	@FindBy(id = "storeLocatorQuickLink_alt")
 	public  WebElement storeLocatorQuick_Link;
 	

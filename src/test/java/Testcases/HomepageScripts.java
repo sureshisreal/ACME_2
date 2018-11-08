@@ -10,7 +10,7 @@ import utilities.BaseTest;
 public class HomepageScripts extends BaseTest{
 	
 	@Test
-	public void Homepage_Header_FieldValidations() throws IOException, InterruptedException {
+	public void Homepage_Header_FieldValidations_001() throws IOException, InterruptedException {
 		TestDescription("Homepage_Header_FieldValidations",
 				"To verify guest user able to view all the fields in the homepage header");
 		homepage.VerifyPageTitle();
@@ -20,7 +20,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_Header_FieldValidations_Reg() throws IOException, InterruptedException {
+	public void Homepage_Header_FieldValidations_Reg_002() throws IOException, InterruptedException {
 		TestDescription("Homepage_Header_FieldValidations",
 				"To verify registered user able to view all the fields in the homepage header");
 		homepage.VerifyPageTitle();
@@ -32,7 +32,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_AddRandomProductFromMenuCategory() throws IOException, InterruptedException {
+	public void Homepage_AddRandomProductFromMenuCategory_003() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuCategory",
 				"To verify guest user able to add product from the header menu Categories");
 		homepage.VerifyPageTitle();
@@ -41,7 +41,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_AddRandomProductFromMenuCategory_Reg() throws IOException, InterruptedException {
+	public void Homepage_AddRandomProductFromMenuCategory_Reg_004() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuCategory",
 				"To verify registered user able to add product from the header menu Categories");
 		homepage.VerifyPageTitle();
@@ -52,7 +52,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_AddRandomProductFromMenuBrands() throws IOException, InterruptedException {
+	public void Homepage_AddRandomProductFromMenuBrands_005() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuBrands",
 				"To verify guest user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();
@@ -61,7 +61,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_AddRandomProductFromMenuBrands_Reg() throws IOException, InterruptedException {
+	public void Homepage_AddRandomProductFromMenuBrands_Reg_006() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuBrands",
 				"To verify registered user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();
@@ -72,7 +72,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_AddRandomProductFromMenuWhatsNew() throws IOException, InterruptedException {
+	public void Homepage_AddRandomProductFromMenuWhatsNew_007() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuBrands",
 				"To verify guest user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();
@@ -81,7 +81,7 @@ public class HomepageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void Homepage_AddRandomProductFromMenuWhatsNew_Reg() throws IOException, InterruptedException {
+	public void Homepage_AddRandomProductFromMenuWhatsNew_Reg_008() throws IOException, InterruptedException {
 		TestDescription("Homepage_AddRandomProductFromMenuBrands",
 				"To verify registered user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();

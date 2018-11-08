@@ -48,6 +48,9 @@ public class ProductsDetailPageRepo extends BaseTest{
 	@FindBy( className = "ratings")
 	public  WebElement PDPpage_Rating;
 	
+	@FindBy( id = "WAR")
+	public  WebElement PDPpage_Review;
+	
 	@FindBy( className = "avail-info")
 	public  WebElement PDPpage_AvailInfo;
 
@@ -66,6 +69,24 @@ public class ProductsDetailPageRepo extends BaseTest{
 	@FindBy( id = "footer")
 	public  WebElement PDPpage_footer;
 	
+	@FindBy( id = "lowPriceGuaranteeAnchor")
+	public  WebElement lowPriceGuaranteeAnchor_Link;
+	
+	@FindBy( id = "lowPrice_text_id")
+	public  WebElement lowPrice_close;
+	
+	@FindBy( css = "	.qty.right input")
+	public  WebElement Qty_Input;
+	
+	@FindBy( id = "ErrorMessageText")
+	public  WebElement Qty_ErrorMsg;
+	
+	@FindBy( id = "shoppping_list_content")
+	public  WebElement shoppping_list_content;
+	
+	@FindBy( id = "ShoppingList_0")
+	public  WebElement Wishlist_signIn;	
+		
 	@FindBy( xpath = "(.//*[@class='subheader-bar'][contains(.,'Recommended')]/following-sibling::div//li//div[@class='product_name']//a)")
 	public  List<WebElement> PDPpage_RecommendedProducts;
 	
@@ -80,7 +101,7 @@ public class ProductsDetailPageRepo extends BaseTest{
 		 return driver.findElement(By.xpath("(.//*[@class='header-bar'][contains(.,'Also')]/following-sibling::div//li//div[@class='product_name']//a)["+i+"]"));
 	    }
 	 
-	
+	 
 	
 	
 	

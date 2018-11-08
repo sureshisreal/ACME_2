@@ -10,7 +10,7 @@ import utilities.BaseTest;
 public class ShippingPageScripts extends BaseTest{
 	
 	@Test
-	public void ShippingPage_FieldValidations() throws IOException, InterruptedException {
+	public void ShippingPage_FieldValidations_001() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_FieldValidations",
 				"To verify guest user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -27,7 +27,7 @@ public class ShippingPageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShippingPage_FieldValidations_Reg() throws IOException, InterruptedException {
+	public void ShippingPage_FieldValidations_Reg_002() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_FieldValidations",
 				"To verify registered user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");

@@ -2,7 +2,10 @@ package Reusables;
 
 import static org.testng.AssertJUnit.assertTrue;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import pageObjectsRepo.ProductsDetailPageRepo;
 
@@ -39,8 +42,41 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 
 	public void VerifyPage() {
 		WaitUntilElementVisible(PDPpage_Container);
-		logs("PDP page verified");
-		
+		logs("PDP page verified");	
+	}
+	
+	public void QtyErrorMsg() {
+		WaitUntilElementVisible(Qty_Input);
+		Qty_Input.sendKeys("0");
+		assertTrue(Qty_ErrorMsg.getText().contains
+				("The value in the Quantity field is invalid. Ensure the value is a positive integer and try again"));
+		logs("PDP page verified");	
+	}
+	
+	public void lowPriceGuaranteeAnchor() throws IOException {
+		if(lowPriceGuaranteeAnchor_Link.isDisplayed()) {
+			lowPriceGuaranteeAnchor_Link.click();
+			AddScreenshot();
+			lowPrice_close.click();
+		}
+		logs("lowPriceGuaranteeAnchor_Link verified");	
+	}
+	
+	public void wishlist() throws IOException {
+		if(shoppping_list_content.isDisplayed()) {
+			shoppping_list_content.click();
+			AddScreenshot();
+			assertTrue(shoppping_list_content.getText().contains
+					("Sign In / Register"));
+		}
+		logs("wishlist verified");	
+	}
+	
+	public void reviewlink() throws IOException {
+		WaitUntilElementVisible(PDPpage_Review);
+		PDPpage_Review.click();
+		AddScreenshot();
+		logs("reviewlink verified");
 	}
 
 	public void fieldValidations() {
@@ -78,6 +114,9 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 			logs("AlsoViewed product added and verified");
 		}
 	}
+	
+	
+	
 
 
 }

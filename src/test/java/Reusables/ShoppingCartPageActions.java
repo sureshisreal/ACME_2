@@ -17,12 +17,22 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 	}
 
 	public void guestCheckout() throws InterruptedException, IOException {
+		WaitUntilElementVisible(regShopperContinue);
+		AddScreenshot();
+		regShopperContinue.click();
+		logs("Reg Checkout button clicked in the shoppingCart Page");
+
+	}
+	
+	public void RegCheckout() throws InterruptedException, IOException {
 		WaitUntilElementVisible(guestShopperContinue);
 		AddScreenshot();
 		guestShopperContinue.click();
 		logs("Guest Checkout button clicked in the shoppingCart Page");
 
 	}
+	
+	
 
 	public void fieldvalidations() {
 		WaitUntilElementVisible(guestShopperContinue);
@@ -59,6 +69,14 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 		AddScreenshot();
 		logs("Empty Cart Verified");
 	}
+	
+	public void shoppingcartInlinCheck(int i) throws IOException {
+		WaitUntilElementVisible(shoppingCart_Heading);
+		int inline = ProductName_link.size();
+		assertTrue(inline == 2 );
+		AddScreenshot();	
+		logs("verified Inline Check");
+	}
 
 	public void ReturningCustomer() throws IOException {
 		WaitUntilElementVisible(returning_customerId);
@@ -70,6 +88,38 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 		returning_customerId.sendKeys(Username);
 		returning_customerpassword.sendKeys(Password);
 		signInCheckout_button.click();
+	}
+	
+	public void Invalid_ReturningCustomer() throws IOException {
+		WaitUntilElementVisible(returning_customerId);
+		List<String> ErrorMsgData = getColumnData("SignIn","SignInErrorMsg");
+		String ErrorMsg1 = ErrorMsgData.get(0);
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String Password = PssswordData.get(0);
+		returning_customerId.sendKeys(ErrorMsg1);
+		returning_customerpassword.sendKeys(Password);
+		signInCheckout_button.click();
+	}
+
+	public void ForgotPassword() {
+		WaitUntilElementClickable(forgotpassword_link);
+		forgotpassword_link.click();
+		WaitUntilElementClickable(ForgotpassWord_SignIn);
+		ForgotpassWord_SignIn.click();
+		WaitUntilElementVisible(ForgotpassWord_Registerationpage);
+		assertTrue(EmptyCart.getText().contains("CREATE AN ACME TOOLS ACCOUNT PROFILE"));
+		driver.navigate().back();
+		ForgotpassWord_Error.click();
+		assertTrue(ForgotpassWord_Error.getText().contains("Type a logon ID in the Logon ID field."));
+		ForgotpassWord_Textbox.sendKeys("!@#$%^&*");
+		assertTrue(ForgotpassWord_Error.getText().contains("The logon ID that you entered is not valid. Check your entry and try again"));
+
+	}
+
+	public void promocode() {
+			WaitUntilElementClickable(shoppingcart_promo);
+			shoppingcart_promo.click();
+			
 	}
 
 }

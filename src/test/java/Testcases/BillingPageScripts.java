@@ -10,7 +10,7 @@ import utilities.BaseTest;
 public class BillingPageScripts extends BaseTest{
 	
 	@Test
-	public void BillingPage_FieldValidations() throws IOException, InterruptedException {
+	public void BillingPage_FieldValidations_001() throws IOException, InterruptedException {
 		TestDescription("BillingPage_FieldValidations",
 				"To verify guest user able to view all the fields in the Billing page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -28,7 +28,7 @@ public class BillingPageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void BillingPage_FieldValidations_Reg() throws IOException, InterruptedException {
+	public void BillingPage_FieldValidations_Reg_002() throws IOException, InterruptedException {
 		TestDescription("BillingPage_FieldValidations",
 				"To verify guest user able to view all the fields in the Billing page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -46,6 +46,5 @@ public class BillingPageScripts extends BaseTest{
 		shippingPage.GuestShippingAddress();
 		billingPage.BillingFieldValidation();
 	}
-	
 	
 }
