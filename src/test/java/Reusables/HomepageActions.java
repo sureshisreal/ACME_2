@@ -165,6 +165,14 @@ public class HomepageActions extends HomepageRepo {
 		logs(" Menu What'snew verified");
 	}
 
+	public void signout() throws IOException {
+		WaitUntilElementClickable(MyAccount_Link);
+		SigniIn_alt_Link.click();
+		AddScreenshot();
+		WaitUntilElementClickable(SignInRegister_Link);
+		logs("Log out verified");
+	}
+
 	
 
 }

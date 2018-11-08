@@ -131,8 +131,30 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		logs("login page displayed");		
 	}
 
-	public void CreateAccountValidations() {
-		
+	public void CreateAccountValidations() throws IOException {
+		WaitUntilElementVisible(submit_Button);
+		submit_Button.click();
+		AddScreenshot();
+		logonPassword_Textbox.sendKeys("P@ssw0rd");
+		submit_Button.click();
+		logonPasswordVerify_Textbox.sendKeys("P@ssw0rd");
+		submit_Button.click();
+		firstName_Textbox.sendKeys("firstName");
+		submit_Button.click();
+		lastName_Textbox.sendKeys("lastname");
+		submit_Button.click();
+		address1_Textbox.sendKeys("address1");
+		submit_Button.click();
+		city_Textbox.sendKeys("New york");
+		submit_Button.click();
+		zipCode_Textbox.sendKeys("10007");
+		submit_Button.click();
+		email1_Textbox.sendKeys("abc@yopmail.com");
+		submit_Button.click();
+		verifyemail1_Textbox.sendKeys("abc@yopmail.com");
+		phone1_Textbox.sendKeys("6767676767");
+		submit_Button.click();
+		AddScreenshot();
 	}
 	
 	public void loginWithOldPassword() throws IOException {
@@ -221,6 +243,25 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		//AddScreenshot();
 		logs("Login success \n UserName :" +Username+ "Password: "+Password);
 		
+	}
+
+
+	public void cancelregisteration() throws IOException {
+		WaitUntilElementVisible(submit_Button);
+		submit_Button.click();
+		AddScreenshot();
+		logonPassword_Textbox.sendKeys("P@ssw0rd");
+		logonPasswordVerify_Textbox.sendKeys("P@ssw0rd");
+		firstName_Textbox.sendKeys("firstName");
+		lastName_Textbox.sendKeys("lastname");
+		address1_Textbox.sendKeys("address1");
+		city_Textbox.sendKeys("New york");
+		zipCode_Textbox.sendKeys("10007");
+		email1_Textbox.sendKeys("abc@yopmail.com");
+		verifyemail1_Textbox.sendKeys("abc@yopmail.com");
+		phone1_Textbox.sendKeys("6767676767");
+		cancel_Button.click();
+		AddScreenshot();		
 	}
 	
 	

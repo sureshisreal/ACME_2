@@ -15,6 +15,7 @@ public class RegisterationScripts extends BaseTest{
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
+		homepage.signout();
 	}
 	
 	@Test
@@ -39,6 +40,9 @@ public class RegisterationScripts extends BaseTest{
 	public void CreateAccount_Error_Messages_Validations_004() throws IOException {
 		TestDescription("ForgotPassword_Error_Messages_Validations",
 				"To verify error messages are getting displayed for oinvalid data in the forgot password page");
+		homepage.VerifyPageTitle();
+		homepage.SignInLink();
+		registerationPage.cancelregisteration();
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
 		registerationPage.CreateAccountValidations();	

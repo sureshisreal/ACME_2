@@ -18,9 +18,8 @@ public class ShoppingCartPageRepo extends BaseTest {
 	@FindBy( xpath = "(.//*[@id='guestShopperContinue'])[1]")
 	public  WebElement guestShopperContinue;
 	
-	@FindBy( id = "(.//*[@id='shopcartCheckout'])[1]")
+	@FindBy( xpath = "(.//*[@id='shopcartCheckout'])[1]")
 	public  WebElement regShopperContinue;
-	
 	
 	@FindBy( xpath = "(.//*[@id='guestShopperContinue'])[2]")
 	public  WebElement guestShopperContinue_footer;
@@ -30,7 +29,6 @@ public class ShoppingCartPageRepo extends BaseTest {
 	
 	@FindBy( className = "skuNo")
 	public  WebElement Sku_label;
-	
 	
 	@FindBy( css = "a[id^='catalogEntry_name']")
 	public  List<WebElement> ProductName_link;
@@ -95,7 +93,5 @@ public class ShoppingCartPageRepo extends BaseTest {
 	
 	@FindBy( css = ".promotion_button a")
 	public  WebElement shoppingcart_promo;
-	
-	
 
 }

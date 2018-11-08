@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import utilities.BaseTest;
 
 public class CheckoutScripts extends BaseTest {
-
+/*
 	@Test	
 	public void Guest_SearchCheckout_001() throws IOException, InterruptedException {		
 		TestDescription("Guest_SearchCheckout" , "To verify guest user able to place order using search items");
@@ -27,7 +27,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.VisaPayment();
 			billingPage.PlaceOrder();
 
-	}
+	}*/
 		
 	@Test	
 	public void Registered_SearchCheckout_002() throws IOException, InterruptedException {		
@@ -43,13 +43,14 @@ public class CheckoutScripts extends BaseTest {
 			productsDetailPage.quantity("5");
 			productsDetailPage.AddToCart();
 			productsDetailPage.minishopcart_total();
+			shoppingCartPage.RegCheckout();
 			shippingPage.GuestShippingAddress();
 			shippingPage.UseEnteredAddress();
 			billingPage.VisaPayment();
 			billingPage.PlaceOrder();
 	}
 	
-	@Test	
+	/*@Test	
 	public void Bopis_SearchCheckout_003() throws IOException, InterruptedException {		
 		TestDescription("Bopis_SearchCheckout" , "To verify user able to place order using bopis");
 			logs("Url entered");
@@ -87,6 +88,6 @@ public class CheckoutScripts extends BaseTest {
 			logs("Ordered Placed");
 	}
 	
-
+*/
 
 }
