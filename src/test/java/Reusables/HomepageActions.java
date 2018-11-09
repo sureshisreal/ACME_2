@@ -142,14 +142,14 @@ public class HomepageActions extends HomepageRepo {
 		assertTrue(SubCategoryName.contains(SearchHeader_Verify.getText()));
 		AddScreenshot();
 		
-		//First Product
+		/*//First Product
 				WaitUntilElementClickable(FirstProductName);
-				String ProductName = FirstProductName.getText();
+				//String ProductName = FirstProductName.getText();
 				FirstProductName.click();
 				logs("First product selected ");
 				WaitUntilElementVisible(PDP_TitleVerify);
-				assertTrue(PDP_TitleVerify.getText().contains(ProductName));
-				logs("First product verified");
+				//assertTrue(ProductName.contains(PDP_TitleVerify.getText()));
+				logs("First product verified");*/
 	}
 
 	public void BrandMenuSelection() throws IOException {

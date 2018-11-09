@@ -9,14 +9,10 @@
     <classes>
       <class name="Testcases.PDPScripts">
         <methods>
-          <include name="PDP_AddAlsoViewedProduct_Reg_006"/>
           <include name="afterMethod"/>
-          <include name="PDP_AddRecommendations_Reg_004"/>
           <include name="PDP_AddAlsoViewedProduct_005"/>
           <include name="PDP_FieldValidations_001"/>
           <include name="beforeMethod"/>
-          <include name="PDP_AddRecommendations_003"/>
-          <include name="PDP_FieldValidations_Reg_002"/>
         </methods>
       </class> <!-- Testcases.PDPScripts -->
     </classes>

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import utilities.BaseTest;
 
 public class CheckoutScripts extends BaseTest {
-/*
+
 	@Test	
 	public void Guest_SearchCheckout_001() throws IOException, InterruptedException {		
 		TestDescription("Guest_SearchCheckout" , "To verify guest user able to place order using search items");
@@ -27,7 +27,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.VisaPayment();
 			billingPage.PlaceOrder();
 
-	}*/
+	}
 		
 	@Test	
 	public void Registered_SearchCheckout_002() throws IOException, InterruptedException {		

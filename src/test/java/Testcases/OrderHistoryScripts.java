@@ -12,7 +12,7 @@ import java.util.List;
 public class OrderHistoryScripts extends BaseTest{
 	
 	
-	/*
+	
 	@Test
 	public void reg_OrderDetails_UIValidation() throws IOException, InterruptedException {
 		
@@ -32,7 +32,7 @@ public class OrderHistoryScripts extends BaseTest{
 		//shippingPage.UseEnteredAddress();
 		billingPage.VisaPayment();
 		billingPage.PlaceOrder();
-		homepage.myAccount_Link.click();
+		homepage.MyAccount_Link.click();
 		myaccountPage.recent_OrderHistory_DetailsLink.click();
 		Assert.assertTrue(myaccountPage.currentPageBreadcrumb.getText().toString().trim().equals("Order Details"));
 		logs("Sucessfully Navigated to OrderDetails Page");
@@ -94,7 +94,6 @@ public class OrderHistoryScripts extends BaseTest{
 	
 	}
 	
-		*/
 	
 	@Test
 	public void guest_OrderStatus_OrderDetailsNavigation() throws IOException, InterruptedException {

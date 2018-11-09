@@ -120,6 +120,7 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 			WaitUntilElementClickable(shoppingcart_promo);
 			shoppingcart_promo.click();
 			
+			
 	}
 
 }

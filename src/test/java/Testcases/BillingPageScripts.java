@@ -11,7 +11,7 @@ public class BillingPageScripts extends BaseTest{
 	
 	@Test
 	public void BillingPage_FieldValidations_001() throws IOException, InterruptedException {
-		TestDescription("BillingPage_FieldValidations",
+		TestDescription("BillingPage_FieldValidations_001",
 				"To verify guest user able to view all the fields in the Billing page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -29,8 +29,8 @@ public class BillingPageScripts extends BaseTest{
 	
 	@Test
 	public void BillingPage_FieldValidations_Reg_002() throws IOException, InterruptedException {
-		TestDescription("BillingPage_FieldValidations",
-				"To verify guest user able to view all the fields in the Billing page");
+		TestDescription("BillingPage_FieldValidations_Reg_002",
+				"To verify registered user able to view all the fields in the Billing page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();

@@ -45,12 +45,13 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 		logs("PDP page verified");	
 	}
 	
-	public void QtyErrorMsg() {
+	public void QtyErrorMsg() throws InterruptedException {
 		WaitUntilElementVisible(Qty_Input);
 		Qty_Input.sendKeys("0");
+		Thread.sleep(5000);
 		assertTrue(Qty_ErrorMsg.getText().contains
 				("The value in the Quantity field is invalid. Ensure the value is a positive integer and try again"));
-		logs("PDP page verified");	
+		logs("PDP page verified");
 	}
 	
 	public void lowPriceGuaranteeAnchor() throws IOException {

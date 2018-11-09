@@ -7,9 +7,10 @@
 	<parameter name="browser" value="chrome" />
 	<test  name="Test">
 		<classes>
-		<class name="Testcases.PDPScripts" /> 
+		<class name="Testcases.HomepageScripts" />
 			<!-- <class name="Testcases.CheckoutScripts" />
 			<class name="Testcases.HomepageScripts" />
+				<class name="Testcases.PDPScripts" /> 
 			<class name="Testcases.RegisterationScripts" /> 
 			<class name="Testcases.MyAccountScripts" /> 
 			<class name="Testcases.CategorypageScripts" />  -->   
