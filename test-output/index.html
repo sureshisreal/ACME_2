@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>E:\Acme_Workspace\ACME_2\testng.xml</span>
+                    <span>C:\ACME_Eclipse\ACME_2\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.CheckoutScripts" hash-for-method="Registered_SearchCheckout_002">Registered_SearchCheckout_002</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.OrderHistoryScripts" hash-for-method="guest_OrderStatus_OrderDetailsNavigation">guest_OrderStatus_OrderDetailsNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testcases.MyAccountScripts" hash-for-method="personalInformation_editingEmail">personalInformation_editingEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,61 +122,40 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-<<<<<<< HEAD
-              <img src="failed.png"/>
-              <span class="class-name">Testcases.CheckoutScripts</span>
-=======
               <img src="passed.png"/>
-              <span class="class-name">Testcases.OrderHistoryScripts</span>
->>>>>>> e90000a90046f830125d0cb7a8f61271abaa5055
+              <span class="class-name">Testcases.MyAccountScripts</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-<<<<<<< HEAD
-                  <a name="Registered_SearchCheckout_002">
-                  </a> <!-- Registered_SearchCheckout_002 -->
-                  <span class="method-name">Registered_SearchCheckout_002</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;WC_shippingAddressCreateEditFormDiv_firstName&quot;}
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 32 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;WIN-81NG0PGA72A&apos;, ip: &apos;172.17.1.29&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:52830}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5), userDataDir=C:\Users\P01242\AppData\Local\Temp\scoped_dir9208_32579}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=69.0.3497.100, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=d9072abfc952b22cb88ded050b3bd69d, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d9072abfc952b22cb88ded050b3bd69d
-*** Element info: {Using=id, value=WC_shippingAddressCreateEditFormDiv_firstName}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-	at Reusables.ShippingPageActions.GuestShippingAddress(ShippingPageActions.java:34)
-	at Testcases.CheckoutScripts.Registered_SearchCheckout_002(CheckoutScripts.java:46)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-=======
-                  <a name="guest_OrderStatus_UIValidation">
-                  </a> <!-- guest_OrderStatus_UIValidation -->
-                  <span class="method-name">guest_OrderStatus_UIValidation</span>
->>>>>>> e90000a90046f830125d0cb7a8f61271abaa5055
+                  <a name="personalInformation_editingEmail">
+                  </a> <!-- personalInformation_editingEmail -->
+                  <span class="method-name">personalInformation_editingEmail</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Testcases.OrderHistoryScripts</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="guest_OrderStatus_OrderDetailsNavigation">
+                  </a> <!-- guest_OrderStatus_OrderDetailsNavigation -->
+                  <span class="method-name">guest_OrderStatus_OrderDetailsNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\Acme_Workspace\ACME_2\testng.xml</span>
+            <span class="header-content">C:\ACME_Eclipse\ACME_2\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,11 +168,8 @@ Session ID: d9072abfc952b22cb88ded050b3bd69d
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-<<<<<<< HEAD
-      &lt;class name=&quot;Testcases.CheckoutScripts&quot;/&gt;
-=======
+      &lt;class name=&quot;Testcases.MyAccountScripts&quot;/&gt;
       &lt;class name=&quot;Testcases.OrderHistoryScripts&quot;/&gt;
->>>>>>> e90000a90046f830125d0cb7a8f61271abaa5055
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -202,7 +183,7 @@ Session ID: d9072abfc952b22cb88ded050b3bd69d
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -228,22 +209,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-<<<<<<< HEAD
-data.setCell(0, 1, 'Registered_SearchCheckout_002')
-data.setCell(0, 2, 'Testcases.CheckoutScripts')
-data.setCell(0, 3, 70712);
-=======
-data.setCell(0, 1, 'guest_OrderStatus_UIValidation')
+data.setCell(0, 1, 'guest_OrderStatus_OrderDetailsNavigation')
 data.setCell(0, 2, 'Testcases.OrderHistoryScripts')
-data.setCell(0, 3, 24513);
->>>>>>> e90000a90046f830125d0cb7a8f61271abaa5055
+data.setCell(0, 3, 213568);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'personalInformation_editingEmail')
+data.setCell(1, 2, 'Testcases.MyAccountScripts')
+data.setCell(1, 3, 152001);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -269,33 +248,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-<<<<<<< HEAD
-              <div class="chronological-class-name">Testcases.CheckoutScripts</div> <!-- chronological-class-name -->
-=======
-              <div class="chronological-class-name">Testcases.OrderHistoryScripts</div> <!-- chronological-class-name -->
->>>>>>> e90000a90046f830125d0cb7a8f61271abaa5055
+              <div class="chronological-class-name">Testcases.MyAccountScripts</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-<<<<<<< HEAD
-                <img src="failed.png">
-                </img>
-                <span class="method-name">Registered_SearchCheckout_002</span>
-                <span class="method-start">40297 ms</span>
+                <span class="method-name">personalInformation_editingEmail</span>
+                <span class="method-start">56914 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Registered_SearchCheckout_002 status=FAILURE method=CheckoutScripts.Registered_Sear...)</span>
-                <span class="method-start">111020 ms</span>
-=======
-                <span class="method-name">guest_OrderStatus_UIValidation</span>
-                <span class="method-start">56066 ms</span>
+                <span class="method-name">afterMethod([TestResult name=personalInformation_editingEmail status=SUCCESS method=MyAccountScripts.personalInf...)</span>
+                <span class="method-start">208917 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Testcases.OrderHistoryScripts</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chrome)</span>
+                <span class="method-start">208958 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">guest_OrderStatus_OrderDetailsNavigation</span>
+                <span class="method-start">253033 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=guest_OrderStatus_UIValidation status=SUCCESS method=OrderHistoryScripts.guest_Orde...)</span>
-                <span class="method-start">80583 ms</span>
->>>>>>> e90000a90046f830125d0cb7a8f61271abaa5055
+                <span class="method-name">afterMethod([TestResult name=guest_OrderStatus_OrderDetailsNavigation status=SUCCESS method=OrderHistoryScripts....)</span>
+                <span class="method-start">466602 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

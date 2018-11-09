@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Testcases.CheckoutScripts">
+      <class name="Testcases.OrderHistoryScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="Registered_SearchCheckout_002"/>
           <include name="beforeMethod"/>
+          <include name="guest_OrderStatus_OrderDetailsNavigation"/>
         </methods>
-      </class> <!-- Testcases.CheckoutScripts -->
+      </class> <!-- Testcases.OrderHistoryScripts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

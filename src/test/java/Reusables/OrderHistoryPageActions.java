@@ -7,6 +7,7 @@ import org.testng.Assert;
 import pageObjectsRepo.OrderHistoryPageRepo;
 
 import java.io.IOException;
+import java.util.List;
 
 public class OrderHistoryPageActions extends OrderHistoryPageRepo {
 	
@@ -70,6 +71,67 @@ public class OrderHistoryPageActions extends OrderHistoryPageRepo {
 		
 		
 	}
+
+	public void loginfromOrderStatus() throws IOException {
+		// TODO Auto-generated method stub
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String Username = UsernameData.get(0);
+		List<String> PssswordData = getColumnData("SignIn","Password");
+		String Password = PssswordData.get(0);
+		System.out.println("Credentials :" + Username + "" +Password);
+		os_logonIDField.clear();
+		os_passwordField.clear();
+		os_logonIDField.sendKeys(Username);
+		os_passwordField.sendKeys(Password);
+		AddScreenshot();
+		os_signIn_CTA.click();
+		
+
+	}
+
+	public void invalidOrderDetailsCheck() throws IOException {
+		// TODO Auto-generated method stub
+		os_ordNumField.sendKeys("148009");
+		os_billZipcodeField.sendKeys("32003");
+		os_findOrderCTA.click();
+		WaitUntilElementVisible(os_errorMsg);
+		Assert.assertTrue(os_errorMsg.getText().toString().contains("The order number or zipcode are incorrect"));
+		AddScreenshot();
+		logs("error message is displayed while entering the invalid order number or zipcode in the guest order status page");
+	}
+
+	public void guest_ordStatus_OrderDetailsNavigation(String ordNum, String billToZipcode) {
+		// TODO Auto-generated method stub
+		os_ordNumField.clear();
+		os_billZipcodeField.clear();
+		os_ordNumField.sendKeys(ordNum);
+		os_billZipcodeField.sendKeys(billToZipcode);
+		os_findOrderCTA.click();
+		
+		
+	}
+
+	public void guest_orderDetailsPage_UIValidation() throws IOException {
+		// TODO Auto-generated method stub
+		ElementPresent(odg_header);
+		ElementPresent(odg_FindAnotherOrder_sectionHeader);
+		ElementPresent(odg_FindAnotherOrder_ordNumLabel);
+		ElementPresent(odg_FindAnotherOrder_ordNumFiled);
+		ElementPresent(odg_FindAnotherOrder_billToZipcodeLabel);
+		ElementPresent(odg_FindAnotherOrder_billToZipcodeField);
+		ElementPresent(odg_FindAnotherOrder_findOrderCTA);
+		ElementPresent(odg_ordNumber);
+		ElementPresent(odg_ordDate);
+		ElementPresent(odg_ShipInfoHeader);
+		ElementPresent(odg_BillInfoHeader);
+		ElementPresent(odg_printCTA);
+		AddScreenshot();
+		logs("Guest user Order Details Page validation is completed");
+		
+		
+	}
+	
+	
 	
 	
 	

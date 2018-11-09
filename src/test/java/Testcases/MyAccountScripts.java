@@ -15,7 +15,7 @@ import utilities.BaseTest;
 
 public class MyAccountScripts extends BaseTest {
 	
-
+/*
 	@Test
 	public void myAccountSummary() throws IOException, InterruptedException {
 
@@ -179,7 +179,7 @@ public class MyAccountScripts extends BaseTest {
 
 }
 	
-	
+	*/
 
 	@Test
 	public void personalInformation_editingEmail() throws IOException, InterruptedException {
@@ -190,15 +190,22 @@ public class MyAccountScripts extends BaseTest {
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
 		myaccountPage.pinfo_editEmailValidations();
-		registerationPage.SignOut.click();
+		logs("Editing Email validations are completed");
+		//The Following codes are NOT applicable since, changing the email will NOT change the logon ID
+		
+		/*registerationPage.SignOut.click();
 		registerationPage.loginwithOldEmail();
 		registerationPage.loginwithNewEmail();
+		*/
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
 		myaccountPage.revertToOriginalEmail();
+		logs("Email Changes are reverted back to original");
+		
+		
 	}
 	
 
-	 
+	/* 
 	@Test
 	public void myAcc_ShippingInfo_UIValidation() throws IOException, InterruptedException {
 		TestDescription("MyAccount_addressBook_09",
@@ -344,6 +351,6 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 		
-	
+	*/
 	
 }
