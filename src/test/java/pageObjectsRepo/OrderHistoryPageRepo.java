@@ -123,6 +123,57 @@ public class OrderHistoryPageRepo extends BaseTest {
 	public WebElement os_findOrderCTA;
 	
 	
+	@FindBy(xpath ="//div[@class='guests bordered']//p[@class='myaccount_error']")
+	public WebElement os_errorMsg;
+	
+	// Guest Order Details Page UI Page Elements
+	
+	//'odg' indicates - order details of guest user
+	
+	@FindBy(xpath ="//h2[contains(text(),'Order Details')]")
+	public WebElement odg_header;
+	
+	@FindBy(xpath ="//div[@class='find-order-container bordered']//h1[contains(text(),'Find Another Order')]")
+	public WebElement odg_FindAnotherOrder_sectionHeader;
+	
+	@FindBy(xpath ="//div[@class='find-order-container bordered']//label[@for='orderNumber']")
+	public WebElement odg_FindAnotherOrder_ordNumLabel;
+	
+	@FindBy(name ="orderNumber")
+	public WebElement odg_FindAnotherOrder_ordNumFiled;
+	
+	@FindBy(xpath ="//div[@class='find-order-container bordered']//label[@for='billtoZip']")
+	public WebElement odg_FindAnotherOrder_billToZipcodeLabel;
+	
+	@FindBy(name ="billtoZip")
+	public WebElement odg_FindAnotherOrder_billToZipcodeField;
+	
+	@FindBy(xpath ="//div[@class='find-order-container bordered']//a[contains(text(),'Find Order')]")
+	public WebElement odg_FindAnotherOrder_findOrderCTA;
+	
+	
+	@FindBy(xpath ="//div[@class='orderConfirm']//span[contains(text(),'Order Number')]")
+	public WebElement odg_ordNumber;
+	
+	
+	@FindBy(xpath ="//div[@class='orderConfirm']//span[contains(text(),'Order Date')]")
+	public WebElement odg_ordDate;
+	
+	
+	@FindBy(xpath = "//div[@class='orderConfirm']//h2[contains(text(),'Shipping Information')]")
+	public WebElement odg_ShipInfoHeader;
+	
+	@FindBy(xpath = "//div[@class='orderConfirm']//h2[contains(text(),'Billing Information')]")
+	public WebElement odg_BillInfoHeader;
+	
+	@FindBy(xpath = "//a[contains(text(),'Print')]")
+	public WebElement odg_printCTA;
+	
+	
+	
+	
+	
+	
 	
 	
 
