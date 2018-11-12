@@ -48,7 +48,7 @@ public class HomepageScripts extends BaseTest{
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		homepage.CategoryMenuSelection();
-		//categorypage.selectRandomProduct();
+		categorypage.selectRandomProduct();
 	}
 	
 	@Test
