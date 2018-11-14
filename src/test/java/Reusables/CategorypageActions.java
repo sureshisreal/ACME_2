@@ -91,6 +91,25 @@ public class CategorypageActions extends CatgoryPageRepo{
 		WaitUntilElementVisible(PDP_TitleVerify);
 		assertTrue(TopSellingSelect.contains(PDP_TitleVerify.getText()));
 		logs("Added product verified");
+	}
+
+	public void SearchBreadcrumbsNaigation() {
+		WaitUntilElementVisible(SearchHeader);
+		int Breadcrumbsize = Breadcrumb_Navigation.size();
+		for( int i=1; i<Breadcrumbsize ; i++) {
+				if(i==1) {
+					String title = driver.getTitle();
+					Assert.assertEquals(driver.getTitle(),
+										"Search Results Display");
+					logs("Page title verified : " + title);
+				}
+			String BreadcrumbName = BreacrumbNavigation(i).getText();
+			BreacrumbNavigation(i).click();
+			assertTrue(CategoryVerify.getText().contains(BreadcrumbName));
+			driver.navigate().back();
+		}
+		
+		
 	}	
 
 }

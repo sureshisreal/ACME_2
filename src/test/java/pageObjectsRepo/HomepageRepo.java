@@ -106,11 +106,18 @@ public class HomepageRepo extends BaseTest{
 	@FindBy(xpath = ".//*[@class='category-page']")
 	public WebElement Menu_CategoryVerify;
 	
+	@FindBy(xpath = "(.//div[@class='product_name'])[1]")
+	public WebElement FirstProductName;
+	
+	@FindBy(xpath = ".//div[@class='top namePartPriceContainer']//h1[@class='main_header']")
+	public WebElement PDP_TitleVerify;
+	
 	@FindBy(xpath = ".//*[@class='departmentButton'][contains(.,'Brands')]/following-sibling::div//li")
 	public WebElement RandomMenu_BrandName;
 	
 	@FindBy(xpath = "(.//*[@class='promonewrow']//b)[1]")
 	public  WebElement Categorypage_FirstCategory;
+	
 	
 	@FindBy(xpath = ".//*[@class='promonewrow']//b")
 	public  List<WebElement> Categorypage_AllCategory;
@@ -119,6 +126,12 @@ public class HomepageRepo extends BaseTest{
 		 return driver.findElement(By.xpath("(.//*[@class='promonewrow']//b)["+i+"]"));
 	    }
 	 
+	 @FindBy(xpath = "(.//*[@class='content carousel product_listing_container']//b)")
+		public  List<WebElement> Categorypage_SubCategory;
+	 
+	 public WebElement Categorypage_SubRandomCategory(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='content carousel product_listing_container']//b)["+i+"]"));
+	    }
 	@FindBy(xpath = ".//*[@class='product_group_name product_info']")
 	public  List<WebElement> SubCategorypage_SubCCategory;
 	 

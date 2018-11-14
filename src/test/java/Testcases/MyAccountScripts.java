@@ -15,7 +15,7 @@ import utilities.BaseTest;
 
 public class MyAccountScripts extends BaseTest {
 	
-/*
+
 	@Test
 	public void myAccountSummary() throws IOException, InterruptedException {
 
@@ -179,7 +179,7 @@ public class MyAccountScripts extends BaseTest {
 
 }
 	
-	*/
+	
 
 	@Test
 	public void personalInformation_editingEmail() throws IOException, InterruptedException {
@@ -202,7 +202,7 @@ public class MyAccountScripts extends BaseTest {
 	}
 	
 
-	/* 
+	 
 	@Test
 	public void myAcc_ShippingInfo_UIValidation() throws IOException, InterruptedException {
 		TestDescription("MyAccount_addressBook_09",
@@ -348,6 +348,6 @@ public class MyAccountScripts extends BaseTest {
 		
 	}
 		
-	*/
+	
 	
 }
