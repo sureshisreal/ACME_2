@@ -1,41 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="466687" started-at="2018-11-08T14:38:10Z" finished-at="2018-11-08T14:45:57Z">
+  <suite name="Suite" duration-ms="411226" started-at="2018-11-12T12:03:55Z" finished-at="2018-11-12T12:10:46Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="466687" started-at="2018-11-08T14:38:10Z" finished-at="2018-11-08T14:45:57Z">
-      <class name="Testcases.OrderHistoryScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.OrderHistoryScripts@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="44075" started-at="2018-11-08T14:41:39Z" finished-at="2018-11-08T14:42:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="guest_OrderStatus_OrderDetailsNavigation()[pri:0, instance:Testcases.OrderHistoryScripts@38c5cc4c]" name="guest_OrderStatus_OrderDetailsNavigation" duration-ms="213568" started-at="2018-11-08T14:42:23Z" finished-at="2018-11-08T14:45:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- guest_OrderStatus_OrderDetailsNavigation -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.OrderHistoryScripts@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="63" started-at="2018-11-08T14:45:57Z" finished-at="2018-11-08T14:45:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=guest_OrderStatus_OrderDetailsNavigation status=SUCCESS method=OrderHistoryScripts.guest_OrderStatus_OrderDetailsNavigation()[pri:0, instance:Testcases.OrderHistoryScripts@38c5cc4c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.OrderHistoryScripts -->
+    <test name="Test" duration-ms="411226" started-at="2018-11-12T12:03:55Z" finished-at="2018-11-12T12:10:46Z">
       <class name="Testcases.MyAccountScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.MyAccountScripts@223f3642]" name="beforeMethod" is-config="true" duration-ms="56914" started-at="2018-11-08T14:38:10Z" finished-at="2018-11-08T14:39:07Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="beforeMethod" is-config="true" duration-ms="201936" started-at="2018-11-12T12:03:55Z" finished-at="2018-11-12T12:07:17Z">
           <params>
             <param index="0">
               <value>
@@ -46,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="personalInformation_editingEmail()[pri:0, instance:Testcases.MyAccountScripts@223f3642]" name="personalInformation_editingEmail" duration-ms="152001" started-at="2018-11-08T14:39:07Z" finished-at="2018-11-08T14:41:39Z">
+        <test-method status="PASS" signature="personalInformation_editingEmail()[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="personalInformation_editingEmail" duration-ms="209144" started-at="2018-11-12T12:07:17Z" finished-at="2018-11-12T12:10:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- personalInformation_editingEmail -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.MyAccountScripts@223f3642]" name="afterMethod" is-config="true" duration-ms="40" started-at="2018-11-08T14:41:39Z" finished-at="2018-11-08T14:41:39Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.MyAccountScripts@5db250b4]" name="afterMethod" is-config="true" duration-ms="121" started-at="2018-11-12T12:10:46Z" finished-at="2018-11-12T12:10:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=personalInformation_editingEmail status=SUCCESS method=MyAccountScripts.personalInformation_editingEmail()[pri:0, instance:Testcases.MyAccountScripts@223f3642] output={null}]]]>
+                <![CDATA[[TestResult name=personalInformation_editingEmail status=SUCCESS method=MyAccountScripts.personalInformation_editingEmail()[pri:0, instance:Testcases.MyAccountScripts@5db250b4] output={null}]]]>
               </value>
             </param>
           </params>

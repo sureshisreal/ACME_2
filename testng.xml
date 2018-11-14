@@ -12,8 +12,8 @@
 			<class name="Testcases.HomepageScripts" />
 			<class name="Testcases.RegisterationScripts" />  -->
 			<class name="Testcases.MyAccountScripts" /> 
-<!-- 			<class name="Testcases.CategorypageScripts" />   -->	
-		<class name ="Testcases.OrderHistoryScripts" />
+<!-- 			<class name="Testcases.CategorypageScripts" />   	
+		<class name ="Testcases.OrderHistoryScripts" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

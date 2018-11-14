@@ -127,8 +127,7 @@ public class OrderHistoryPageActions extends OrderHistoryPageRepo {
 		ElementPresent(odg_printCTA);
 		AddScreenshot();
 		logs("Guest user Order Details Page validation is completed");
-		
-		
+
 	}
 	
 	

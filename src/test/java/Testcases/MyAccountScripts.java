@@ -190,13 +190,10 @@ public class MyAccountScripts extends BaseTest {
 		logs("Logged in as registered user");
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
 		myaccountPage.pinfo_editEmailValidations();
-		logs("Editing Email validations are completed");
-		//The Following codes are NOT applicable since, changing the email will NOT change the logon ID
-		
-		/*registerationPage.SignOut.click();
-		registerationPage.loginwithOldEmail();
+		logs("Editing Email validations are completed");		
+		registerationPage.SignOut.click();
 		registerationPage.loginwithNewEmail();
-		*/
+		registerationPage.loginwithOldEmail();
 		myaccountPage.myacc_leftNav_settings_personalInfo.click();
 		myaccountPage.revertToOriginalEmail();
 		logs("Email Changes are reverted back to original");
