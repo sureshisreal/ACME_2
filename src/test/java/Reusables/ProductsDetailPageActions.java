@@ -68,7 +68,7 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 			shoppping_list_content.click();
 			AddScreenshot();
 			assertTrue(shoppping_list_content.getText().contains
-					("Sign In / Register"));
+					("Sign"));
 		}
 		logs("wishlist verified");	
 	}

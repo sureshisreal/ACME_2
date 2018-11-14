@@ -20,6 +20,7 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	String pinfo_username, pinfo_passwd;
 
 	public void HomepageLogin() throws IOException {
+		WaitUntilElementVisible(ReturningCustomer_Header);
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> UsernameData = getColumnData("SignIn","Username");
 		String Username = UsernameData.get(0);
@@ -39,6 +40,7 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	
 	
 	public void HomepageLogin_AccwithNoOrders() throws IOException {
+		WaitUntilElementVisible(ReturningCustomer_Header);
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> UsernameData = getColumnData("SignIn","Username");
 		String Username = UsernameData.get(1);
@@ -58,6 +60,7 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	
 	
 	public void HomepageLogin_pinfoAcc() throws IOException {
+		WaitUntilElementVisible(ReturningCustomer_Header);
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> UsernameData = getColumnData("SignIn","Username");
 		String pinfo_username = UsernameData.get(2);
@@ -82,6 +85,7 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	
 
 	public void SignInValidations() throws IOException {
+		WaitUntilElementVisible(ReturningCustomer_Header);
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
 		List<String> ErrorMsgData = getColumnData("SignIn","SignInErrorMsg");
 		String ErrorMsg1 = ErrorMsgData.get(0);

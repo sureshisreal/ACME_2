@@ -22,6 +22,7 @@ public class SearchpageScripts extends BaseTest{
 			searchResultPage.VerifyPage();
 	}
 	
+
 	@Test
 	public void Searchpage_BrandSearch_Reg_002() throws IOException, InterruptedException {
 		TestDescription("Searchpage_BrandSearch",
@@ -46,6 +47,7 @@ public class SearchpageScripts extends BaseTest{
 			homepage.searchTerm(SingleSearchTermList);
 			productsDetailPage.VerifyPage();
 	}
+	
 	@Test
 	public void Searchpage_SingleProduct_Reg_004() throws IOException, InterruptedException {
 		TestDescription("Searchpage_SingleProduct_Reg",
@@ -127,7 +129,7 @@ public class SearchpageScripts extends BaseTest{
 			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
 			logs("Product added to the cart");
-			homepage.returnhomepage();
+			//homepage.returnhomepage();
 		}
 		productsDetailPage.minishopcart_total();
 		logs("MiniCart Clicked");
@@ -154,11 +156,12 @@ public class SearchpageScripts extends BaseTest{
 			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
 			logs("Product added to the cart");
-			homepage.returnhomepage();
+			//homepage.returnhomepage();
 		}
 		productsDetailPage.minishopcart_total();
 		logs("MiniCart Clicked");
 	}
+	
 	
 	@Test
 	public void Searchpage_BreadcrumbsNavigation_011() throws IOException, InterruptedException {
@@ -169,7 +172,7 @@ public class SearchpageScripts extends BaseTest{
 			String SearchTermList = SearchTermData.get(0);
 			homepage.searchTerm(SearchTermList);
 			searchResultPage.VerifyPage();
-		categorypage.Breadcrumbs();
+			categorypage.SearchBreadcrumbsNaigation();
 	}
 	
 	@Test
@@ -183,7 +186,7 @@ public class SearchpageScripts extends BaseTest{
 		String SearchTermList = SearchTermData.get(0);
 		homepage.searchTerm(SearchTermList);
 		searchResultPage.VerifyPage();
-		categorypage.Breadcrumbs();
+		categorypage.SearchBreadcrumbsNaigation();
 	}
 	
 }

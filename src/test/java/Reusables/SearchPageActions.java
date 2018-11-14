@@ -28,9 +28,12 @@ public class SearchPageActions extends SearchResultpageRepo {
 	}
 
 	public void VerifyPage() {
-		WaitUntilElementVisible(Searchpage_Container);
-		logs("Search page verified");
-		
+		String currentURL = driver.getCurrentUrl();
+		System.out.println("Current Url : " +currentURL);
+		if(currentURL.contains("https://qa.acmetools.com")) {
+		WaitUntilElementVisible(BrandName_BreadCrumb);		
+		logs("Search page verified");	
+		}
 	}
 	
 	

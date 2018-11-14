@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="152269" started-at="2018-11-09T14:26:10Z" finished-at="2018-11-09T14:28:42Z">
+  <suite name="Suite" duration-ms="403396" started-at="2018-11-14T10:30:11Z" finished-at="2018-11-14T10:36:54Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="152269" started-at="2018-11-09T14:26:10Z" finished-at="2018-11-09T14:28:42Z">
+    <test name="Test" duration-ms="403396" started-at="2018-11-14T10:30:11Z" finished-at="2018-11-14T10:36:54Z">
       <class name="Testcases.HomepageScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.HomepageScripts@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="50981" started-at="2018-11-09T14:26:10Z" finished-at="2018-11-09T14:27:01Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.HomepageScripts@3fa247d1]" name="beforeMethod" is-config="true" duration-ms="42823" started-at="2018-11-14T10:30:11Z" finished-at="2018-11-14T10:30:54Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Homepage_AddRandomProductFromMenuCategory_Reg_004()[pri:0, instance:Testcases.HomepageScripts@38c5cc4c]" name="Homepage_AddRandomProductFromMenuCategory_Reg_004" duration-ms="101004" started-at="2018-11-09T14:27:01Z" finished-at="2018-11-09T14:28:42Z">
+        <test-method status="PASS" signature="Homepage_Header_FieldValidations_001()[pri:0, instance:Testcases.HomepageScripts@3fa247d1]" name="Homepage_Header_FieldValidations_001" duration-ms="360379" started-at="2018-11-14T10:30:54Z" finished-at="2018-11-14T10:36:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Homepage_AddRandomProductFromMenuCategory_Reg_004 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.HomepageScripts@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="204" started-at="2018-11-09T14:28:42Z" finished-at="2018-11-09T14:28:42Z">
+        </test-method> <!-- Homepage_Header_FieldValidations_001 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.HomepageScripts@3fa247d1]" name="afterMethod" is-config="true" duration-ms="174" started-at="2018-11-14T10:36:54Z" finished-at="2018-11-14T10:36:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Homepage_AddRandomProductFromMenuCategory_Reg_004 status=SUCCESS method=HomepageScripts.Homepage_AddRandomProductFromMenuCategory_Reg_004()[pri:0, instance:Testcases.HomepageScripts@38c5cc4c] output={null}]]]>
+                <![CDATA[[TestResult name=Homepage_Header_FieldValidations_001 status=SUCCESS method=HomepageScripts.Homepage_Header_FieldValidations_001()[pri:0, instance:Testcases.HomepageScripts@3fa247d1] output={null}]]]>
               </value>
             </param>
           </params>
