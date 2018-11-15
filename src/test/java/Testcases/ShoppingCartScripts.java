@@ -106,7 +106,6 @@ public class ShoppingCartScripts extends BaseTest{
 		for(int i=0; i<loop ; i++) {
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
-		homepage.VerifyPageTitle();
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
@@ -151,8 +150,8 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_ForgotPassword() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_ReturningCustomer",
-				"To verify guest user able to signin in the shoppingcart page");
+		TestDescription("ShoppingCart_ForgotPassword",
+				"To verify guest user able to validate the forgot password page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();
@@ -167,8 +166,8 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_Promocode() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_ReturningCustomer",
-				"To verify guest user able to signin in the shoppingcart page");
+		TestDescription("ShoppingCart_Promocode",
+				"To verify guest user able to apply promo code");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();

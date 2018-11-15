@@ -9,7 +9,7 @@ import utilities.BaseTest;
 
 public class CategorypageScripts extends BaseTest{
 
-	@Test
+/*	@Test
 	public void Categorypage_BreadcrumbsNavigation_001() throws IOException, InterruptedException {
 		TestDescription("Categorypage_BreadcrumbsNavigation_001",
 				"To verify guest user able to navigate using breadcrumbs");
@@ -56,7 +56,7 @@ public class CategorypageScripts extends BaseTest{
 		homepage.VerifyPageTitle();
 		homepage.CategoryMenuSelection();
 		categorypage.AddTopSellingItem();
-	}
+	}*/
 	
 	@Test
 	public void Categorypage_AddTopSellingItem_Reg_006() throws IOException, InterruptedException {
