@@ -67,7 +67,6 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		
 		List<String> PssswordData = getColumnData("SignIn","Password");
 		String pinfo_passwd = PssswordData.get(2);
-		String H;
 		System.out.println(pinfo_username);
 		System.out.println(pinfo_passwd);
 		
@@ -203,12 +202,18 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		String H;
 		System.out.println(pinfo_username);
 		System.out.println(pinfo_passwd);
-		
+		LogonId_Textbox.clear();
+		Password_Textbox.clear();
 		LogonId_Textbox.sendKeys(pinfo_username);
 		Password_Textbox.sendKeys(pinfo_passwd);
 		SignIn_Button.click();
-		Assert.assertTrue(logonErrorMessage.getText().toString().contains("Either the logon ID or password entered is incorrect. Enter the information again"));
-		logs("Validation with old Email ID doesn't allow user to edit");
+		
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		AddScreenshot();
+		logs("Login success \n with the UserName and password used while registering the account" + pinfo_username + "and " + pinfo_passwd);
+		
+		
 	}
 	
 	public void loginwithNewEmail() throws IOException {
@@ -222,12 +227,10 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		LogonId_Textbox.sendKeys("pinfoedited@yopmail.com");
 		Password_Textbox.sendKeys(pinfo_passwd);
 		SignIn_Button.click();
-		String welcomeText= MyAccount_WelcomeText.getText();
-		assertTrue(welcomeText.contains("Welcome,"));
-		AddScreenshot();
-		logs("Login success \n with new UserName and password" + "pinfoedited@yopmail.com" + pinfo_passwd);
 		
-		
+		Assert.assertTrue(logonErrorMessage.getText().toString().contains("Either the logon ID or password entered is incorrect. Enter the information again"));
+		logs("Validation with New Email ID doesn't allow user to login");
+	
 		
 	}
 	
