@@ -30,6 +30,7 @@ public class CategorypageActions extends CatgoryPageRepo{
 		WaitUntilElementClickable(SearchHeader);
 		int rand_int = rand.nextInt(AllProductNames.size()+1); 
 		String ProductName = RandomCategorySelect(rand_int).getText();
+		
 		AddScreenshot();
 		RandomCategorySelect(rand_int).click();
 		logs("Random product selected : " + rand_int+ "product");
