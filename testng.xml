@@ -11,6 +11,7 @@
 			<class name="Testcases.PDPScripts" /> 
 			<class name="Testcases.HomepageScripts" />
 			<class name="Testcases.RegisterationScripts" /> 
+			<class name="Testcases.OrderConformationPageScripts" /> 
 			<class name="Testcases.MyAccountScripts" /> 
 			<class name="Testcases.CategorypageScripts" /> 
 			<class name="Testcases.BillingPageScripts" /> 
