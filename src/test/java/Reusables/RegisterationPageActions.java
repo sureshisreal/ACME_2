@@ -116,7 +116,7 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		logs("Forgotpassword_Link clicked ");
 		String forgotHeader = Forgotpassword_Header.getText(); 
 		System.out.println("forgotHeader" +forgotHeader);
-		assertTrue(forgotHeader.contains("Forgot your password?"));
+		assertTrue(forgotHeader.contains("FORGOT"));
 		logs("Forgotpassword_Header verified");
 		LogonId_Textbox.sendKeys("InvalidUsername");
 		logs("Invalid username entered");

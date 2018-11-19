@@ -61,7 +61,7 @@ public class ShoppingCartPageRepo extends BaseTest {
 	@FindBy( name = "logonPassword")
 	public  WebElement returning_customerpassword;
 	
-	@FindBy( className = "forgotpwd")
+	@FindBy( css = ".forgotpwd a")
 	public  WebElement forgotpassword_link;
 	
 	@FindBy( id = "guestShopperLogon")

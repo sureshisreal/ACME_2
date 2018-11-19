@@ -63,11 +63,12 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 		logs("lowPriceGuaranteeAnchor_Link verified");	
 	}
 	
-	public void wishlist() throws IOException {
+	public void wishlist() throws IOException, InterruptedException {
+		Thread.sleep(2000);
 		if(shoppping_list_content.isDisplayed()) {
 			shoppping_list_content.click();
 			AddScreenshot();
-			assertTrue(shoppping_list_content.getText().contains
+			assertTrue(Wishlist_signIn.getText().contains
 					("Sign"));
 		}
 		logs("wishlist verified");	

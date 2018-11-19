@@ -25,6 +25,7 @@ public class BillingPageScripts extends BaseTest{
 		productsDetailPage.minishopcart_total();
 		shoppingCartPage.guestCheckout();
 		shippingPage.GuestShippingAddress();
+		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();
 	}
 	
@@ -45,6 +46,7 @@ public class BillingPageScripts extends BaseTest{
 		productsDetailPage.minishopcart_total();
 		shoppingCartPage.guestCheckout();
 		shippingPage.GuestShippingAddress();
+		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();
 	}
 	

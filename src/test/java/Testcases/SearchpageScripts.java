@@ -129,7 +129,7 @@ public class SearchpageScripts extends BaseTest{
 			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
 			logs("Product added to the cart");
-			//homepage.returnhomepage();
+			
 		}
 		productsDetailPage.minishopcart_total();
 		logs("MiniCart Clicked");

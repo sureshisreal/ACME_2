@@ -3,13 +3,154 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.SearchpageScripts">
+      <class name="Testcases.ShoppingCartScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="ShoppingCart_RemoveProduct_003"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.ShoppingCartScripts -->
+      <class name="Testcases.ShippingPageScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="ShippingPage_AVSCheck"/>
+          <include name="ShippingPage_FieldValidations_001"/>
+          <include name="beforeMethod"/>
+          <include name="ShippingPage_FieldValidations_Reg_002"/>
+        </methods>
+      </class> <!-- Testcases.ShippingPageScripts -->
+      <class name="Testcases.CategorypageScripts">
+        <methods>
+          <include name="Categorypage_AddTopSellingItem_Reg_006"/>
+          <include name="afterMethod"/>
+          <include name="Categorypage_AddTopSellingItem_005"/>
+          <include name="Categorypage_BreadcrumbsNavigation_001"/>
+          <include name="Categorypage_Validations_003"/>
+          <include name="beforeMethod"/>
+          <include name="Categorypage_BreadcrumbsNavigation_Reg_002"/>
+          <include name="Categorypage_Validations_Reg_004"/>
+        </methods>
+      </class> <!-- Testcases.CategorypageScripts -->
+      <class name="Testcases.BopisCheckoutScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="Bopis_SearchCheckout"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.BopisCheckoutScripts -->
+      <class name="Testcases.HomepageScripts">
+        <methods>
+          <include name="Homepage_Header_FieldValidations_001"/>
+          <include name="afterMethod"/>
+          <include name="Homepage_AddRandomProductFromMenuWhatsNew_Reg_008"/>
+          <include name="Homepage_AddRandomProductFromMenuBrands_Reg_006"/>
+          <include name="Homepage_AddRandomProductFromMenuWhatsNew_007"/>
+          <include name="Homepage_Header_FieldValidations_Reg_002"/>
+          <include name="Homepage_AddRandomProductFromMenuCategory_Reg_004"/>
+          <include name="beforeMethod"/>
+          <include name="Homepage_AddRandomProductFromMenuCategory_003"/>
+          <include name="Homepage_AddRandomProductFromMenuBrands_005"/>
+        </methods>
+      </class> <!-- Testcases.HomepageScripts -->
+      <class name="Testcases.RegisterationScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="Valid_SignIn_001"/>
+          <include name="CreateAccount_Error_Messages_Validations_004"/>
+          <include name="beforeMethod"/>
+          <include name="ForgotPassword_Error_Messages_Validations_003"/>
+          <include name="Invalid_SignIn_Error_Messages_Validations_002"/>
+        </methods>
+      </class> <!-- Testcases.RegisterationScripts -->
+      <class name="Testcases.CheckoutScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="Registered_SearchCheckout_002"/>
+          <include name="beforeMethod"/>
+          <include name="Guest_SearchCheckout_001"/>
+        </methods>
+      </class> <!-- Testcases.CheckoutScripts -->
+      <class name="Testcases.OrderConformationPageScripts">
+        <methods>
+          <include name="OrderConformationPage_FieldValidations"/>
+          <include name="afterMethod"/>
+          <include name="OrderConformationPage_FieldValidations_Reg"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.OrderConformationPageScripts -->
+      <class name="Testcases.BillingPageScripts">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
+          <include name="BillingPage_FieldValidations_001"/>
+          <include name="BillingPage_FieldValidations_Reg_002"/>
+        </methods>
+      </class> <!-- Testcases.BillingPageScripts -->
+      <class name="Testcases.SearchpageScripts">
+        <methods>
+          <include name="Homepage_SearchItems_005"/>
+          <include name="Searchpage_SingleProduct_003"/>
+          <include name="beforeMethod"/>
+          <include name="Homepage_MultipleSearchItems_Reg_010"/>
+          <include name="Searchpage_SingleProduct_Reg_004"/>
           <include name="Searchpage_BreadcrumbsNavigation_011"/>
+          <include name="afterMethod"/>
+          <include name="Homepage_InvalidSearchItems_007"/>
+          <include name="Searchpage_BreadcrumbsNavigation_Reg_012"/>
+          <include name="Homepage_MultipleSearchItems_009"/>
+          <include name="Searchpage_BrandSearch_Reg_002"/>
+          <include name="Searchpage_BrandSearch_001"/>
+          <include name="Homepage_SearchItems_Reg_006"/>
+          <include name="Homepage_InvalidSearchItems_Reg_008"/>
         </methods>
       </class> <!-- Testcases.SearchpageScripts -->
+      <class name="Testcases.OrderHistoryScripts">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="guest_OrderStatus_invalidOrderNum_validation"/>
+          <include name="reg_OrderDetails_UIValidation"/>
+          <include name="beforeMethod"/>
+          <include name="guest_OrderStatus_loginValidation"/>
+          <include name="reg_OrderHistory_PageNavigation"/>
+          <include name="guest_OrderStatus_UIValidation"/>
+          <include name="guest_OrderStatus_OrderDetailsNavigation"/>
+        </methods>
+      </class> <!-- Testcases.OrderHistoryScripts -->
+      <class name="Testcases.PDPScripts">
+        <methods>
+          <include name="PDP_AddAlsoViewedProduct_Reg_006"/>
+          <include name="afterMethod"/>
+          <include name="PDP_AddRecommendations_Reg_004"/>
+          <include name="PDP_AddAlsoViewedProduct_005"/>
+          <include name="PDP_FieldValidations_001"/>
+          <include name="beforeMethod"/>
+          <include name="PDP_AddRecommendations_003"/>
+          <include name="PDP_FieldValidations_Reg_002"/>
+        </methods>
+      </class> <!-- Testcases.PDPScripts -->
+      <class name="Testcases.MyAccountScripts">
+        <methods>
+          <include name="myAccountSummary"/>
+          <include name="myAcc_ShippingInfo_restrictRemoveAddress"/>
+          <include name="myAcc_ShippingInfo_removeAddress"/>
+          <include name="personalInformation_editing"/>
+          <include name="recentOrderHistory_Orders"/>
+          <include name="beforeMethod"/>
+          <include name="myAcc_creditCard_UIValidation"/>
+          <include name="recentOrderHistory_NoOrders"/>
+          <include name="myAcc_ShippingInfo_addNewAddress"/>
+          <include name="editLink_accSummary"/>
+          <include name="afterMethod"/>
+          <include name="leftNavMenuLinks_UICheck"/>
+          <include name="myAcc_Coupons_UIValidation"/>
+          <include name="myAcc_ShippingInfo_addressPrePopulation_test"/>
+          <include name="personalInformation_PageUICheck"/>
+          <include name="myAcc_ShippingInfo_UIValidation"/>
+          <include name="myAcc_ShippingInfo_addNewAddress_emptyField_test"/>
+          <include name="myAcc_creditCard_addNewCreditCardInfo"/>
+          <include name="personalInformation_editingEmail"/>
+        </methods>
+      </class> <!-- Testcases.MyAccountScripts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
