@@ -65,6 +65,12 @@ public class BillingPageRepo extends BaseTest {
 	@FindBy(xpath = "//div[@id='billing']//input[@name='saveCCToAccount']")
 	public WebElement billing_saveToMyAccount;
 	
+	@FindBy(name = "logonPassword")
+	public WebElement orderConf_guest_PasswordField;
+
+	@FindBy(name = "submit_registration")
+	public WebElement orderConf_guest_completeRegistration;
+	
 	
 	
 

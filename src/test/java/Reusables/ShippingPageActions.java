@@ -1,5 +1,10 @@
 package Reusables;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -32,7 +37,10 @@ public class ShippingPageActions extends ShippingPageRepo {
 		logs("Shipping fields validated");
 	}
 
-	public void GuestShippingAddress() {
+	public String GuestShippingAddress() {
+		
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String guestEmail = "test123"+timeStamp+"@yopmail.com";
 		if(Shipping_firstName.isDisplayed()) {
 		WaitUntilElementVisible(Shipping_firstName);
 		Shipping_firstName.sendKeys("FirstName");
@@ -43,12 +51,42 @@ public class ShippingPageActions extends ShippingPageRepo {
 		Shipping_city.sendKeys("New York");
 		Shipping_state.sendKeys("New York");
 		Shipping_phone.sendKeys("1231231231");
-		Shipping_email1.sendKeys("test123@gmail.com");
+
+		Shipping_email1.sendKeys(guestEmail);
 		Select occupation =new Select(Shipping_occupation);
 		occupation.selectByValue("Carpentry Work");
 		logs("Shipping address entered");
 		PlaceOrder_Button.click();
 		}
+		return guestEmail;
+		
+	}
+	
+	
+	public String GuestShippingAddress_existingEmail() throws IOException {
+		
+		List<String> UsernameData = getColumnData("SignIn","Username");
+		String Username = UsernameData.get(0);
+		if(Shipping_firstName.isDisplayed()) {
+		WaitUntilElementVisible(Shipping_firstName);
+		Shipping_firstName.sendKeys("FirstName");
+		Shipping_lastName.sendKeys("lastName");
+		Shipping_address1.sendKeys("290 Broadway");
+		Shipping_organizationName.sendKeys("test");
+		Shipping_zipCode.sendKeys("10007");
+		Shipping_city.sendKeys("New York");
+		Shipping_state.sendKeys("New York");
+		Shipping_phone.sendKeys("1231231231");
+
+		Shipping_email1.sendKeys(Username);
+		Select occupation =new Select(Shipping_occupation);
+		occupation.selectByValue("Carpentry Work");
+		logs("Shipping address entered");
+		PlaceOrder_Button.click();
+		}
+		return Username;
+		
+		
 	}
 	
 	public void GuestShippingInvalidAddress() {
