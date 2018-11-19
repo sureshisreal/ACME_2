@@ -1,5 +1,8 @@
 package Reusables;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -30,7 +33,10 @@ public class ShippingPageActions extends ShippingPageRepo {
 		PlaceOrder_Button.click();
 	}
 
-	public void GuestShippingAddress() {
+	public String GuestShippingAddress() {
+		
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String guestEmail = "test123"+timeStamp+"yopmail.com";
 		if(Shipping_firstName.isDisplayed()) {
 		WaitUntilElementVisible(Shipping_firstName);
 		Shipping_firstName.sendKeys("FirstName");
@@ -41,12 +47,15 @@ public class ShippingPageActions extends ShippingPageRepo {
 		Shipping_city.sendKeys("New York");
 		Shipping_state.sendKeys("New York");
 		Shipping_phone.sendKeys("1231231231");
-		Shipping_email1.sendKeys("test123@gmail.com");
+
+		Shipping_email1.sendKeys(guestEmail);
 		Select occupation =new Select(Shipping_occupation);
 		occupation.selectByValue("Carpentry Work");
 		logs("Shipping address entered");
 		PlaceOrder_Button.click();
 		}
+		return guestEmail;
+		
 	}
 	
 	public void GuestShippingInvalidAddress() {

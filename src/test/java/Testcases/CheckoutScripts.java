@@ -3,11 +3,14 @@ package Testcases;
 import java.io.IOException;
 import java.util.List;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import utilities.BaseTest;
 
 public class CheckoutScripts extends BaseTest {
+	
+	/*
 
 	@Test	
 	public void Guest_SearchCheckout_001() throws IOException, InterruptedException {		
@@ -50,7 +53,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.PlaceOrder();
 	}
 	
-	/*@Test	
+	@Test	
 	public void Bopis_SearchCheckout_003() throws IOException, InterruptedException {		
 		TestDescription("Bopis_SearchCheckout" , "To verify user able to place order using bopis");
 			logs("Url entered");
@@ -89,5 +92,33 @@ public class CheckoutScripts extends BaseTest {
 	}
 	
 */
+	
+	public void Guest_signupPostCheckout_004() throws IOException, InterruptedException {		
+		TestDescription("Guest user Sign up in Order Confirmation Page" , "To verify the guest user is able to sign up for an account from the order confirmation Page");
+			AddScreenshot();
+			List<String> SearchTermData = getColumnData("Search","SearchSKU");
+			String SearchTerm = SearchTermData.get(0);
+			homepage.VerifyPageTitle();
+			homepage.searchTerm(SearchTerm);
+			categorypage.verifySearchHeader(SearchTerm);
+			categorypage.selectFirstProduct();
+			productsDetailPage.quantity("5");
+			productsDetailPage.AddToCart();
+			productsDetailPage.minishopcart_total();
+			shoppingCartPage.guestCheckout();
+			String GuestEmail = shippingPage.GuestShippingAddress();
+			shippingPage.UseEnteredAddress();
+			billingPage.VisaPayment();
+			billingPage.PlaceOrder();
+			billingPage.orderConf_guest_PasswordField.sendKeys("P@ssw0rd");
+			billingPage.orderConf_guest_completeRegistration.click();
+			WaitUntilElementVisible(myaccountPage.currentPageBreadcrumb);
+			Assert.assertTrue(myaccountPage.personal_info_email_value.getText().equals(GuestEmail));
+			logs("Guest user is successfully be able to sign up for an account from Order Confirmation Page");
+
+			
+	}
+	
+	
 
 }
