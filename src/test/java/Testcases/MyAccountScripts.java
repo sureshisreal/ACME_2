@@ -115,6 +115,9 @@ public class MyAccountScripts extends BaseTest {
 	
 	
 	
+	
+	
+	
 	@Test
 	public void leftNavMenuLinks_UICheck() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_05",
@@ -327,6 +330,9 @@ public class MyAccountScripts extends BaseTest {
 		ElementPresent(myaccountPage.myAccountSummary_title);
 		ElementPresent(myaccountPage.myacc_quickCheckout_successMsg);
 		logs("Credit card information added successfully");
+		
+		
+		
 
 	}
 	
