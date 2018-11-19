@@ -41,7 +41,7 @@ public class ShippingPageScripts extends BaseTest{
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
-		shoppingCartPage.guestCheckout();
+		shoppingCartPage.RegCheckout();
 		shippingPage.GuestShippingInvalidAddress();
 		shippingPage.UseSuggestedAddress();
 		shippingPage.GuestShippingAddress();
@@ -62,7 +62,7 @@ public class ShippingPageScripts extends BaseTest{
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
-		shoppingCartPage.guestCheckout();
+		shoppingCartPage.RegCheckout();
 		shippingPage.ShippingAddressFieldValidation();
 	}
 	

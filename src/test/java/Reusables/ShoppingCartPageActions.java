@@ -35,7 +35,7 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 	
 
 	public void fieldvalidations() {
-		WaitUntilElementVisible(guestShopperContinue);
+		WaitUntilElementVisible(shoppingCart_Heading);
 		ElementPresent(shoppingCart_Heading);
 		ElementPresent(ProductAvailablility_Status);
 		ElementPresent(Product_Price);

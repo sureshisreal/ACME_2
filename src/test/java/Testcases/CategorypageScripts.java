@@ -55,7 +55,7 @@ public class CategorypageScripts extends BaseTest{
 				"To verify guest user able to add top selling item in the categorypage");
 		homepage.VerifyPageTitle();
 		homepage.CategoryMenuSelection();
-		categorypage.AddTopSellingItem();
+		//categorypage.AddTopSellingItem();
 	}
 	
 	@Test
@@ -66,7 +66,7 @@ public class CategorypageScripts extends BaseTest{
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		homepage.CategoryMenuSelection();
-		categorypage.AddTopSellingItem();
+		//categorypage.AddTopSellingItem();
 	}
 	
 }

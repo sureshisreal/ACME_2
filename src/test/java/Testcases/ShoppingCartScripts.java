@@ -84,10 +84,10 @@ public class ShoppingCartScripts extends BaseTest{
 		TestDescription("ShoppingCart_InlineItem_005",
 				"To verify guest user able to view sepaerate line items in the shoppingcart page");
 		int loop=2;
-		for(int i=0; i<loop ; i++) {
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
-		homepage.VerifyPageTitle();
+		for(int i=0; i<loop ; i++) {
+		//homepage.VerifyPageTitle();
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
@@ -103,9 +103,9 @@ public class ShoppingCartScripts extends BaseTest{
 		TestDescription("ShoppingCart_InlineItem_Reg_006",
 				"To verify registered user able to view sepaerate line items in the shoppingcart page");
 		int loop=2;
-		for(int i=0; i<loop ; i++) {
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
+		for(int i=0; i<loop ; i++) {
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
