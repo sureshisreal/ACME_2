@@ -201,21 +201,18 @@ public class MyAccountCCRepo  extends BaseTest {
 	@FindBy(xpath = "//a[contains(text(),'Update')]")
 	public WebElement mcc_updateCTA;
 	
-
+	@FindBy (name = "pay_expire_year")
+	public WebElement mcc_selectedExpiryYear;
+	
+	@FindBy (name = "pay_expire_month")
+	public WebElement mcc_selectedExpiryMonth;
 	
 	
 	
-	
-	
-	
-	
-	
-	
-
 	
 	
 
-	
+
 
 
 }

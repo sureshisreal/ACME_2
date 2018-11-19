@@ -127,6 +127,8 @@ public class MyAccountCCPageActions  extends MyAccountCCRepo {
 		mcc_bill_zipCodeField.clear();
 		mcc_bill_emailField.clear();
 		mcc_bill_phNumField.clear();
+		mcc_bill_phNumField.click();
+		mcc_bill_phNumField.sendKeys(phNum);
 
 		logs("Legacy credit card info details are cleared");
 		mcc_cardNumField.sendKeys(cardNumber);
@@ -147,7 +149,7 @@ public class MyAccountCCPageActions  extends MyAccountCCRepo {
 		mcc_bill_emailField.sendKeys(email);
 		mcc_bill_cityField.sendKeys(city);
 		
-		mcc_bill_phNumField.sendKeys(phNum);
+		//mcc_bill_phNumField.sendKeys(phNum);
 		
 		System.out.println(phNum);
 		
@@ -158,9 +160,62 @@ public class MyAccountCCPageActions  extends MyAccountCCRepo {
 		mcc_updateCTA.click();
 		
 		
+	}
+
+	public void verifySavedCreditDetailsFromCheckout() throws IOException {
+		// TODO Auto-generated method stub
+		String mcc_cardNum = mcc_cardNumField.getAttribute("value").toString();
+		String temp = mcc_cardNum.replace("*", "");
+		System.out.println(temp);
 		
-	
+		String mcc_expYear = mcc_selectedExpiryYear.getAttribute("value");
+		String mcc_expMonth = mcc_selectedExpiryMonth.getAttribute("value");
 		
+		String mcc_fname = mcc_bill_fnameField.getAttribute("value");
+		String mcc_lname = mcc_bill_lnameField.getAttribute("value");
+		String mcc_addr1 = mcc_bill_addr1Field.getAttribute("value");
+		String mcc_zipcode = mcc_bill_zipCodeField.getAttribute("value");
+		
+		
+		List<String> cardNumData = getColumnData("creditCardInfo","CardNumber");
+		String cardNumber = cardNumData.get(1);
+		List<String> expMonthData = getColumnData("creditCardInfo","ExpMonth");
+		String expMonth = expMonthData.get(1);
+		List<String> expYearData = getColumnData("creditCardInfo","ExpYear");
+		String expYear = expYearData.get(1);	
+		List<String> firstNameData = getColumnData("creditCardInfo","firstName");
+		String firstName = firstNameData.get(1);
+		List<String> lastNameData = getColumnData("creditCardInfo","lastName");
+		String lastName = lastNameData.get(1);
+		List<String> addr1Data = getColumnData("creditCardInfo","address1");
+		String addr1 = addr1Data.get(1);
+		List<String> zipcodeData = getColumnData("creditCardInfo","zipcode");
+		String zipcode = zipcodeData.get(1);
+		
+		Assert.assertTrue(cardNumber.contains(temp));
+		logs("Card number used in checkout is saved successfully in My Account");
+		
+		Assert.assertTrue(expMonth.equals(mcc_expMonth));
+		logs("Expiry Month used in checkout is saved successfully in My Account");
+		
+		Assert.assertTrue(expYear.equals(mcc_expYear));
+		logs("Exp Year used in checkout is saved successfully in My Account");
+		
+		Assert.assertTrue(firstName.equals(mcc_fname));
+		logs("First name used in checkout is saved successfully in My Account");
+		
+		
+		Assert.assertTrue(lastName.equals(mcc_lname));
+		logs("Last name used in checkout is saved successfully in My Account");
+		
+		
+		Assert.assertTrue(addr1.equals(mcc_addr1));
+		logs("Address 1 used in checkout is saved successfully in My Account");;
+		
+		Assert.assertTrue(zipcode.equals(mcc_zipcode));
+		logs("Zipcode used in checkout is saved successfully in My Account");
+		
+		AddScreenshot();
 		
 		
 	}
