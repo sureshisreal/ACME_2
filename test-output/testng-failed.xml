@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Testcases.BillingPageScripts">
+      <class name="Testcases.CategorypageScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="BillingPage_info_saveToMyAccount_validation"/>
+          <include name="Categorypage_BreadcrumbsNavigation_001"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- Testcases.BillingPageScripts -->
+      </class> <!-- Testcases.CategorypageScripts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

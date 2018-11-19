@@ -12,7 +12,7 @@ public class CategorypageScripts extends BaseTest{
 	@Test
 	public void Categorypage_BreadcrumbsNavigation_001() throws IOException, InterruptedException {
 		TestDescription("Categorypage_BreadcrumbsNavigation_001",
-				"To verify guest user able to navigate using breadcrumbs");
+				"To verify guest user able to navigate using bread crumbs");
 		homepage.VerifyPageTitle();
 		homepage.CategoryMenuSelection();
 		categorypage.Breadcrumbs();
@@ -21,7 +21,7 @@ public class CategorypageScripts extends BaseTest{
 	@Test
 	public void Categorypage_BreadcrumbsNavigation_Reg_002() throws IOException, InterruptedException {
 		TestDescription("Categorypage_BreadcrumbsNavigation_Reg_002",
-				"To verify registered user able to navigate using breadcrumbs");
+				"To verify registered user able to navigate using bread crumbs");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
@@ -32,7 +32,7 @@ public class CategorypageScripts extends BaseTest{
 	@Test
 	public void Categorypage_Validations_003() throws IOException, InterruptedException {
 		TestDescription("Categorypage_Validations_003",
-				"To verify guest user able to view all the available fields in the categorypage");
+				"To verify guest user able to view all the available fields in the category page");
 		homepage.VerifyPageTitle();
 		homepage.CategoryMenuSelection();
 		categorypage.FieldValidations();
@@ -55,18 +55,18 @@ public class CategorypageScripts extends BaseTest{
 				"To verify guest user able to add top selling item in the categorypage");
 		homepage.VerifyPageTitle();
 		homepage.CategoryMenuSelection();
-		categorypage.AddTopSellingItem();
+		//categorypage.AddTopSellingItem();
 	}
 	
 	@Test
 	public void Categorypage_AddTopSellingItem_Reg_006() throws IOException, InterruptedException {
 		TestDescription("Categorypage_AddTopSellingItem_Reg_006",
-				"To verify guest user able to add top selling item in the categorypage");
+				"To verify registered user able to add top selling item in the categorypage");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		homepage.CategoryMenuSelection();
-		categorypage.AddTopSellingItem();
+		//categorypage.AddTopSellingItem();
 	}
 	
 }

@@ -38,7 +38,7 @@ public class RegisterationScripts extends BaseTest{
 	
 	@Test
 	public void CreateAccount_Error_Messages_Validations_004() throws IOException {
-		TestDescription("ForgotPassword_Error_Messages_Validations",
+		TestDescription("CreateAccount_Error_Messages_Validations_004",
 				"To verify error messages are getting displayed for oinvalid data in the forgot password page");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();

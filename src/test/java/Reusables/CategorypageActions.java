@@ -78,13 +78,15 @@ public class CategorypageActions extends CatgoryPageRepo{
 		ElementPresent(FirstProduct);
 		ElementPresent(pageControl_Header);
 		ElementPresent(pageControl_Footer);
-		ElementPresent(TopSellingItems);
+		//ElementPresent(TopSellingItems);
 		ElementPresent(Footer);
 		logs("Category landing page validations verified");
 		
 	}
 
-	public void AddTopSellingItem() {
+	public void AddTopSellingItem() throws InterruptedException {
+		Thread.sleep(1000);
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		WaitUntilElementVisible(TopSellingItems);
 		int rand_int = rand.nextInt(TopSellingItems_Count.size()+1); 
 		String TopSellingSelect = TopSellingItemsName(rand_int).getText();	
@@ -104,10 +106,12 @@ public class CategorypageActions extends CatgoryPageRepo{
 										"Search Results Display");
 					logs("Page title verified : " + title);
 				}
+				else {	
 			String BreadcrumbName = BreacrumbNavigation(i).getText();
 			BreacrumbNavigation(i).click();
 			assertTrue(CategoryVerify.getText().contains(BreadcrumbName));
 			driver.navigate().back();
+				}
 		}
 		
 		

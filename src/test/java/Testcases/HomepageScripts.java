@@ -82,7 +82,7 @@ public class HomepageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_AddRandomProductFromMenuWhatsNew_Reg_008() throws IOException, InterruptedException {
-		TestDescription("Homepage_AddRandomProductFromMenuBrands",
+		TestDescription("Homepage_AddRandomProductFromMenuWhatsNew_Reg_008",
 				"To verify registered user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();

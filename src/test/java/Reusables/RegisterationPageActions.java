@@ -124,14 +124,14 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		Assert.assertEquals(ForgotErrorMsg,Forgotpassword_ErrorMsg.getText());
 		logs("Forgotpassword Error message verified");
 		LogonId_Textbox.clear();
-		LogonId_Textbox.sendKeys(Username);
+		/*LogonId_Textbox.sendKeys(Username);
 		logs("Valid username entered");
 		Forgotpassword_SendMeValidationsLink.click();
 		assertTrue(Forgotpassword_ResetSuccessText.getText().contains("Your password has been sent to you."));
 		logs("Forgotpassword success message verified");
 		Forgotpassword_ResetContinueLogin.click();
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
-		logs("login page displayed");		
+		logs("login page displayed");*/
 	}
 
 	public void CreateAccountValidations() throws IOException {
