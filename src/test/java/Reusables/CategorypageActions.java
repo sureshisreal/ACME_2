@@ -78,7 +78,7 @@ public class CategorypageActions extends CatgoryPageRepo{
 		ElementPresent(FirstProduct);
 		ElementPresent(pageControl_Header);
 		ElementPresent(pageControl_Footer);
-		ElementPresent(TopSellingItems);
+		//ElementPresent(TopSellingItems);
 		ElementPresent(Footer);
 		logs("Category landing page validations verified");
 		
@@ -106,10 +106,12 @@ public class CategorypageActions extends CatgoryPageRepo{
 										"Search Results Display");
 					logs("Page title verified : " + title);
 				}
+				else {	
 			String BreadcrumbName = BreacrumbNavigation(i).getText();
 			BreacrumbNavigation(i).click();
 			assertTrue(CategoryVerify.getText().contains(BreadcrumbName));
 			driver.navigate().back();
+				}
 		}
 		
 		

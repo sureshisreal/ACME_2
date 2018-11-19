@@ -94,6 +94,7 @@ public class ShoppingCartScripts extends BaseTest{
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
+		homepage.returnhomepage();
 		}
 		shoppingCartPage.shoppingcartInlinCheck(loop);
 	}

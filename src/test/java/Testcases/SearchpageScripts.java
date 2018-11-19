@@ -158,6 +158,7 @@ public class SearchpageScripts extends BaseTest{
 			logs("Product added to the cart");
 			//homepage.returnhomepage();
 		}
+		Thread.sleep(3000);
 		productsDetailPage.minishopcart_total();
 		logs("MiniCart Clicked");
 	}
