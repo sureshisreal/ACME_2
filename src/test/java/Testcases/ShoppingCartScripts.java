@@ -11,7 +11,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_FieldValidations_001() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_FieldValidations",
+		TestDescription("ShoppingCart_FieldValidations_001",
 				"To verify guest user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -27,7 +27,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_FieldValidations_Reg_002() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_FieldValidations_Reg",
+		TestDescription("ShoppingCart_FieldValidations_Reg_002",
 				"To verify registered user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -45,7 +45,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_RemoveProduct_003() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_RemovePRoduct",
+		TestDescription("ShoppingCart_RemoveProduct_003",
 				"To verify guest user able to remove product in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -62,7 +62,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_RemoveProduct_Reg_004() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_RemovePRoduct_Reg",
+		TestDescription("ShoppingCart_RemoveProduct_Reg_004",
 				"To verify registered user able to remove product in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -81,7 +81,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_InlineItem_005() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_InlineItem",
+		TestDescription("ShoppingCart_InlineItem_005",
 				"To verify guest user able to view sepaerate line items in the shoppingcart page");
 		int loop=2;
 		for(int i=0; i<loop ; i++) {
@@ -100,7 +100,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_InlineItem_Reg_006() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_InlineItem_Reg",
+		TestDescription("ShoppingCart_InlineItem_Reg_006",
 				"To verify registered user able to view sepaerate line items in the shoppingcart page");
 		int loop=2;
 		for(int i=0; i<loop ; i++) {
@@ -118,7 +118,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_ReturningCustomer_007() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_ReturningCustomer",
+		TestDescription("ShoppingCart_ReturningCustomer_007",
 				"To verify guest user able to signin in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -133,8 +133,8 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_ReturningCustomer_Invalid_007() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_ReturningCustomer",
+	public void ShoppingCart_ReturningCustomer_Invalid_008() throws IOException, InterruptedException {
+		TestDescription("ShoppingCart_ReturningCustomer_Invalid_007",
 				"To verify guest user able to signin in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -149,7 +149,7 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_ForgotPassword() throws IOException, InterruptedException {
+	public void ShoppingCart_ForgotPassword_009() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_ForgotPassword",
 				"To verify guest user able to validate the forgot password page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
@@ -165,7 +165,7 @@ public class ShoppingCartScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShoppingCart_Promocode() throws IOException, InterruptedException {
+	public void ShoppingCart_Promocode_010() throws IOException, InterruptedException {
 		TestDescription("ShoppingCart_Promocode",
 				"To verify guest user able to apply promo code");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");

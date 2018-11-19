@@ -11,7 +11,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Searchpage_BrandSearch_001() throws IOException, InterruptedException {
-		TestDescription("Searchpage_BrandSearch",
+		TestDescription("Searchpage_BrandSearch_001",
 				"To verify whether guest user able to search using the brand names");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "BrandSearch");
@@ -25,7 +25,7 @@ public class SearchpageScripts extends BaseTest{
 
 	@Test
 	public void Searchpage_BrandSearch_Reg_002() throws IOException, InterruptedException {
-		TestDescription("Searchpage_BrandSearch",
+		TestDescription("Searchpage_BrandSearch_Reg_002",
 				"To verify whether guest user able to search using the brand names");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "BrandSearch");
@@ -38,7 +38,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Searchpage_SingleProduct_003() throws IOException, InterruptedException {
-		TestDescription("Searchpage_PDPScripts",
+		TestDescription("Searchpage_SingleProduct_003",
 				"To verify whether guest user navigates to PDP while using single SKU");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "SingleSearch");
@@ -50,7 +50,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Searchpage_SingleProduct_Reg_004() throws IOException, InterruptedException {
-		TestDescription("Searchpage_SingleProduct_Reg",
+		TestDescription("Searchpage_SingleProduct_Reg_004",
 				"To verify whether guest user navigates to PDP while using single SKU");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "SingleSearch");
@@ -64,7 +64,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_SearchItems_005() throws IOException, InterruptedException {
-		TestDescription("Homepage_SearchItems",
+		TestDescription("Homepage_SearchItems_005",
 				"To verify guest user able to place order using search items");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "SearchSKU");
@@ -75,7 +75,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_SearchItems_Reg_006() throws IOException, InterruptedException {
-		TestDescription("Homepage_SearchItems",
+		TestDescription("Homepage_SearchItems_Reg_006",
 				"To verify guest user able to place order using search items");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
@@ -88,7 +88,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_InvalidSearchItems_007() throws IOException, InterruptedException {
-		TestDescription("Homepage_InvalidSearchItems",
+		TestDescription("Homepage_InvalidSearchItems_007",
 				"To verify guest user able to view th invalid search result page");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "InvalidSearch");
@@ -99,7 +99,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_InvalidSearchItems_Reg_008() throws IOException, InterruptedException {
-		TestDescription("Homepage_InvalidSearchItems",
+		TestDescription("Homepage_InvalidSearchItems_Reg_008",
 				"To verify guest user able to view th invalid search result page");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
@@ -112,7 +112,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_MultipleSearchItems_009() throws IOException, InterruptedException {
-		TestDescription("Homepage_MultipleSearchItems",
+		TestDescription("Homepage_MultipleSearchItems_009",
 				"To verify guest user able to place order using multiple search items");
 		homepage.VerifyPageTitle();
 		List<String> SearchTermData = getColumnData("Search", "SearchSKU");
@@ -137,7 +137,7 @@ public class SearchpageScripts extends BaseTest{
 	
 	@Test
 	public void Homepage_MultipleSearchItems_Reg_010() throws IOException, InterruptedException {
-		TestDescription("Homepage_MultipleSearchItems",
+		TestDescription("Homepage_MultipleSearchItems_Reg_010",
 				"To verify guest user able to place order using multiple search items");
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();

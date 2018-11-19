@@ -43,7 +43,7 @@ public class BillingPageScripts extends BaseTest{
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
-		shoppingCartPage.guestCheckout();
+		shoppingCartPage.RegCheckout();
 		shippingPage.GuestShippingAddress();
 		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();

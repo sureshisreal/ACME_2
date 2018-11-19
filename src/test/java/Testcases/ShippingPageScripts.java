@@ -11,7 +11,7 @@ public class ShippingPageScripts extends BaseTest{
 	
 	@Test
 	public void ShippingPage_FieldValidations_001() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_FieldValidations",
+		TestDescription("ShippingPage_FieldValidations_001",
 				"To verify guest user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -27,8 +27,8 @@ public class ShippingPageScripts extends BaseTest{
 	}
 	
 	@Test
-	public void ShippingPage_AVSCheck() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_FieldValidations",
+	public void ShippingPage_AVSCheck_002() throws IOException, InterruptedException {
+		TestDescription("ShippingPage_AVSCheck_002",
 				"To verify registered user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -49,7 +49,7 @@ public class ShippingPageScripts extends BaseTest{
 	
 	@Test
 	public void ShippingPage_FieldValidations_Reg_002() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_FieldValidations",
+		TestDescription("ShippingPage_FieldValidations_Reg_002",
 				"To verify registered user able to view all the fields in the shoppingcart page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);

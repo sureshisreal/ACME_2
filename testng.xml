@@ -18,7 +18,7 @@
 			<class name="Testcases.SearchpageScripts" />  
 			<class name="Testcases.ShippingPageScripts" />  
 			<class name="Testcases.ShoppingCartScripts" />  -->
-			<class name="Testcases.RegisterationScripts" /> 
+				<class name="Testcases.CategorypageScripts"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

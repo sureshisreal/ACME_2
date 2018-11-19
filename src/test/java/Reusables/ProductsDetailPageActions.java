@@ -70,8 +70,11 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 			AddScreenshot();
 			assertTrue(Wishlist_signIn.getText().contains
 					("Sign"));
+			logs("wishlist verified");	
 		}
-		logs("wishlist verified");	
+		else {
+		logs("wishlist not present");	
+		}
 	}
 	
 	public void reviewlink() throws IOException {

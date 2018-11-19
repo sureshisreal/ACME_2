@@ -84,7 +84,9 @@ public class CategorypageActions extends CatgoryPageRepo{
 		
 	}
 
-	public void AddTopSellingItem() {
+	public void AddTopSellingItem() throws InterruptedException {
+		Thread.sleep(1000);
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		WaitUntilElementVisible(TopSellingItems);
 		int rand_int = rand.nextInt(TopSellingItems_Count.size()+1); 
 		String TopSellingSelect = TopSellingItemsName(rand_int).getText();	
