@@ -124,6 +124,9 @@ public class RegisterationpageRepo extends BaseTest {
 //Logout 	
 	@FindBy(xpath = "//ul[@id='quickLinksBar']//a[@id='SigniIn_alt']")
 	public WebElement SignOut;
+	
+	@FindBy(id = "UserRegistrationErrorMessage")
+	public WebElement regErrorMsg_existingEmail;
 
 	
 	

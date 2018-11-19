@@ -10,7 +10,7 @@ import utilities.BaseTest;
 
 public class BillingPageScripts extends BaseTest{
 	
-/*	@Test
+	@Test
 	public void BillingPage_FieldValidations_001() throws IOException, InterruptedException {
 		TestDescription("BillingPage_FieldValidations_001",
 				"To verify guest user able to view all the fields in the Billing page");
@@ -130,11 +130,11 @@ public class BillingPageScripts extends BaseTest{
 		AddScreenshot();
 	}
 	
-	*/
+	
 	
 
 	@Test
-	public void BillingPage_info_saveToMyAccount_validation() throws IOException, InterruptedException {
+	public void BillingPage_info_saveEditedAddrToMyAccount_validation() throws IOException, InterruptedException {
 		TestDescription("BillingPage_info_saveEditedBillingDetailsToMyAccount_validation_005",
 				"To verify if the Billing address details edited in checkouT is updated in the My credit information of the My Account Page");
 		
