@@ -20,6 +20,7 @@ public class ShippingPageActions extends ShippingPageRepo {
 	
 	public void ShippingAddressFieldValidation() {
 		WaitUntilElementVisible(Shipping_firstName);
+		if(Shipping_firstName.isDisplayed()) {
 		ElementPresent(Shipping_firstName);
 		ElementPresent(Shipping_lastName);
 		ElementPresent(Shipping_address1);
@@ -29,8 +30,9 @@ public class ShippingPageActions extends ShippingPageRepo {
 		ElementPresent(Shipping_state);
 		ElementPresent(Shipping_phone);
 		ElementPresent(Shipping_email1);
-		logs("Shipping fields validated");
 		PlaceOrder_Button.click();
+		}
+		logs("Shipping fields validated");
 	}
 
 	public String GuestShippingAddress() {

@@ -14,7 +14,7 @@ public class CheckoutScripts extends BaseTest {
 
 	@Test	
 	public void Guest_SearchCheckout_001() throws IOException, InterruptedException {		
-		TestDescription("Guest_SearchCheckout" , "To verify guest user able to place order using search items");
+		TestDescription("Guest_SearchCheckout_001" , "To verify guest user able to place order using search items");
 			List<String> SearchTermData = getColumnData("Search","SearchSKU");
 			String SearchTerm = SearchTermData.get(0);
 			homepage.VerifyPageTitle();
@@ -34,7 +34,7 @@ public class CheckoutScripts extends BaseTest {
 		
 	@Test	
 	public void Registered_SearchCheckout_002() throws IOException, InterruptedException {		
-		TestDescription("Registered_SearchCheckout" , "To verify registered user able to place order using search items");
+		TestDescription("Registered_SearchCheckout_002" , "To verify registered user able to place order using search items");
 				List<String> SearchTermData = getColumnData("Search","SearchSKU");
 			String SearchTerm = SearchTermData.get(0);
 			homepage.VerifyPageTitle();
