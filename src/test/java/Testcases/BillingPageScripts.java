@@ -78,13 +78,6 @@ public class BillingPageScripts extends BaseTest{
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	@Test
 	public void BillingPage_info_getFromMyAccount_validation() throws IOException, InterruptedException {
 		TestDescription("BillingPage_info_getFromMyAccount_validation_004",

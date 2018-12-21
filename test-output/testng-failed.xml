@@ -10,7 +10,7 @@
       <class name="Testcases.CheckoutScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="Guest_signupPostCheckout_006"/>
+          <include name="Registered_SearchCheckout_002"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- Testcases.CheckoutScripts -->
