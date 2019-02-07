@@ -23,8 +23,8 @@ public class ExtentManager {
 	public static ExtentReports extent;
     private static Platform platform;
     private static String reportFileName = "ExtentReports"+df.format(now)+".html";
-    private static String macPath = System.getProperty("user.dir")+ "/TestReport";
-    private static String windowsPath = System.getProperty("user.dir")+ "\\TestReport";
+    private static String macPath =  "../TestReport";
+    private static String windowsPath =  "..\\TestReport";
     private static String macReportFileLoc = macPath + "/" + reportFileName;
     private static String winReportFileLoc = windowsPath + "\\" + reportFileName;
 

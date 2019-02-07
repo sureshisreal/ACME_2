@@ -143,8 +143,11 @@ public class BaseTest extends ExtentManager {
 		try {
 			DateFormat df = new SimpleDateFormat("dd_MM_yy_HH_mm_ss");
 			Date now = new Date();
-			String filePath = System.getProperty("user.dir")
-					+ "//Test-ScreenShots//" + df.format(now) + ".png";
+			String filePath = 
+					"..//ScreenShots//" + df.format(now) + ".png";
+			/*String filePath =  System.getProperty("user.dir")
+					+ "//ScreenShots//" + df.format(now) + ".png"; */
+			System.out.println(" filePath : " +filePath);
 			TakesScreenshot screen = (TakesScreenshot) driver;
 			File screenShot = screen.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenShot, new File(filePath));
