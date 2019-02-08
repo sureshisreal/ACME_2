@@ -167,6 +167,7 @@ public class HomepageActions extends HomepageRepo {
 		WaitUntilElementVisible(SearchHeader_Verify);
 		AddScreenshot();
 		Assert.assertEquals(SearchHeader_Verify.getText(),BrandName);
+		
 		if(SubCategorypage_SubCCategory.size() > 0) {
 		int rand_int1 = rand.nextInt(SubCategorypage_SubCCategory.size()+1); 
 		System.out.println("SubCategory Header" +rand_int1);

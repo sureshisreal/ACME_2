@@ -38,6 +38,7 @@ public class ProductsDetailPageActions extends ProductsDetailPageRepo {
 
 	public void AddBopisProduct() {
 		productPagePickUpTodayButton.click();
+		logs("Bopis product added to the cart ");
 	}
 
 	public void VerifyPage() {

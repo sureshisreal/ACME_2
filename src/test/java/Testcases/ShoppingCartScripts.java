@@ -87,7 +87,7 @@ public class ShoppingCartScripts extends BaseTest{
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		for(int i=0; i<loop ; i++) {
-		//homepage.VerifyPageTitle();
+		homepage.VerifyPageTitle();
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
@@ -107,12 +107,14 @@ public class ShoppingCartScripts extends BaseTest{
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		for(int i=0; i<loop ; i++) {
+		homepage.VerifyPageTitle();
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
+		homepage.returnhomepage();
 		}
 		shoppingCartPage.shoppingcartInlinCheck(loop);
 	}

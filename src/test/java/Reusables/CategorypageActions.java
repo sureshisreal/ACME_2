@@ -51,20 +51,23 @@ public class CategorypageActions extends CatgoryPageRepo{
 		logs("Category pages verified");
 	}
 
-	public void Breadcrumbs() throws IOException {
+	public void Breadcrumbs() throws IOException, InterruptedException {
 		WaitUntilElementVisible(SearchHeader);
 		int Breadcrumbsize = Breadcrumb_Navigation.size();
-		for( int i=1; i<Breadcrumbsize ; i++) {
+		for( int i=Breadcrumbsize; i>=1 ; i--) {
 				if(i==1) {
+					BreacrumbNavigation(i).click();
+					Thread.sleep(1000);
 					String title = driver.getTitle();
 					Assert.assertEquals(driver.getTitle(),
 							"Acme Tools - Best Online Tool Store - FREE Shipping Orders $49+");
 					logs("Page title verified : " + title);
+					break;
 				}
 			String BreadcrumbName = BreacrumbNavigation(i).getText();
 			BreacrumbNavigation(i).click();
 			assertTrue(CategoryVerify.getText().contains(BreadcrumbName));
-			driver.navigate().back();
+			//driver.navigate().back();
 		}
 		
 	}

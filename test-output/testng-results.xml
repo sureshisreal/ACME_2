@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="124853" started-at="2019-02-08T12:18:19Z" finished-at="2019-02-08T12:20:24Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="124853" started-at="2019-02-08T12:18:19Z" finished-at="2019-02-08T12:20:24Z">
+      <class name="Testcases.CategorypageScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.CategorypageScripts@2cb2fc20]" name="beforeMethod" is-config="true" duration-ms="46677" started-at="2019-02-08T12:18:19Z" finished-at="2019-02-08T12:19:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Categorypage_Validations_003()[pri:0, instance:Testcases.CategorypageScripts@2cb2fc20]" name="Categorypage_Validations_003" duration-ms="78079" started-at="2019-02-08T12:19:06Z" finished-at="2019-02-08T12:20:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Categorypage_Validations_003 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.CategorypageScripts@2cb2fc20]" name="afterMethod" is-config="true" duration-ms="65" started-at="2019-02-08T12:20:24Z" finished-at="2019-02-08T12:20:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Categorypage_Validations_003 status=SUCCESS method=CategorypageScripts.Categorypage_Validations_003()[pri:0, instance:Testcases.CategorypageScripts@2cb2fc20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Testcases.CategorypageScripts -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

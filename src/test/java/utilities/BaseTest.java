@@ -147,7 +147,7 @@ public class BaseTest extends ExtentManager {
 					"..//ScreenShots//" + df.format(now) + ".png";
 			/*String filePath =  System.getProperty("user.dir")
 					+ "//ScreenShots//" + df.format(now) + ".png"; */
-			System.out.println(" filePath : " +filePath);
+			//System.out.println(" filePath : " +filePath);
 			TakesScreenshot screen = (TakesScreenshot) driver;
 			File screenShot = screen.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenShot, new File(filePath));
@@ -168,7 +168,7 @@ public class BaseTest extends ExtentManager {
 	
 	public List<String> getColumnData(String sheetName, String columnName) throws IOException {
 		
-		 System.out.println(" " +sheetName + " " + columnName);
+		// System.out.println(" " +sheetName + " " + columnName);
 	        FileInputStream file = new FileInputStream(new File("TestData.xlsx"));
 		xlsWorkBook = new XSSFWorkbook(file);
 		Sheet sheet1 = xlsWorkBook.getSheet(sheetName);
@@ -216,7 +216,7 @@ public class BaseTest extends ExtentManager {
 	 
 	 public Boolean ElementPresent(WebElement element){
 		 if(element.isDisplayed()) {
-		 System.out.println("Element is Present");
+		// System.out.println("Element is Present");
 		 logs(element + "is present");
 		 return true;
 		 }

@@ -46,13 +46,29 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 		ElementPresent(paypalcheckout_button);
 		logs("Shopping cart field validations verified");
 	}
+	
+	
+	public void CartIconCount() throws IOException, InterruptedException {
+		WaitUntilElementClickable(minishopcart_body);
+		int cartcount = Integer.parseInt(minishopcart_total.getText());
+		if(cartcount > 0)
+		{
+			minishopcart_total.click();
+			RemoveProduct();
+		}
+	
+	}
 
+		
+	
+	
 	public void RemoveProduct() throws IOException, InterruptedException {
 		WaitUntilElementClickable(shoppingCart_Heading);
 		int removecount = Remove_link.size();
 		AddScreenshot();
 		for(int i=1;i<=removecount; i++) {
-			RemoveAllProducts_link(i).click();
+			RemoveAllProducts_link(1).click();
+			driver.navigate().refresh();
 			Thread.sleep(2000);
 			WaitUntilElementClickable(shoppingCart_Heading);
 			logs("Product :" +i+ " removed");
@@ -104,20 +120,21 @@ public class ShoppingCartPageActions extends ShoppingCartPageRepo {
 		WaitUntilElementClickable(ForgotpassWord_SignIn);
 		ForgotpassWord_SignIn.click();
 		WaitUntilElementVisible(ForgotpassWord_Registerationpage);
-		assertTrue(ForgotpassWord_Registerationpage.getText().contains("CREATE AN ACME TOOLS ACCOUNT PROFILE"));
+		assertTrue(ForgotpassWord_Registerationpage.getText().contains("REGIST"));
 		driver.navigate().back();
 		ForgotpassWord_SendLink.click();
+		WaitUntilElementClickable(ForgotpassWord_Error);
 		assertTrue(ForgotpassWord_Error.getText().contains("Type a logon ID in the Logon ID field."));
 		ForgotpassWord_Textbox.sendKeys("!@#$%^&*");
 		ForgotpassWord_SendLink.click();
+		WaitUntilElementClickable(ForgotpassWord_Error);
 		assertTrue(ForgotpassWord_Error.getText().contains("The logon ID that you entered is not valid. Check your entry and try again"));
 
 	}
 
 	public void promocode() {
 			WaitUntilElementClickable(shoppingcart_promo);
-			shoppingcart_promo.click();
-			
+			shoppingcart_promo.click();		
 			
 	}
 

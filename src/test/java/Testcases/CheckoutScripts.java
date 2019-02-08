@@ -20,7 +20,7 @@ public class CheckoutScripts extends BaseTest {
 			homepage.VerifyPageTitle();
 			homepage.searchTerm(SearchTerm);
 			categorypage.verifySearchHeader(SearchTerm);
-			/*categorypage.selectFirstProduct();
+			categorypage.selectFirstProduct();
 			productsDetailPage.quantity("5");
 			productsDetailPage.AddToCart();
 			productsDetailPage.minishopcart_total();
@@ -28,10 +28,10 @@ public class CheckoutScripts extends BaseTest {
 			shippingPage.GuestShippingAddress();
 			shippingPage.UseEnteredAddress();
 			billingPage.VisaPayment();
-			billingPage.PlaceOrder();*/
+			billingPage.PlaceOrder();
 
 	}
-	/*	
+	
 	@Test	
 	public void Registered_SearchCheckout_002() throws IOException, InterruptedException {		
 		TestDescription("Registered_SearchCheckout_002" , "To verify registered user able to place order using search items");
@@ -53,7 +53,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.PlaceOrder();
 	}
 	
-	@Test	
+	@Test	(priority=1)
 	public void Bopis_SearchCheckout_003() throws IOException, InterruptedException {		
 		TestDescription("Bopis_SearchCheckout" , "To verify user able to place order using bopis");
 			logs("Url entered");
@@ -61,7 +61,7 @@ public class CheckoutScripts extends BaseTest {
 			homepage.SignInLink();
 			registerationPage.HomepageLogin();
 			logs("User signed In using valid credentials");
-			List<String> SearchTermData = getColumnData("suresh","SearchSKU");
+			List<String> SearchTermData = getColumnData("Search","SearchSKU");
 			String SearchTerm = SearchTermData.get(0);
 			homepage.searchTerm(SearchTerm);
 			logs("Search term entered");
@@ -183,7 +183,7 @@ public class CheckoutScripts extends BaseTest {
 	}
 	
 	
-	*/
+	
 	
 
 }

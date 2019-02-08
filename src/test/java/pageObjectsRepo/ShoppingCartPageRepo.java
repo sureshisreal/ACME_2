@@ -18,6 +18,12 @@ public class ShoppingCartPageRepo extends BaseTest {
 	@FindBy( xpath = "(.//*[@id='guestShopperContinue'])[1]")
 	public  WebElement guestShopperContinue;
 	
+	@FindBy( id = "minishopcart_total")
+	public  WebElement minishopcart_total;
+	
+	@FindBy( id = "miniShopCartBody")
+	public  WebElement minishopcart_body;
+	
 	@FindBy( xpath = "(.//*[@id='shopcartCheckout'])[1]")
 	public  WebElement regShopperContinue;
 	
