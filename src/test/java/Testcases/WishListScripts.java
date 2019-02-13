@@ -11,12 +11,11 @@ public class WishListScripts extends BaseTest{
 	
 	@Test
 	public void WishList_FieldValidations_001() throws IOException, InterruptedException {
-		TestDescription("PDP_FieldValidations_001",
-				"To verify guest user able to view all the fields in the pdp page");
+		TestDescription("WishList_FieldValidations_001",
+				"To verify guest user able to add product to the WishList");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();
-		//homepage.CategoryMenuSelection();
 		homepage.searchTerm(SearchTerm);
 		categorypage.verifySearchHeader(SearchTerm);
 		categorypage.selectFirstProduct();
@@ -25,8 +24,8 @@ public class WishListScripts extends BaseTest{
 	
 	@Test
 	public void WishList_FieldValidations_002_Reg() throws IOException, InterruptedException {
-		TestDescription("PDP_FieldValidations_001",
-				"To verify guest user able to view all the fields in the pdp page");
+		TestDescription("WishList_FieldValidations_002_Reg",
+				"To verify registered user able to add product to the WishList");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
 		homepage.VerifyPageTitle();

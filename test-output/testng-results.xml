@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="373782" started-at="2019-02-13T10:23:21Z" finished-at="2019-02-13T10:29:35Z">
+  <suite name="Suite" duration-ms="1643060" started-at="2019-02-13T10:42:59Z" finished-at="2019-02-13T11:10:22Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="373782" started-at="2019-02-13T10:23:21Z" finished-at="2019-02-13T10:29:35Z">
-      <class name="Testcases.CheckoutScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="48085" started-at="2019-02-13T10:23:21Z" finished-at="2019-02-13T10:24:09Z">
+    <test name="Test" duration-ms="1643060" started-at="2019-02-13T10:42:59Z" finished-at="2019-02-13T11:10:22Z">
+      <class name="Testcases.PDPScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.PDPScripts@2cb2fc20]" name="beforeMethod" is-config="true" duration-ms="39603" started-at="2019-02-13T10:42:59Z" finished-at="2019-02-13T10:43:38Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Guest_signupPostCheckout_005()[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c]" name="Guest_signupPostCheckout_005" duration-ms="325595" started-at="2019-02-13T10:24:09Z" finished-at="2019-02-13T10:29:35Z">
+        <test-method status="PASS" signature="PDP_FieldValidations_001()[pri:0, instance:Testcases.PDPScripts@2cb2fc20]" name="PDP_FieldValidations_001" duration-ms="1603336" started-at="2019-02-13T10:43:38Z" finished-at="2019-02-13T11:10:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Guest_signupPostCheckout_005 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="73" started-at="2019-02-13T10:29:35Z" finished-at="2019-02-13T10:29:35Z">
+        </test-method> <!-- PDP_FieldValidations_001 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.PDPScripts@2cb2fc20]" name="afterMethod" is-config="true" duration-ms="72" started-at="2019-02-13T11:10:22Z" finished-at="2019-02-13T11:10:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Guest_signupPostCheckout_005 status=SUCCESS method=CheckoutScripts.Guest_signupPostCheckout_005()[pri:0, instance:Testcases.CheckoutScripts@38c5cc4c] output={null}]]]>
+                <![CDATA[[TestResult name=PDP_FieldValidations_001 status=SUCCESS method=PDPScripts.PDP_FieldValidations_001()[pri:0, instance:Testcases.PDPScripts@2cb2fc20] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.CheckoutScripts -->
+      </class> <!-- Testcases.PDPScripts -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
