@@ -11,7 +11,7 @@
 		 <class name="Testcases.ShoppingCartScripts" /> 
 			<class name="Testcases.BopisCheckoutScripts" />
 			 <class name="Testcases.CheckoutScripts" />
-			 	<class name="Testcases.HomepageScripts" />
+			 <class name="Testcases.HomepageScripts" />
 			<class name="Testcases.PDPScripts" /> 
 			<class name="Testcases.HomepageScripts" />
 			<class name="Testcases.RegisterationScripts" /> 

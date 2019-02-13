@@ -271,8 +271,10 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		AddScreenshot();		
 	}
 	
-	
-	
+	public void selectUserRegisteration() {
+		WaitUntilElementClickable(IndividualUse_Radio);
+		IndividualUse_Radio.click();	
+	}
 	
 	
 	

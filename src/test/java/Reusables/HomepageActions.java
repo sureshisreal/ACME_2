@@ -101,7 +101,7 @@ public class HomepageActions extends HomepageRepo {
 		logs(" Menu What'snew verified");
 	}
 
-	public void CategoryMenuSelection() throws IOException, InterruptedException {
+	/*public void CategoryMenuSelection() throws IOException, InterruptedException {
 		//Menu Selection
 		WaitUntilElementVisible(Menu_Category);
 		Menu_Category.click();
@@ -143,16 +143,64 @@ public class HomepageActions extends HomepageRepo {
 		assertTrue(SubCategoryName.contains(SearchHeader_Verify.getText()));
 		AddScreenshot();
 		
-		/*//First Product
+		//First Product
 				WaitUntilElementClickable(FirstProductName);
 				//String ProductName = FirstProductName.getText();
 				FirstProductName.click();
 				logs("First product selected ");
 				WaitUntilElementVisible(PDP_TitleVerify);
 				//assertTrue(ProductName.contains(PDP_TitleVerify.getText()));
-				logs("First product verified");*/
+				logs("First product verified");
 	}
+*/
+	
+	public void CategoryMenuSelection() throws IOException, InterruptedException {
+		//Menu Selection
+		WaitUntilElementVisible(Menu_Category);
+		Menu_Category.click();
+		logs("Category Header Selected");
+		
+		//SubMenu
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		//int rand_int = rand.nextInt(Categorypage_AllCategory.size()+1); 
+		//if(rand_int >0) {
+		//System.out.println("rand_int " +rand_int);
+		int rand_int =1 ;
+		AddScreenshot();
+		String CategoryName = Categorypage_RandomCategory(rand_int).getText();
+		logs("Random Category selected : " +CategoryName);
+		Categorypage_RandomCategory(rand_int).click();
+		
+		//Sub Category Menu
+		WaitUntilElementVisible(Menu_CategoryVerify);
+		//int rand_subcat = rand.nextInt(Categorypage_SubCategory.size()+1); 
+		//System.out.println("rand_subcat " +rand_subcat);
+		int rand_subcat = 1;
+		AddScreenshot();
+		if(rand_subcat > 0) {
+		String CategorySubName = Categorypage_SubRandomCategory(rand_int).getText();
+		logs("Random Category selected : " +CategorySubName);
+		Categorypage_SubRandomCategory(rand_int).click();
+		WaitUntilElementVisible(SearchHeader_Verify);
+		AddScreenshot();
+		//Assert.assertEquals(SearchHeader_Verify.getText(),CategoryName);
+		//assertTrue(CategoryName.contains(SearchHeader_Verify.getText()));
+		}
+		
+		/*WaitUntilElementVisible(Menu_CategoryVerify);
+		int rand_int1 = rand.nextInt(SubCategorypage_SubCCategory.size()+1); 
+		System.out.println("SubCategory Header" +rand_int1);
+		String SubCategoryName = SubCategorypage_RandomCategory(rand_int1).getText();
+		AddScreenshot();
+		SubCategorypage_RandomCategory(rand_int1).click();
+		logs("Random SubCategory selected : " +SubCategoryName);
+		//Assert.assertEquals(SearchHeader_Verify.getText(),SubCategoryName);
+		assertTrue(SubCategoryName.contains(SearchHeader_Verify.getText()));
+		AddScreenshot();*/
 
+	}
+	
+	
 	public void BrandMenuSelection() throws IOException {
 		WaitUntilElementVisible(Menu_Category);
 		Menu_Brands.click();
@@ -199,6 +247,5 @@ public class HomepageActions extends HomepageRepo {
 		logs("Log out verified");
 	}
 
-	
 
 }

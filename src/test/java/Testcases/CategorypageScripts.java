@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import utilities.BaseTest;
 
 public class CategorypageScripts extends BaseTest{
-
+/*
 	@Test
 	public void Categorypage_BreadcrumbsNavigation_001() throws IOException, InterruptedException {
 		TestDescription("Categorypage_BreadcrumbsNavigation_001",
@@ -28,7 +28,7 @@ public class CategorypageScripts extends BaseTest{
 		homepage.CategoryMenuSelection();
 		categorypage.Breadcrumbs();
 	}
-	
+	*/
 	@Test
 	public void Categorypage_Validations_003() throws IOException, InterruptedException {
 		TestDescription("Categorypage_Validations_003",
@@ -37,7 +37,7 @@ public class CategorypageScripts extends BaseTest{
 		homepage.CategoryMenuSelection();
 		categorypage.FieldValidations();
 	}
-	
+	/*
 	@Test
 	public void Categorypage_Validations_Reg_004() throws IOException, InterruptedException {
 		TestDescription("Categorypage_Validations_Reg_004",
@@ -67,6 +67,6 @@ public class CategorypageScripts extends BaseTest{
 		registerationPage.HomepageLogin();
 		homepage.CategoryMenuSelection();
 		//categorypage.AddTopSellingItem();
-	}
+	}*/
 	
 }

@@ -94,7 +94,9 @@ public class ShoppingCartScripts extends BaseTest{
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
+		if(i==0 ) {
 		homepage.returnhomepage();
+			}
 		}
 		shoppingCartPage.shoppingcartInlinCheck(loop);
 	}
@@ -114,7 +116,9 @@ public class ShoppingCartScripts extends BaseTest{
 		productsDetailPage.quantity("1");
 		productsDetailPage.AddToCart();
 		productsDetailPage.minishopcart_total();
+		if(i==0 ) {
 		homepage.returnhomepage();
+			}
 		}
 		shoppingCartPage.shoppingcartInlinCheck(loop);
 	}

@@ -55,7 +55,7 @@ public class CheckoutScripts extends BaseTest {
 	
 	@Test	(priority=1)
 	public void Bopis_SearchCheckout_003() throws IOException, InterruptedException {		
-		TestDescription("Bopis_SearchCheckout" , "To verify user able to place order using bopis");
+		TestDescription("Bopis_SearchCheckout_003" , "To verify user able to place order using bopis");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();
@@ -143,6 +143,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.PlaceOrder();
 			billingPage.orderConf_guest_PasswordField.sendKeys("P@ssw0rd");
 			billingPage.orderConf_guest_completeRegistration.click();
+			registerationPage.selectUserRegisteration();
 			WaitUntilElementVisible(registerationPage.regErrorMsg_existingEmail);
 			Assert.assertTrue(registerationPage.regErrorMsg_existingEmail.getText().contains("Error: The logon ID you entered already exists. Type a different logon ID and try again."));
 			AddScreenshot();
@@ -174,6 +175,7 @@ public class CheckoutScripts extends BaseTest {
 			billingPage.PlaceOrder();
 			billingPage.orderConf_guest_PasswordField.sendKeys("abcde");
 			billingPage.orderConf_guest_completeRegistration.click();
+			registerationPage.selectUserRegisteration();
 			WaitUntilElementVisible(registerationPage.regErrorMsg_existingEmail);
 			Assert.assertTrue(registerationPage.regErrorMsg_existingEmail.getText().toString().trim().contains("Error: You entered a password with fewer than 6 characters."));
 			AddScreenshot();

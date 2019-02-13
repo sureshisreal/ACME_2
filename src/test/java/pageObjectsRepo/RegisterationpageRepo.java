@@ -61,6 +61,10 @@ public class RegisterationpageRepo extends BaseTest {
 	
 // Registeration 
 	
+	
+	@FindBy(xpath = ".//label[contains(.,'Individual')]")
+	public  WebElement IndividualUse_Radio;
+	
 	@FindBy(xpath = ".//*[@class='btn'][contains(.,'Register')]")
 	public  WebElement Register_Button;
 	

@@ -126,19 +126,35 @@ public class HomepageRepo extends BaseTest{
 		 return driver.findElement(By.xpath("(.//*[@class='promonewrow']//b)["+i+"]"));
 	    }
 	 
-	 @FindBy(xpath = "(.//*[@class='content carousel product_listing_container']//b)")
+	/* @FindBy(xpath = "(.//*[@class='content carousel product_listing_container']//b)")
 		public  List<WebElement> Categorypage_SubCategory;
 	 
 	 public WebElement Categorypage_SubRandomCategory(int i) {
 		 return driver.findElement(By.xpath("(.//*[@class='content carousel product_listing_container']//b)["+i+"]"));
-	    }
-	@FindBy(xpath = ".//*[@class='product_group_name product_info']")
-	public  List<WebElement> SubCategorypage_SubCCategory;
+	    }*/
 	 
-	 public WebElement SubCategorypage_RandomCategory(int i) {
+	 @FindBy(xpath = "(.//*[@class='product_listing_container1']//li)")
+		public  List<WebElement> Categorypage_SubCategory;
+	 
+	 public WebElement Categorypage_SubRandomCategory(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='product_listing_container1']//li)["+i+"]"));
+	    }
+	 
+	 
+	/*@FindBy(xpath = ".//*[@class='product_group_name product_info']")
+	public  List<WebElement> SubCategorypage_SubCCategory;*/
+	 
+	 @FindBy(xpath = "(.//*[@class='product_listing_container']//div[@class='product_name'])")
+		public  List<WebElement> SubCategorypage_SubCCategory;
+	 
+/*	 public WebElement SubCategorypage_RandomCategory(int i) {
 		 return driver.findElement(By.xpath("(.//*[@class='product_group_name product_info'])["+i+"]"));
-	    }
+	    }*/
 	 
+	public WebElement SubCategorypage_RandomCategory(int i) {
+		 return driver.findElement(By.xpath("(.//*[@class='product_listing_container']//div[@class='product_name'])["+i+"]"));
+	    }
+
 	@FindBy(xpath = " .//*[@class='brandListing column-list-js']//a")
 	public  List<WebElement> Brand_SubCCategory;
 	
