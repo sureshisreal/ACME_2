@@ -120,9 +120,6 @@ public class CheckoutScripts extends BaseTest {
 			
 	}
 	
-	
-	
-	
 	@Test
 	public void Guest_signupPostCheckout_005() throws IOException, InterruptedException {		
 		TestDescription("Guest_signupPostCheckout_005" , "To verify if the guest user is restrcited to create an account if the email address used in checkout is already registered");
@@ -147,13 +144,8 @@ public class CheckoutScripts extends BaseTest {
 			WaitUntilElementVisible(registerationPage.regErrorMsg_existingEmail);
 			Assert.assertTrue(registerationPage.regErrorMsg_existingEmail.getText().contains("Error: The logon ID you entered already exists. Type a different logon ID and try again."));
 			AddScreenshot();
-			logs("Guest user is restricted to sign up for an account from Order Confirmation Page when they use the existing email address for checkout");
-
-			
+			logs("Guest user is restricted to sign up for an account from Order Confirmation Page when they use the existing email address for checkout");		
 	}
-	
-	
-	
 	
 	@Test
 	public void Guest_signupPostCheckout_006() throws IOException, InterruptedException {		

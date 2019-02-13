@@ -65,7 +65,7 @@ public class ShippingPageActions extends ShippingPageRepo {
 	
 	public String GuestShippingAddress_existingEmail() throws IOException {
 		
-		List<String> UsernameData = getColumnData("SignIn","Username");
+		List<String> UsernameData = getColumnData("SignIn","Email");
 		String Username = UsernameData.get(0);
 		if(Shipping_firstName.isDisplayed()) {
 		WaitUntilElementVisible(Shipping_firstName);
