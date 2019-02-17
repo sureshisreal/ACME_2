@@ -30,12 +30,22 @@ public class CategorypageActions extends CatgoryPageRepo{
 		WaitUntilElementClickable(SearchHeader);
 		int rand_int = rand.nextInt(AllProductNames.size()+1); 
 		String ProductName = RandomCategorySelect(rand_int).getText();
-		
+		System.out.println("ProductName :" +ProductName);
 		AddScreenshot();
 		RandomCategorySelect(rand_int).click();
 		logs("Random product selected : " + rand_int+ "product");
 		WaitUntilElementVisible(PDP_TitleVerify);
-		assertTrue(ProductName.contains(PDP_TitleVerify.getText()));
+		System.out.println("PDP_TitleVerify : " +PDP_TitleVerify);
+		//String delimiters = "\\s+|-,\\s-|\\.\\s*";
+		String[] arrOfStr = ProductName.split ("[-\\s]");
+		//String[] arrOfStr = ProductName.split(delimiters);   
+        for (String a : arrOfStr) {
+            System.out.println(a); 
+            //assertTrue(a.contains(PDP_TitleVerify_Verify.getText()));
+            assertTrue(PDP_TitleVerify_Verify.getText().contains(a));
+            break;
+        	} 
+	//	assertTrue(ProductName.contains(PDP_TitleVerify_Verify.getText()));
 		AddScreenshot();
 		logs("Random product verified");
 	}

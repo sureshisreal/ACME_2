@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1643060" started-at="2019-02-13T10:42:59Z" finished-at="2019-02-13T11:10:22Z">
+  <suite name="Suite" duration-ms="286030" started-at="2019-02-17T10:52:25Z" finished-at="2019-02-17T10:57:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1643060" started-at="2019-02-13T10:42:59Z" finished-at="2019-02-13T11:10:22Z">
-      <class name="Testcases.PDPScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.PDPScripts@2cb2fc20]" name="beforeMethod" is-config="true" duration-ms="39603" started-at="2019-02-13T10:42:59Z" finished-at="2019-02-13T10:43:38Z">
+    <test name="Test" duration-ms="286030" started-at="2019-02-17T10:52:25Z" finished-at="2019-02-17T10:57:11Z">
+      <class name="Testcases.MyAccountScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.MyAccountScripts@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="114072" started-at="2019-02-17T10:52:25Z" finished-at="2019-02-17T10:54:19Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="PDP_FieldValidations_001()[pri:0, instance:Testcases.PDPScripts@2cb2fc20]" name="PDP_FieldValidations_001" duration-ms="1603336" started-at="2019-02-13T10:43:38Z" finished-at="2019-02-13T11:10:22Z">
+        <test-method status="PASS" signature="myAcc_ShippingInfo_addressPrePopulation_test()[pri:0, instance:Testcases.MyAccountScripts@38c5cc4c]" name="myAcc_ShippingInfo_addressPrePopulation_test" duration-ms="171830" started-at="2019-02-17T10:54:19Z" finished-at="2019-02-17T10:57:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PDP_FieldValidations_001 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.PDPScripts@2cb2fc20]" name="afterMethod" is-config="true" duration-ms="72" started-at="2019-02-13T11:10:22Z" finished-at="2019-02-13T11:10:22Z">
+        </test-method> <!-- myAcc_ShippingInfo_addressPrePopulation_test -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.MyAccountScripts@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="105" started-at="2019-02-17T10:57:11Z" finished-at="2019-02-17T10:57:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PDP_FieldValidations_001 status=SUCCESS method=PDPScripts.PDP_FieldValidations_001()[pri:0, instance:Testcases.PDPScripts@2cb2fc20] output={null}]]]>
+                <![CDATA[[TestResult name=myAcc_ShippingInfo_addressPrePopulation_test status=SUCCESS method=MyAccountScripts.myAcc_ShippingInfo_addressPrePopulation_test()[pri:0, instance:Testcases.MyAccountScripts@38c5cc4c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.PDPScripts -->
+      </class> <!-- Testcases.MyAccountScripts -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

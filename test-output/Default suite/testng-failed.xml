@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.CategorypageScripts">
+      <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
-          <include name="Categorypage_Validations_003"/>
+          <include name="myAcc_ShippingInfo_addressPrePopulation_test"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- Testcases.CategorypageScripts -->
+      </class> <!-- Testcases.MyAccountScripts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

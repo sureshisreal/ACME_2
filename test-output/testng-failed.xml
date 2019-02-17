@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
-  <listeners>
-    <listener class-name="listeners.TestListener"/>
-  </listeners>
-  <test thread-count="1" name="Test(failed)" parallel="classes">
-    <parameter name="browser" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.CheckoutScripts">
+      <class name="Testcases.MyAccountScripts">
         <methods>
           <include name="afterMethod"/>
+          <include name="myAcc_ShippingInfo_addressPrePopulation_test"/>
           <include name="beforeMethod"/>
-          <include name="Guest_signupPostCheckout_005"/>
         </methods>
-      </class> <!-- Testcases.CheckoutScripts -->
+      </class> <!-- Testcases.MyAccountScripts -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

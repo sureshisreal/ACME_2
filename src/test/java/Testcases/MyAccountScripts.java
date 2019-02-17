@@ -32,10 +32,6 @@ public class MyAccountScripts extends BaseTest {
 		ElementPresent(myaccountPage.personal_information_title);
 		logs("Personal information Title is present");
 		ElementPresent(myaccountPage.personal_info_name_label);
-		
-		
-		
-		
 		ElementPresent(myaccountPage.personal_info_address_label);
 		ElementPresent(myaccountPage.personal_info_city_label);
 		ElementPresent(myaccountPage.personal_info_email_label);
@@ -46,10 +42,6 @@ public class MyAccountScripts extends BaseTest {
 		ElementPresent(myaccountPage.recent_order_history_view_all_orders);
 		logs("Order History Title with the view all orders link are present");
 		
-		
-		
-		
-
 	}
 
 	
@@ -84,11 +76,9 @@ public class MyAccountScripts extends BaseTest {
 		registerationPage.HomepageLogin_AccwithNoOrders();
 		logs("Logged in as registered user");
 		ElementPresent(myaccountPage.recent_OrderHistory_noOrdersFound);
-		
-		
-
 	}
 
+	
 	@Test
 	public void recentOrderHistory_Orders() throws IOException, InterruptedException {
 		TestDescription("MyAccount_Summary_04","To verify the order details are present in the recent Order History section within the account which has orders");
@@ -219,7 +209,7 @@ public class MyAccountScripts extends BaseTest {
 		
 
 }
-		
+
 		 
 	
 	@Test

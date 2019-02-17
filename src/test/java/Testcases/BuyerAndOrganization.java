@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import utilities.BaseTest;
 
-public class BopisCheckoutScripts extends BaseTest {
+public class BuyerAndOrganization extends BaseTest {
 	
 	@Test	
 	public void Bopis_SearchCheckout() throws IOException, InterruptedException {		
@@ -28,7 +28,6 @@ public class BopisCheckoutScripts extends BaseTest {
 			AddScreenshot();
 			categorypage.selectFirstProduct();
 			logs("First Product Selected in the CLP");
-			//String BopisState = "58102";
 			List<String> BopisStateData = getColumnData("Search","Bopis");
 			String BopisState = BopisStateData.get(0);
 			js.executeScript("document.cookie='currentZipcode="+BopisState+"';");

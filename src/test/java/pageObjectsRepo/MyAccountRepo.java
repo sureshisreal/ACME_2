@@ -62,7 +62,7 @@ public class MyAccountRepo extends BaseTest {
 	public WebElement personal_info_edit_link;
 	
 	
-	@FindBy(xpath = "span[text()='Recent Order History']")
+	@FindBy(xpath = "//span[contains(.,'Recent Order History')]")
 	public WebElement recent_order_history_title;
 	
 	

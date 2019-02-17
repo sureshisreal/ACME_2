@@ -129,10 +129,9 @@ public class SearchpageScripts extends BaseTest{
 			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
 			logs("Product added to the cart");
-			
+			homepage.returnhomepage();
 		}
-		productsDetailPage.minishopcart_total();
-		logs("MiniCart Clicked");
+	
 	}
 	
 	@Test
@@ -156,11 +155,9 @@ public class SearchpageScripts extends BaseTest{
 			logs("Qunatity increased in PDP");
 			productsDetailPage.AddToCart();
 			logs("Product added to the cart");
-			//homepage.returnhomepage();
+			homepage.returnhomepage();
 		}
-		Thread.sleep(3000);
-		productsDetailPage.minishopcart_total();
-		logs("MiniCart Clicked");
+		
 	}
 	
 	

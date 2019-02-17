@@ -33,6 +33,9 @@ public class CatgoryPageRepo extends BaseTest {
 	@FindBy(xpath = ".//div[@class='top namePartPriceContainer']//h1[@class='main_header']")
 	public WebElement PDP_TitleVerify;
 	
+	@FindBy(xpath = ".//div[@class='socialLeft']")
+	public WebElement PDP_TitleVerify_Verify;
+	
 	 public WebElement RandomCategorySelect(int i) {
 		 return driver.findElement(By.xpath("(.//*[@class='product_name'])["+i+"]"));
 	    }
