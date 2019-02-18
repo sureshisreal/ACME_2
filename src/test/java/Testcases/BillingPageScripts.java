@@ -49,7 +49,7 @@ public class BillingPageScripts extends BaseTest{
 		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();
 	}
-	
+
 	
 	@Test
 	public void BillingPage_info_saveToMyAccount_validation() throws IOException, InterruptedException {

@@ -3,6 +3,7 @@ package Reusables;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pageObjectsRepo.BillingPageRepo;
@@ -46,14 +47,16 @@ public class BillingPageActions extends BillingPageRepo {
 		
 	}
 
-	public void saveBillingDetailsToAccount() throws IOException {
+	public void saveBillingDetailsToAccount() throws IOException, InterruptedException {
 		
 		// TODO Auto-generated method stub
-		
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", CardNumber_Textbox);
+		Thread.sleep(500); 
 		WaitUntilElementClickable(CardNumber_Textbox);
-		
-		if(billing_billingSameasShipping.isSelected())
+	
+		if(billing_billingSameasShipping.isSelected()) {
 			billing_billingSameasShipping.click();
+			}
 		
 		//get the billing address Details from the test data sheet
 		
@@ -71,8 +74,8 @@ public class BillingPageActions extends BillingPageRepo {
 		String addr1 = addr1Data.get(1);
 		List<String> zipcodeData = getColumnData("creditCardInfo","zipcode");
 		String zipcode = zipcodeData.get(1);
-		List<String> companyData = getColumnData("creditCardInfo","company");
-		String company = companyData.get(0);
+		/*List<String> companyData = getColumnData("creditCardInfo","company");
+		String company = companyData.get(0);*/
 		
 		//Clear all the Billing address details
 		
@@ -88,7 +91,7 @@ public class BillingPageActions extends BillingPageRepo {
 		billing_lastName.sendKeys(lastName);
 		billing_address1.sendKeys(addr1);
 		billing_zipCode.sendKeys(zipcode);
-		billing_company.sendKeys(company);
+		//billing_company.sendKeys(company);
 		
 		//enter the Payment details 
 		CardNumber_Textbox.sendKeys(cardNumber);

@@ -41,6 +41,7 @@ public class ShippingPageActions extends ShippingPageRepo {
 		
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		String guestEmail = "test123"+timeStamp+"@yopmail.com";
+		
 		if(Shipping_firstName.isDisplayed()) {
 		WaitUntilElementVisible(Shipping_firstName);
 		Shipping_firstName.sendKeys("FirstName");
@@ -51,7 +52,6 @@ public class ShippingPageActions extends ShippingPageRepo {
 		Shipping_city.sendKeys("New York");
 		Shipping_state.sendKeys("New York");
 		Shipping_phone.sendKeys("1231231231");
-
 		Shipping_email1.sendKeys(guestEmail);
 		Select occupation =new Select(Shipping_occupation);
 		occupation.selectByValue("Carpentry Work");
@@ -111,7 +111,8 @@ public class ShippingPageActions extends ShippingPageRepo {
 	public void UseEnteredAddress() throws InterruptedException{
 		Thread.sleep(60000);
 		//System.out.println("UseEnteredAddress_RadioButton.isDisplayed()" +UseEnteredAddress_RadioButton.isDisplayed());
-		if(UseEnteredAddress_RadioButton.isDisplayed()) {
+		int UseEnteredAddressCount = UseEnteredAddress_RadioButton_Count.size();
+		if(UseEnteredAddressCount > 0) {
 			UseEnteredAddress_RadioButton.click();	}
 	}
 	

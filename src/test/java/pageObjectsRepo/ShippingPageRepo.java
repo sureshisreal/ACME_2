@@ -51,6 +51,9 @@ public class ShippingPageRepo extends BaseTest{
 	@FindBy( xpath = ".//*[@name='addressOption'][@value='Original']")
 	public  WebElement UseEnteredAddress_RadioButton;
 	
+	@FindBy( xpath = ".//*[@name='addressOption'][@value='Original']")
+	public   List<WebElement> UseEnteredAddress_RadioButton_Count;
+	
 	@FindBy( xpath = "(.//*[@name='addressOption'])[1]")
 	public  WebElement UseSuggestedAddress_RadioButton;
 	
