@@ -38,6 +38,25 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		
 	}
 	
+	public void B2B_Login() throws IOException {
+		WaitUntilElementVisible(ReturningCustomer_Header);
+		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
+		List<String> UsernameData = getColumnData("SignIn","UsernameB2B");
+		String Username = UsernameData.get(0);
+		List<String> PssswordData = getColumnData("SignIn","PasswordB2B");
+		String Password = PssswordData.get(0);
+		System.out.println("Credentials :" + Username + "" +Password);
+		LogonId_Textbox.sendKeys(Username);
+		Password_Textbox.sendKeys(Password);
+		//AddScreenshot();
+		SignIn_Button.click();	
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		//AddScreenshot();
+		logs("Login success \n UserName :" +Username+ "Password: "+Password);
+		
+	}
+	
 	
 	public void HomepageLogin_AccwithNoOrders() throws IOException {
 		WaitUntilElementVisible(ReturningCustomer_Header);

@@ -6,9 +6,12 @@
 	</listeners>
 	<test  name="Test">
 	<parameter name="browser" value="chrome" />
-		<classes>
+		<classes>  
 		   <class name="Testcases.CategorypageScripts" /> 
+		   <class name="Testcases.CatalogScripts" />
 		    <class name="Testcases.ShoppingCartScripts" /> 
+		    <class name="Testcases.RequestQuote" />
+		    <class name="Testcases.RequisitionList" />
 			<class name="Testcases.BopisCheckoutScripts" />
 			<class name="Testcases.CheckoutScripts" />
 			<class name="Testcases.HomepageScripts" />

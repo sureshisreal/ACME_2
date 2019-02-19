@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="395390" started-at="2019-02-18T07:13:29Z" finished-at="2019-02-18T07:20:04Z">
+  <suite name="Suite" duration-ms="71851" started-at="2019-02-19T12:33:33Z" finished-at="2019-02-19T12:34:45Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="395390" started-at="2019-02-18T07:13:29Z" finished-at="2019-02-18T07:20:04Z">
-      <class name="Testcases.BillingPageScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.BillingPageScripts@2a7ed1f]" name="beforeMethod" is-config="true" duration-ms="42808" started-at="2019-02-18T07:13:29Z" finished-at="2019-02-18T07:14:11Z">
+    <test name="Test" duration-ms="71851" started-at="2019-02-19T12:33:33Z" finished-at="2019-02-19T12:34:45Z">
+      <class name="Testcases.CatalogScripts">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.CatalogScripts@2a7ed1f]" name="beforeMethod" is-config="true" duration-ms="48074" started-at="2019-02-19T12:33:33Z" finished-at="2019-02-19T12:34:21Z">
           <params>
             <param index="0">
               <value>
@@ -18,50 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="BillingPage_info_saveToMyAccount_validation()[pri:0, instance:Testcases.BillingPageScripts@2a7ed1f]" name="BillingPage_info_saveToMyAccount_validation" duration-ms="351862" started-at="2019-02-18T07:14:11Z" finished-at="2019-02-18T07:20:03Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at Reusables.MyAccountCCPageActions.verifySavedCreditDetailsFromCheckout(MyAccountCCPageActions.java:204)
-at Testcases.BillingPageScripts.BillingPage_info_saveToMyAccount_validation(BillingPageScripts.java:75)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="Catalog_Validations()[pri:0, instance:Testcases.CatalogScripts@2a7ed1f]" name="Catalog_Validations" duration-ms="23598" started-at="2019-02-19T12:34:21Z" finished-at="2019-02-19T12:34:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BillingPage_info_saveToMyAccount_validation -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.BillingPageScripts@2a7ed1f]" name="afterMethod" is-config="true" duration-ms="654" started-at="2019-02-18T07:20:03Z" finished-at="2019-02-18T07:20:04Z">
+        </test-method> <!-- Catalog_Validations -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.CatalogScripts@2a7ed1f]" name="afterMethod" is-config="true" duration-ms="144" started-at="2019-02-19T12:34:44Z" finished-at="2019-02-19T12:34:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BillingPage_info_saveToMyAccount_validation status=FAILURE method=BillingPageScripts.BillingPage_info_saveToMyAccount_validation()[pri:0, instance:Testcases.BillingPageScripts@2a7ed1f] output={null}]]]>
+                <![CDATA[[TestResult name=Catalog_Validations status=SUCCESS method=CatalogScripts.Catalog_Validations()[pri:0, instance:Testcases.CatalogScripts@2a7ed1f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.BillingPageScripts -->
+      </class> <!-- Testcases.CatalogScripts -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

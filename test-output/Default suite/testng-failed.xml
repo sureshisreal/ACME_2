@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.MyAccountScripts">
+      <class name="Testcases.RequisitionList">
         <methods>
           <include name="afterMethod"/>
-          <include name="myAcc_ShippingInfo_addressPrePopulation_test"/>
           <include name="beforeMethod"/>
+          <include name="RequisitionList_Validations"/>
         </methods>
-      </class> <!-- Testcases.MyAccountScripts -->
+      </class> <!-- Testcases.RequisitionList -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
