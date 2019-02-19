@@ -4,28 +4,27 @@
 	<listeners>
 		<listener class-name="listeners.TestListener" />
 	</listeners>
-	<test  name="Test">
-	<parameter name="browser" value="chrome" />
-		<classes>  
-		   <class name="Testcases.CategorypageScripts" /> 
-		   <class name="Testcases.CatalogScripts" />
-		    <class name="Testcases.ShoppingCartScripts" /> 
-		    <class name="Testcases.RequestQuote" />
-		    <class name="Testcases.RequisitionList" />
+	<test name="Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="Testcases.BillingPageScripts" />
 			<class name="Testcases.BopisCheckoutScripts" />
+			<class name="Testcases.CatalogScripts" />
+			<class name="Testcases.CategorypageScripts" />
 			<class name="Testcases.CheckoutScripts" />
 			<class name="Testcases.HomepageScripts" />
-			<class name="Testcases.PDPScripts" /> 
-			<class name="Testcases.HomepageScripts" />
-			<class name="Testcases.RegisterationScripts" /> 
-			<class name="Testcases.OrderConformationPageScripts" /> 
-			<class name="Testcases.MyAccountScripts" /> 
-			<class name="Testcases.CategorypageScripts" /> 
-			<class name="Testcases.BillingPageScripts" /> 
+			<class name="Testcases.MyAccountScripts" />
+			<class name="Testcases.OrderConformationPageScripts" />
 			<class name="Testcases.OrderHistoryScripts" />
-			<class name="Testcases.SearchpageScripts" />  
-			<class name="Testcases.ShippingPageScripts"/> 
+			<class name="Testcases.OrganizationBuyer" />
+			<class name="Testcases.PDPScripts" />
+			<class name="Testcases.RegisterationScripts" />
+			<class name="Testcases.RequestQuote" />
+			<class name="Testcases.RequisitionList" />
+			<class name="Testcases.SearchpageScripts" />
+			<class name="Testcases.ShippingPageScripts" />
+			<class name="Testcases.ShoppingCartScripts" />
 			<class name="Testcases.WishListScripts" />
 		</classes>
-	</test> 
+	</test>
 </suite> <!-- Suite -->
