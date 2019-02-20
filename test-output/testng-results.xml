@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="71851" started-at="2019-02-19T12:33:33Z" finished-at="2019-02-19T12:34:45Z">
+  <suite name="Suite" duration-ms="211650" started-at="2019-02-20T09:32:13Z" finished-at="2019-02-20T09:35:45Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="71851" started-at="2019-02-19T12:33:33Z" finished-at="2019-02-19T12:34:45Z">
-      <class name="Testcases.CatalogScripts">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.CatalogScripts@2a7ed1f]" name="beforeMethod" is-config="true" duration-ms="48074" started-at="2019-02-19T12:33:33Z" finished-at="2019-02-19T12:34:21Z">
+    <test name="Test" duration-ms="211650" started-at="2019-02-20T09:32:13Z" finished-at="2019-02-20T09:35:45Z">
+      <class name="Testcases.OrganizationBuyer">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:Testcases.OrganizationBuyer@38c5cc4c]" name="beforeMethod" is-config="true" duration-ms="107701" started-at="2019-02-20T09:32:13Z" finished-at="2019-02-20T09:34:01Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Catalog_Validations()[pri:0, instance:Testcases.CatalogScripts@2a7ed1f]" name="Catalog_Validations" duration-ms="23598" started-at="2019-02-19T12:34:21Z" finished-at="2019-02-19T12:34:44Z">
+        <test-method status="PASS" signature="Buyers_Organization_BreadCrumbValidations()[pri:0, instance:Testcases.OrganizationBuyer@38c5cc4c]" name="Buyers_Organization_BreadCrumbValidations" duration-ms="103857" started-at="2019-02-20T09:34:01Z" finished-at="2019-02-20T09:35:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Catalog_Validations -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.CatalogScripts@2a7ed1f]" name="afterMethod" is-config="true" duration-ms="144" started-at="2019-02-19T12:34:44Z" finished-at="2019-02-19T12:34:45Z">
+        </test-method> <!-- Buyers_Organization_BreadCrumbValidations -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Testcases.OrganizationBuyer@38c5cc4c]" name="afterMethod" is-config="true" duration-ms="66" started-at="2019-02-20T09:35:44Z" finished-at="2019-02-20T09:35:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Catalog_Validations status=SUCCESS method=CatalogScripts.Catalog_Validations()[pri:0, instance:Testcases.CatalogScripts@2a7ed1f] output={null}]]]>
+                <![CDATA[[TestResult name=Buyers_Organization_BreadCrumbValidations status=SUCCESS method=OrganizationBuyer.Buyers_Organization_BreadCrumbValidations()[pri:0, instance:Testcases.OrganizationBuyer@38c5cc4c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testcases.CatalogScripts -->
+      </class> <!-- Testcases.OrganizationBuyer -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

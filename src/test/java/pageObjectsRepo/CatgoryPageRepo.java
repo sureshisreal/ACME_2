@@ -30,6 +30,9 @@ public class CatgoryPageRepo extends BaseTest {
 	@FindBy(xpath = ".//*[@class='category-page']")
 	public WebElement CategoryVerify;
 	
+	@FindBy(xpath = "//h1")
+	public WebElement HeaderVerify;
+	
 	@FindBy(xpath = ".//div[@class='top namePartPriceContainer']//h1[@class='main_header']")
 	public WebElement PDP_TitleVerify;
 	

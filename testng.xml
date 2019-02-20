@@ -7,7 +7,8 @@
 	<test name="Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="Testcases.BillingPageScripts" />
+			<class name="Testcases.OrganizationBuyer" />
+			<!-- <class name="Testcases.BillingPageScripts" />
 			<class name="Testcases.BopisCheckoutScripts" />
 			<class name="Testcases.CatalogScripts" />
 			<class name="Testcases.CategorypageScripts" />
@@ -24,7 +25,7 @@
 			<class name="Testcases.SearchpageScripts" />
 			<class name="Testcases.ShippingPageScripts" />
 			<class name="Testcases.ShoppingCartScripts" />
-			<class name="Testcases.WishListScripts" />
+			<class name="Testcases.WishListScripts" /> -->
 		</classes>
 	</test>
 </suite> <!-- Suite -->

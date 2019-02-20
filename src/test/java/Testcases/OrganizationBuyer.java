@@ -12,7 +12,7 @@ import utilities.BaseTest;
 
 public class OrganizationBuyer extends BaseTest {
 	
-	@Test	
+/*	@Test	
 	public void Buyers_Organization_OrganizationValidations() throws IOException, InterruptedException {		
 		TestDescription("Buyers_Organization_EditOrganization_001" , "To verify user able to edit organization");
 			logs("Url entered");
@@ -34,7 +34,7 @@ public class OrganizationBuyer extends BaseTest {
 			organizationBuyerPage.AddressValidation();
 			organizationBuyerPage.ContactValidation();
 			organizationBuyerPage.MemberValidations();	
-	}
+	}*/
 
 	@Test	
 	public void Buyers_Organization_BreadCrumbValidations() throws IOException, InterruptedException {		
@@ -44,7 +44,7 @@ public class OrganizationBuyer extends BaseTest {
 			homepage.SignInLink();
 			registerationPage.B2B_Login();
 			organizationBuyerPage.Organizationpage();
-			categorypage.Breadcrumbs();
+			categorypage.MyAccountBreadcrumbs();
 	}
 	
 }

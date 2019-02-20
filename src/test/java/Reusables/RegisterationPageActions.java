@@ -41,9 +41,9 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	public void B2B_Login() throws IOException {
 		WaitUntilElementVisible(ReturningCustomer_Header);
 		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
-		List<String> UsernameData = getColumnData("SignIn","UsernameB2B");
+		List<String> UsernameData = getColumnData("SignIn","B2BUsername");
 		String Username = UsernameData.get(0);
-		List<String> PssswordData = getColumnData("SignIn","PasswordB2B");
+		List<String> PssswordData = getColumnData("SignIn","B2BPassword");
 		String Password = PssswordData.get(0);
 		System.out.println("Credentials :" + Username + "" +Password);
 		LogonId_Textbox.sendKeys(Username);
