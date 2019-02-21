@@ -28,7 +28,7 @@ public class OrderConformationPageScripts extends BaseTest{
 		billingPage.BillingFieldValidation();
 	}
 	
-	/*@Test
+	@Test
 	public void OrderConformationPage_FieldValidations_Reg() throws IOException, InterruptedException {
 		TestDescription("OrderConformationPage_FieldValidations_02",
 				"To verify registered user able to view all the fields in the order confirmation page");
@@ -48,6 +48,6 @@ public class OrderConformationPageScripts extends BaseTest{
 		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();
 	}
-	*/
+	
 	
 }

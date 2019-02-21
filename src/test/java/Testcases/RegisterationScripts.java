@@ -8,7 +8,7 @@ import utilities.BaseTest;
 
 public class RegisterationScripts extends BaseTest{
 	
-	/*@Test
+	@Test
 	public void Valid_SignIn_001() throws IOException {
 		TestDescription("Registered User Sign In_001",
 				"To verify whether registered user able to sign-in using valid credentials");
@@ -34,7 +34,7 @@ public class RegisterationScripts extends BaseTest{
 		homepage.VerifyPageTitle();
 		homepage.SignInLink();
 		registerationPage.ForgotpasswordValidations();
-	}*/
+	}
 	
 	@Test
 	public void CreateAccount_Error_Messages_Validations_004() throws IOException {
