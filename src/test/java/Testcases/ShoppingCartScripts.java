@@ -157,7 +157,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_ForgotPassword_009() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_ForgotPassword",
+		TestDescription("ShoppingCart_ForgotPassword_009",
 				"To verify guest user able to validate the forgot password page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -173,7 +173,7 @@ public class ShoppingCartScripts extends BaseTest{
 	
 	@Test
 	public void ShoppingCart_Promocode_010() throws IOException, InterruptedException {
-		TestDescription("ShoppingCart_Promocode",
+		TestDescription("ShoppingCart_Promocode_010",
 				"To verify guest user able to apply promo code");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);

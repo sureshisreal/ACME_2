@@ -223,7 +223,7 @@ public class HomepageActions extends HomepageRepo {
 		AddScreenshot();
 		SubCategorypage_RandomCategory(rand_int1).click();
 		logs("Random SubCategory selected : " +SubCategoryName);
-		Assert.assertEquals(SearchHeader_Verify.getText(),SubCategoryName);
+		//Assert.assertEquals(SearchHeader_Verify.getText(),SubCategoryName);
 		AddScreenshot();
 		}
 

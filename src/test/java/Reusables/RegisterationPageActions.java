@@ -154,6 +154,9 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	}
 
 	public void CreateAccountValidations() throws IOException {
+		Register_Button.click();
+		WaitUntilElementClickable(individualAccount_Radio);
+		individualAccount_Radio.click();
 		WaitUntilElementVisible(submit_Button);
 		submit_Button.click();
 		AddScreenshot();
@@ -173,7 +176,7 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 		submit_Button.click();
 		email1_Textbox.sendKeys("abc@yopmail.com");
 		submit_Button.click();
-		verifyemail1_Textbox.sendKeys("abc@yopmail.com");
+		//verifyemail1_Textbox.sendKeys("abc@yopmail.com");
 		phone1_Textbox.sendKeys("6767676767");
 		submit_Button.click();
 		AddScreenshot();
@@ -273,8 +276,11 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 
 
 	public void cancelregisteration() throws IOException {
-		WaitUntilElementVisible(submit_Button);
-		submit_Button.click();
+		Register_Button.click();
+		WaitUntilElementClickable(individualAccount_Radio);
+		individualAccount_Radio.click();
+		WaitUntilElementVisible(Register_Submit_Button);
+		Register_Submit_Button.click();
 		AddScreenshot();
 		logonPassword_Textbox.sendKeys("P@ssw0rd");
 		logonPasswordVerify_Textbox.sendKeys("P@ssw0rd");
@@ -293,6 +299,25 @@ public class RegisterationPageActions extends RegisterationpageRepo {
 	public void selectUserRegisteration() {
 		WaitUntilElementClickable(IndividualUse_Radio);
 		IndividualUse_Radio.click();	
+	}
+
+	public void PO_Login() throws IOException {
+		
+		WaitUntilElementVisible(ReturningCustomer_Header);
+		assertTrue(ReturningCustomer_Header.getText().contains("RETURNING"));
+		List<String> UsernameData = getColumnData("SignIn","POUsername");
+		String Username = UsernameData.get(0);
+		List<String> PssswordData = getColumnData("SignIn","POPassword");
+		String Password = PssswordData.get(0);
+		System.out.println("Credentials :" + Username + "" +Password);
+		LogonId_Textbox.sendKeys(Username);
+		Password_Textbox.sendKeys(Password);
+		//AddScreenshot();
+		SignIn_Button.click();	
+		String welcomeText= MyAccount_WelcomeText.getText();
+		assertTrue(welcomeText.contains("Welcome,"));
+		//AddScreenshot();
+		logs("Login success \n UserName :" +Username+ "Password: "+Password);
 	}
 	
 	

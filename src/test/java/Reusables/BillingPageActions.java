@@ -102,7 +102,6 @@ public class BillingPageActions extends BillingPageRepo {
 		year.selectByValue(expYear);
 		
 		//Check save to my Account Checkbox
-		
 
 		if(!billing_saveToMyAccount.isSelected())
 			billing_saveToMyAccount.click();
@@ -110,7 +109,11 @@ public class BillingPageActions extends BillingPageRepo {
 		logs("Billing address details are entered and opted to save the account details to my account");
 		AddScreenshot();
 		
-		
+	}
+
+	public void po_number() {
+		ScrollToElement(store_credit_option);
+		store_credit_option.click();
 	}
 
 	

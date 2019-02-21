@@ -7,7 +7,7 @@
 	<test name="Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="Testcases.OrganizationBuyer" />
+			<class name="Testcases.RegisterationScripts" />
 			<!-- <class name="Testcases.BillingPageScripts" />
 			<class name="Testcases.BopisCheckoutScripts" />
 			<class name="Testcases.CatalogScripts" />

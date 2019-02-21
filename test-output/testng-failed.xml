@@ -7,13 +7,13 @@
   <test thread-count="1" name="Test(failed)" parallel="classes">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Testcases.OrganizationBuyer">
+      <class name="Testcases.RegisterationScripts">
         <methods>
           <include name="afterMethod"/>
+          <include name="CreateAccount_Error_Messages_Validations_004"/>
           <include name="beforeMethod"/>
-          <include name="Buyers_Organization_BreadCrumbValidations"/>
         </methods>
-      </class> <!-- Testcases.OrganizationBuyer -->
+      </class> <!-- Testcases.RegisterationScripts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

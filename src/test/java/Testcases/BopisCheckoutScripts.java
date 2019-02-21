@@ -14,7 +14,7 @@ public class BopisCheckoutScripts extends BaseTest {
 	
 	@Test	
 	public void Bopis_SearchCheckout() throws IOException, InterruptedException {		
-		TestDescription("Bopis_SearchCheckout" , "To verify user able to place order using bopis");
+		TestDescription("Bopis_SearchCheckout_001" , "To verify user able to place order using bopis");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();
@@ -57,7 +57,7 @@ public class BopisCheckoutScripts extends BaseTest {
 
 	@Test	
 	public void Bopis_SearchCheckout_Registered() throws IOException, InterruptedException {		
-		TestDescription("Bopis_SearchCheckout" , "To verify user able to place order using bopis");
+		TestDescription("Bopis_SearchCheckout_002" , "To verify user able to place order using bopis");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();
@@ -99,7 +99,7 @@ public class BopisCheckoutScripts extends BaseTest {
 	
 	@Test	
 	public void Bopis_CategoryCheckout() throws IOException, InterruptedException {		
-		TestDescription("Bopis_CategoryCheckout" , "To verify user able to place order using bopis from the category menu");
+		TestDescription("Bopis_CategoryCheckout_003" , "To verify user able to place order using bopis from the category menu");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();
@@ -143,7 +143,7 @@ public class BopisCheckoutScripts extends BaseTest {
 
 	@Test	
 	public void Bopis_CategoryCheckout_Registered() throws IOException, InterruptedException {		
-		TestDescription("Bopis_CategoryCheckout_Registered" , "To verify user able to place order using bopis");
+		TestDescription("Bopis_CategoryCheckout_Registered_004" , "To verify user able to place order using bopis");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();

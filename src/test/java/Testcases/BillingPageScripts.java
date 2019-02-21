@@ -122,9 +122,6 @@ public class BillingPageScripts extends BaseTest{
 		logs("Expiry Year is matching with that of my account info");
 		AddScreenshot();
 	}
-	
-	
-	
 
 	@Test
 	public void BillingPage_info_saveEditedAddrToMyAccount_validation() throws IOException, InterruptedException {

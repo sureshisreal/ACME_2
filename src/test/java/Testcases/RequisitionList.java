@@ -14,7 +14,7 @@ public class RequisitionList extends BaseTest {
 	
 	@Test	
 	public void RequisitionList_Validations() throws IOException, InterruptedException {		
-		TestDescription("RequestQuote_Validations_001" , "To verify all the feilds are present in the Request Quote");
+		TestDescription("RequisitionList_Validations_001" , "To verify all the feilds are present in the Request Quote");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();
@@ -25,7 +25,7 @@ public class RequisitionList extends BaseTest {
 	
 	@Test	
 	public void RequisitionList_CreateAndDelete() throws IOException, InterruptedException {		
-		TestDescription("RequestQuote_Validations_001" , "To verify all the feilds are present in the Request Quote");
+		TestDescription("RequisitionList_Validations_002" , "To verify all the feilds are present in the Request Quote");
 			logs("Url entered");
 			AddScreenshot();
 			homepage.SignInLink();

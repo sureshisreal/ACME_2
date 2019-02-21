@@ -57,7 +57,7 @@ public class HomepageScripts extends BaseTest{
 				"To verify guest user able to add product from the header menu Brands");
 		homepage.VerifyPageTitle();
 		homepage.BrandMenuSelection();
-		categorypage.selectRandomProduct();
+		//categorypage.selectRandomProduct();
 	}
 	
 	@Test
@@ -68,7 +68,7 @@ public class HomepageScripts extends BaseTest{
 		homepage.SignInLink();
 		registerationPage.HomepageLogin();
 		homepage.BrandMenuSelection();
-		categorypage.selectRandomProduct();
+		//categorypage.selectRandomProduct();
 	}
 	
 	@Test

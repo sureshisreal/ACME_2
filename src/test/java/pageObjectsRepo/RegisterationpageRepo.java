@@ -68,6 +68,9 @@ public class RegisterationpageRepo extends BaseTest {
 	@FindBy(xpath = ".//*[@class='btn'][contains(.,'Register')]")
 	public  WebElement Register_Button;
 	
+	@FindBy(xpath = "//input[@id='individualAccount']")
+	public  WebElement individualAccount_Radio;
+		
 	@FindBy(name = "logonPassword")
 	public  WebElement logonPassword_Textbox;
 	
@@ -119,11 +122,15 @@ public class RegisterationpageRepo extends BaseTest {
 	@FindBy(id = "captcha")
 	public  WebElement captcha_Text;
 	
-	@FindBy(xpath = "(//a[contains(.,'Submit')])[1]")
+	@FindBy(xpath = "//div[@id='WC_UserRegistrationAddForm_Buttons_1'][contains(.,'Register')]//a")
 	public  WebElement submit_Button;
 	
 	@FindBy(xpath = "(//a[contains(.,'Cancel')])[1]")
 	public  WebElement cancel_Button;
+	
+	@FindBy(xpath = "//div[@id='WC_UserRegistrationAddForm_Buttons_1'][contains(.,'Register')]//a")
+	public  WebElement Register_Submit_Button;
+	
 	
 //Logout 	
 	@FindBy(xpath = "//ul[@id='quickLinksBar']//a[@id='SigniIn_alt']")

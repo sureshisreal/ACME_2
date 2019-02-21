@@ -11,7 +11,7 @@ public class OrderConformationPageScripts extends BaseTest{
 	
 	@Test
 	public void OrderConformationPage_FieldValidations() throws IOException, InterruptedException {
-		TestDescription("OrderConformationPage_FieldValidations",
+		TestDescription("OrderConformationPage_FieldValidations_01",
 				"To verify guest user able to view all the fields in the order confirmation page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -24,12 +24,13 @@ public class OrderConformationPageScripts extends BaseTest{
 		productsDetailPage.minishopcart_total();
 		shoppingCartPage.guestCheckout();
 		shippingPage.GuestShippingAddress();
+		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();
 	}
 	
-	@Test
+	/*@Test
 	public void OrderConformationPage_FieldValidations_Reg() throws IOException, InterruptedException {
-		TestDescription("OrderConformationPage_FieldValidations",
+		TestDescription("OrderConformationPage_FieldValidations_02",
 				"To verify registered user able to view all the fields in the order confirmation page");
 		List<String> SearchTermData = getColumnData("Search","SearchSKU");
 		String SearchTerm = SearchTermData.get(0);
@@ -44,8 +45,9 @@ public class OrderConformationPageScripts extends BaseTest{
 		productsDetailPage.minishopcart_total();
 		shoppingCartPage.guestCheckout();
 		shippingPage.GuestShippingAddress();
+		shippingPage.UseEnteredAddress();
 		billingPage.BillingFieldValidation();
 	}
-	
+	*/
 	
 }

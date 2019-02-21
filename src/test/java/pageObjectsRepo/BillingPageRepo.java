@@ -12,13 +12,11 @@ public class BillingPageRepo extends BaseTest {
 	    this.driver = driver;
 	}
 
-	@FindBy( id = "WC_PaymentEntry_account")
+	@FindBy( id = "WC_PaymentEntry_account") 
 	public  WebElement CardNumber_Textbox;
-	
 	
 	@FindBy( xpath = "//form[@id='paymentForm1']//input[@name='savedAccount']")
 	public  WebElement CardNumber_textboxWithValue;
-	
 	
 	@FindBy( id = "WC_PaymentEntry_cc_cvc")
 	public  WebElement CvvTextbox;
@@ -71,8 +69,11 @@ public class BillingPageRepo extends BaseTest {
 	@FindBy(name = "submit_registration")
 	public WebElement orderConf_guest_completeRegistration;
 	
+	@FindBy(className = "store_credit_option")
+	public WebElement store_credit_option;
 	
+	@FindBy(id = "WC_PaymentEntry_referenceNumber")
+	public WebElement PO_referenceNumber;
 	
-
 
 }
